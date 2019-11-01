@@ -14,6 +14,11 @@
 		DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC501481236C70F300AD39F1 /* VTune.xcdatamodeld */; };
 		DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC501484236C70F500AD39F1 /* Assets.xcassets */; };
 		DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */; };
+		DC501493236C78C300AD39F1 /* Lagu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC501492236C78C300AD39F1 /* Lagu.storyboard */; };
+		DC501495236C78CC00AD39F1 /* iTunes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC501494236C78CC00AD39F1 /* iTunes.storyboard */; };
+		DC501497236C78D500AD39F1 /* Pengaturan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC501496236C78D500AD39F1 /* Pengaturan.storyboard */; };
+		DCDE2578236C7FEE00918EFF /* LaguViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE2577236C7FED00918EFF /* LaguViewController.swift */; };
+		DCDE257A236C7FFE00918EFF /* PengaturanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE2579236C7FFE00918EFF /* PengaturanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		DC501484236C70F500AD39F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC501487236C70F500AD39F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC501489236C70F500AD39F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC501492236C78C300AD39F1 /* Lagu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lagu.storyboard; sourceTree = "<group>"; };
+		DC501494236C78CC00AD39F1 /* iTunes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iTunes.storyboard; sourceTree = "<group>"; };
+		DC501496236C78D500AD39F1 /* Pengaturan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pengaturan.storyboard; sourceTree = "<group>"; };
+		DCDE2577236C7FED00918EFF /* LaguViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaguViewController.swift; sourceTree = "<group>"; };
+		DCDE2579236C7FFE00918EFF /* PengaturanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PengaturanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,45 @@
 		DC501477236C70F300AD39F1 /* VTune */ = {
 			isa = PBXGroup;
 			children = (
+				DC501491236C717B00AD39F1 /* Controller */,
+				DC50148F236C716400AD39F1 /* Model */,
+				DC501490236C716D00AD39F1 /* View */,
 				DC501478236C70F300AD39F1 /* AppDelegate.swift */,
 				DC50147A236C70F300AD39F1 /* SceneDelegate.swift */,
-				DC50147C236C70F300AD39F1 /* ViewController.swift */,
-				DC50147E236C70F300AD39F1 /* Main.storyboard */,
 				DC501484236C70F500AD39F1 /* Assets.xcassets */,
 				DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */,
 				DC501489236C70F500AD39F1 /* Info.plist */,
 				DC501481236C70F300AD39F1 /* VTune.xcdatamodeld */,
 			);
 			path = VTune;
+			sourceTree = "<group>";
+		};
+		DC50148F236C716400AD39F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC501490236C716D00AD39F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC50147E236C70F300AD39F1 /* Main.storyboard */,
+				DC501492236C78C300AD39F1 /* Lagu.storyboard */,
+				DC501494236C78CC00AD39F1 /* iTunes.storyboard */,
+				DC501496236C78D500AD39F1 /* Pengaturan.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC501491236C717B00AD39F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC50147C236C70F300AD39F1 /* ViewController.swift */,
+				DCDE2577236C7FED00918EFF /* LaguViewController.swift */,
+				DCDE2579236C7FFE00918EFF /* PengaturanViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
+				DC501497236C78D500AD39F1 /* Pengaturan.storyboard in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
+				DC501493236C78C300AD39F1 /* Lagu.storyboard in Resources */,
+				DC501495236C78CC00AD39F1 /* iTunes.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
+				DCDE257A236C7FFE00918EFF /* PengaturanViewController.swift in Sources */,
 				DC50147D236C70F300AD39F1 /* ViewController.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
+				DCDE2578236C7FEE00918EFF /* LaguViewController.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
