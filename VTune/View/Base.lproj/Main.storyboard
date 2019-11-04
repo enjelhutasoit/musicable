@@ -10,7 +10,7 @@
         <!--Main-->
         <scene sceneID="jgI-Je-qvz">
             <objects>
-                <viewController title="Main" id="YIW-J3-JMC" customClass="ViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="YIW-J3-JMC" customClass="MainViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzX-qA-2pN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
