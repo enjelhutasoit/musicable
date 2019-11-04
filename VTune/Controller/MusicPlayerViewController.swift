@@ -1,14 +1,14 @@
 //
-//  PengaturanViewController.swift
+//  MusicPlayerViewController.swift
 //  VTune
 //
-//  Created by Jasmine Hanifa Mounir on 01/11/19.
+//  Created by Jasmine Hanifa Mounir on 04/11/19.
 //  Copyright © 2019 Jasmine Hanifa Mounir. All rights reserved.
 //
 
 import UIKit
 
-class PengaturanViewController: UIViewController {
+class MusicPlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
