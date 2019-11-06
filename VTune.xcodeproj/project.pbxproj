@@ -62,9 +62,9 @@
 		DC501477236C70F300AD39F1 /* VTune */ = {
 			isa = PBXGroup;
 			children = (
-				DC501491236C717B00AD39F1 /* Controller */,
 				DC50148F236C716400AD39F1 /* Model */,
 				DC501490236C716D00AD39F1 /* View */,
+				DC501491236C717B00AD39F1 /* Controller */,
 				DC501478236C70F300AD39F1 /* AppDelegate.swift */,
 				DC50147A236C70F300AD39F1 /* SceneDelegate.swift */,
 				DC501484236C70F500AD39F1 /* Assets.xcassets */,
@@ -85,8 +85,8 @@
 		DC501490236C716D00AD39F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DC50147E236C70F300AD39F1 /* Main.storyboard */,
-				DC60DADD237036320070F386 /* MusicPlayer.storyboard */,
+				DCDFF6DC2372F346002A45EF /* Main */,
+				DCDFF6DB2372F33F002A45EF /* Music Player */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,10 +94,42 @@
 		DC501491236C717B00AD39F1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DC50147C236C70F300AD39F1 /* MainViewController.swift */,
-				DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */,
+				DCDFF6D92372F31E002A45EF /* Main */,
+				DCDFF6DA2372F324002A45EF /* MusicPlayer */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DCDFF6D92372F31E002A45EF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DC50147C236C70F300AD39F1 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DCDFF6DA2372F324002A45EF /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		DCDFF6DB2372F33F002A45EF /* Music Player */ = {
+			isa = PBXGroup;
+			children = (
+				DC60DADD237036320070F386 /* MusicPlayer.storyboard */,
+			);
+			path = "Music Player";
+			sourceTree = "<group>";
+		};
+		DCDFF6DC2372F346002A45EF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DC50147E236C70F300AD39F1 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
