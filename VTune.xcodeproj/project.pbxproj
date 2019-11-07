@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB52F03C237409270048B55D /* albumArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52F03A237409270048B55D /* albumArtViewController.swift */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
@@ -21,6 +20,8 @@
 		DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */; };
 		DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */; };
 		DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */; };
+		DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF823742CA400312B37 /* MusicPlayerAlbumImage.xib */; };
+		DCA99FFB23742D5B00312B37 /* MusicPlayerAlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FFA23742D5B00312B37 /* MusicPlayerAlbumImage.swift */; };
 		DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFF6E92373DA93002A45EF /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerHeader.swift; sourceTree = "<group>"; };
 		DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerLyricHeader.xib; sourceTree = "<group>"; };
 		DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerLyricHeader.swift; sourceTree = "<group>"; };
+		DCA99FF823742CA400312B37 /* MusicPlayerAlbumImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerAlbumImage.xib; sourceTree = "<group>"; };
+		DCA99FFA23742D5B00312B37 /* MusicPlayerAlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerAlbumImage.swift; sourceTree = "<group>"; };
 		DCDFF6E92373DA93002A45EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +131,7 @@
 				DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */,
 				DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */,
 				DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */,
+				DCA99FFA23742D5B00312B37 /* MusicPlayerAlbumImage.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -138,6 +142,7 @@
 				DC60DADD237036320070F386 /* MusicPlayer.storyboard */,
 				DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */,
 				DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */,
+				DCA99FF823742CA400312B37 /* MusicPlayerAlbumImage.xib */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
+				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
@@ -225,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA99FFB23742D5B00312B37 /* MusicPlayerAlbumImage.swift in Sources */,
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
 				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
