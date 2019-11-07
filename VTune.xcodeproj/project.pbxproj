@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB52F03C237409270048B55D /* albumArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52F03A237409270048B55D /* albumArtViewController.swift */; };
+		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
 		DC50147D236C70F300AD39F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147C236C70F300AD39F1 /* MainViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
+		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC501475236C70F300AD39F1 /* VTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC501478236C70F300AD39F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC50147A236C70F300AD39F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		DC50146C236C70F300AD39F1 = {
 			isa = PBXGroup;
 			children = (
+				DB52F03A237409270048B55D /* albumArtViewController.swift */,
+				DB52F03B237409270048B55D /* albumArtViewController.xib */,
 				DC501477236C70F300AD39F1 /* VTune */,
 				DC501476236C70F300AD39F1 /* Products */,
 			);
@@ -190,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
@@ -206,6 +213,7 @@
 			files = (
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
 				DC50147D236C70F300AD39F1 /* MainViewController.swift in Sources */,
+				DB52F03C237409270048B55D /* albumArtViewController.swift in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
