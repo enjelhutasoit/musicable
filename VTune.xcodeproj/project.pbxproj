@@ -15,6 +15,10 @@
 		DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */; };
 		DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC60DADD237036320070F386 /* MusicPlayer.storyboard */; };
 		DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */; };
+		DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */; };
+		DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */; };
+		DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */; };
+		DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */; };
 		DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFF6E92373DA93002A45EF /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,10 @@
 		DC501489236C70F500AD39F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC60DADD237036320070F386 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
 		DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerHeader.xib; sourceTree = "<group>"; };
+		DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerHeader.swift; sourceTree = "<group>"; };
+		DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerLyricHeader.xib; sourceTree = "<group>"; };
+		DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerLyricHeader.swift; sourceTree = "<group>"; };
 		DCDFF6E92373DA93002A45EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */,
+				DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */,
+				DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -120,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				DC60DADD237036320070F386 /* MusicPlayer.storyboard */,
+				DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */,
+				DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -191,9 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
+				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
+				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +220,9 @@
 			files = (
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
+				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
+				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 			);
