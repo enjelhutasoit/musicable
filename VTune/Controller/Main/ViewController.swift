@@ -11,6 +11,10 @@ import MediaPlayer
 
 class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerControllerDelegate {
 
+    //#EH1
+    @IBOutlet weak var tableView: UITableView!
+    let dummyProduct = [DummySongList]()
+    
     @IBOutlet weak var addLagu: UIBarButtonItem!
     
     var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
@@ -19,6 +23,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
         super.viewDidLoad()
         setupNavBar()
         // Do any additional setup after loading the view.
+       
     }
     
     func setupNavBar(){

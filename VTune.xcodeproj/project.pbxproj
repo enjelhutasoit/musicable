@@ -18,6 +18,9 @@
 		DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFF6E92373DA93002A45EF /* ViewController.swift */; };
 		EF1C58A5237416B900694932 /* SongListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C58A3237416B900694932 /* SongListTableViewCell.swift */; };
 		EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1C58A4237416B900694932 /* SongListTableViewCell.xib */; };
+		EFA5E2512375413E00EDEC30 /* dummySongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5E2502375413E00EDEC30 /* dummySongList.swift */; };
+		EFA5E253237543C500EDEC30 /* EqualizerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA5E252237543C500EDEC30 /* EqualizerView.xib */; };
+		EFA5E255237543FD00EDEC30 /* EqualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5E254237543FD00EDEC30 /* EqualizerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		DCDFF6E92373DA93002A45EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF1C58A3237416B900694932 /* SongListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewCell.swift; sourceTree = "<group>"; };
 		EF1C58A4237416B900694932 /* SongListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongListTableViewCell.xib; sourceTree = "<group>"; };
+		EFA5E2502375413E00EDEC30 /* dummySongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummySongList.swift; sourceTree = SOURCE_ROOT; };
+		EFA5E252237543C500EDEC30 /* EqualizerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EqualizerView.xib; sourceTree = "<group>"; };
+		EFA5E254237543FD00EDEC30 /* EqualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 				DC501490236C716D00AD39F1 /* View */,
 				DC501491236C717B00AD39F1 /* Controller */,
 				DC501478236C70F300AD39F1 /* AppDelegate.swift */,
+				EFA5E254237543FD00EDEC30 /* EqualizerView.swift */,
 				DC50147A236C70F300AD39F1 /* SceneDelegate.swift */,
 				DC501484236C70F500AD39F1 /* Assets.xcassets */,
 				DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */,
@@ -82,6 +89,7 @@
 		DC50148F236C716400AD39F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFA5E2502375413E00EDEC30 /* dummySongList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +97,7 @@
 		DC501490236C716D00AD39F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFA5E252237543C500EDEC30 /* EqualizerView.xib */,
 				DCDFF6DC2372F346002A45EF /* Main */,
 				DCDFF6DB2372F33F002A45EF /* Music Player */,
 			);
@@ -199,6 +208,7 @@
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
+				EFA5E253237543C500EDEC30 /* EqualizerView.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 			);
@@ -211,11 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA5E255237543FD00EDEC30 /* EqualizerView.swift in Sources */,
 				EF1C58A5237416B900694932 /* SongListTableViewCell.swift in Sources */,
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
+				EFA5E2512375413E00EDEC30 /* dummySongList.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
