@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC054D072374031800E28931 /* PlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC054D062374031800E28931 /* PlayView.xib */; };
+		AC054D092374033100E28931 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC054D082374033100E28931 /* PlayView.swift */; };
+		AC054D0B23740AE300E28931 /* Lirik.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC054D0A23740AE300E28931 /* Lirik.xib */; };
+		AC054D0D23740AF300E28931 /* Lirik.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC054D0C23740AF300E28931 /* Lirik.swift */; };
+		AC9ECE682375535600881D71 /* DurationSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECE672375535600881D71 /* DurationSlider.swift */; };
+		AC9ECE6C2375553300881D71 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECE6B2375553300881D71 /* VolumeSlider.swift */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
 		DC50147D236C70F300AD39F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147C236C70F300AD39F1 /* MainViewController.swift */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC054D062374031800E28931 /* PlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayView.xib; sourceTree = "<group>"; };
+		AC054D082374033100E28931 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		AC054D0A23740AE300E28931 /* Lirik.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lirik.xib; sourceTree = "<group>"; };
+		AC054D0C23740AF300E28931 /* Lirik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lirik.swift; sourceTree = "<group>"; };
+		AC9ECE672375535600881D71 /* DurationSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSlider.swift; sourceTree = "<group>"; };
+		AC9ECE6B2375553300881D71 /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
 		DC501475236C70F300AD39F1 /* VTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC501478236C70F300AD39F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC50147A236C70F300AD39F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */,
+				AC054D082374033100E28931 /* PlayView.swift */,
+				AC054D0C23740AF300E28931 /* Lirik.swift */,
+				AC9ECE672375535600881D71 /* DurationSlider.swift */,
+				AC9ECE6B2375553300881D71 /* VolumeSlider.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -120,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				DC60DADD237036320070F386 /* MusicPlayer.storyboard */,
+				AC054D062374031800E28931 /* PlayView.xib */,
+				AC054D0A23740AE300E28931 /* Lirik.xib */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -190,8 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC054D072374031800E28931 /* PlayView.xib in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
+				AC054D0B23740AE300E28931 /* Lirik.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 			);
@@ -204,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9ECE682375535600881D71 /* DurationSlider.swift in Sources */,
+				AC054D092374033100E28931 /* PlayView.swift in Sources */,
+				AC9ECE6C2375553300881D71 /* VolumeSlider.swift in Sources */,
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
 				DC50147D236C70F300AD39F1 /* MainViewController.swift in Sources */,
+				AC054D0D23740AF300E28931 /* Lirik.swift in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
@@ -353,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4H65A594JP;
+				DEVELOPMENT_TEAM = X29NU3BMGT;
 				INFOPLIST_FILE = VTune/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4H65A594JP;
+				DEVELOPMENT_TEAM = X29NU3BMGT;
 				INFOPLIST_FILE = VTune/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
