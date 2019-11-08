@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5157B75F23756098005C795E /* MusicPlayerMini.xib */; };
+		5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B761237560D2005C795E /* MusicPlayerMini.swift */; };
+		5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B763237560DA005C795E /* DesignSliderProgress.swift */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5157B75F23756098005C795E /* MusicPlayerMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerMini.xib; sourceTree = "<group>"; };
+		5157B761237560D2005C795E /* MusicPlayerMini.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerMini.swift; sourceTree = "<group>"; };
+		5157B763237560DA005C795E /* DesignSliderProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSliderProgress.swift; sourceTree = "<group>"; };
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC501475236C70F300AD39F1 /* VTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				DCDFF6E92373DA93002A45EF /* ViewController.swift */,
+				5157B761237560D2005C795E /* MusicPlayerMini.swift */,
+				5157B763237560DA005C795E /* DesignSliderProgress.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				DC50147E236C70F300AD39F1 /* Main.storyboard */,
+				5157B75F23756098005C795E /* MusicPlayerMini.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -218,6 +227,7 @@
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
 				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
+				5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
@@ -235,10 +245,12 @@
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
 				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
+				5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
+				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
