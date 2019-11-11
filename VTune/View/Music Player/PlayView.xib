@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,30 +13,34 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Music Player Bg" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-9G-bcY">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main Music Player Bg" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-9G-bcY">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZgQ-UK-ng4">
-                    <rect key="frame" x="8" y="13.5" width="398" height="190"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BKp-R2-erd">
+                    <rect key="frame" x="7" y="9" width="400" height="199"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v1S-sc-M9c">
-                            <rect key="frame" x="0.0" y="0.0" width="398" height="25"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Xf4-ER-kCJ">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="25"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyV-cn-nNW">
-                                    <rect key="frame" x="0.0" y="0.0" width="28" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cr-fm-yPe">
+                                    <rect key="frame" x="0.0" y="0.0" width="29" height="25"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" minimumValueImage="Max Slider" maximumValueImage="Min Slider" translatesAutoresizingMaskIntoConstraints="NO" id="WA5-pc-FIQ" customClass="DurationSlider" customModule="VTune" customModuleProvider="target">
-                                    <rect key="frame" x="34" y="0.0" width="329" height="26"/>
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="WA5-pc-FIQ" customClass="DurationSlider" customModule="VTune" customModuleProvider="target">
+                                    <rect key="frame" x="34" y="0.0" width="333" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="IEj-94-os7"/>
+                                        <constraint firstAttribute="width" constant="329" id="dMF-7J-vRR"/>
+                                    </constraints>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Oval 2"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Big)"/>
                                     </userDefinedRuntimeAttributes>
                                 </slider>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cr-fm-yPe">
-                                    <rect key="frame" x="369" y="0.0" width="29" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyV-cn-nNW">
+                                    <rect key="frame" x="372" y="0.0" width="28" height="25"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -44,42 +48,42 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="WWu-lR-YW9">
-                            <rect key="frame" x="38" y="27" width="322" height="97"/>
+                            <rect key="frame" x="39" y="30" width="322" height="97"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqU-bo-6yj">
                                     <rect key="frame" x="0.0" y="37.5" width="19" height="22"/>
-                                    <state key="normal" image="icon_shuffle"/>
+                                    <state key="normal" image="Shuffle Button"/>
                                     <connections>
                                         <action selector="btnShuffle:" destination="iN0-l3-epB" eventType="touchUpInside" id="AcB-Zo-Qzl"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-hQ-BIG">
                                     <rect key="frame" x="54" y="35.5" width="23" height="26"/>
-                                    <state key="normal" image="prev-1"/>
+                                    <state key="normal" image="Previous Button (Big)"/>
                                     <connections>
                                         <action selector="btnPrevious:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z5c-Wd-VR9"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSY-hU-O2p">
-                                    <rect key="frame" x="112" y="0.0" width="97" height="97"/>
+                                    <rect key="frame" x="112" y="1" width="97" height="95"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="97" id="h50-VC-nzx"/>
                                     </constraints>
-                                    <state key="normal" image="play"/>
+                                    <state key="normal" image="Play Button (Big)"/>
                                     <connections>
                                         <action selector="btnPlay:" destination="iN0-l3-epB" eventType="touchUpInside" id="a24-Z2-XVx"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ6-nD-XOD">
                                     <rect key="frame" x="244" y="35.5" width="25" height="26"/>
-                                    <state key="normal" image="next-1"/>
+                                    <state key="normal" image="Next Button (Big)"/>
                                     <connections>
                                         <action selector="btnNext:" destination="iN0-l3-epB" eventType="touchUpInside" id="SLO-Nb-PFh"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo4-TV-mzV">
                                     <rect key="frame" x="304" y="37.5" width="18" height="22"/>
-                                    <state key="normal" image="icon_repeat"/>
+                                    <state key="normal" image="Reload Button"/>
                                     <connections>
                                         <action selector="btnRepeat:" destination="iN0-l3-epB" eventType="touchUpInside" id="hhX-eR-FM3"/>
                                     </connections>
@@ -91,28 +95,28 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FZb-Wj-pLi">
-                            <rect key="frame" x="6" y="126" width="386" height="25"/>
+                            <rect key="frame" x="7" y="132" width="386" height="25"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quieter icon" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-E1-WF7">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quieter Icon" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-E1-WF7">
                                     <rect key="frame" x="0.0" y="0.0" width="11" height="25"/>
                                 </imageView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" minimumValueImage="Max Slider" maximumValueImage="Min Slider" translatesAutoresizingMaskIntoConstraints="NO" id="QCa-cJ-OZT" customClass="VolumeSlider" customModule="VTune" customModuleProvider="target">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="QCa-cJ-OZT" customClass="VolumeSlider" customModule="VTune" customModuleProvider="target">
                                     <rect key="frame" x="19" y="0.0" width="333" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="329" id="hhP-jl-XDf"/>
                                         <constraint firstAttribute="height" constant="25" id="k9G-JG-z8T"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Oval 2"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Big)"/>
                                     </userDefinedRuntimeAttributes>
                                 </slider>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="louder icon" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-Mg-iQJ">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Louder Icon" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-Mg-iQJ">
                                     <rect key="frame" x="360" y="0.0" width="26" height="25"/>
                                 </imageView>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="mPf-dc-qmv">
-                            <rect key="frame" x="118.5" y="153" width="161" height="37"/>
+                            <rect key="frame" x="117.5" y="162" width="165" height="37"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J22-w7-hsT">
                                     <rect key="frame" x="0.0" y="0.0" width="38" height="37"/>
@@ -122,8 +126,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx8-38-nKp">
-                                    <rect key="frame" x="127" y="0.0" width="34" height="37"/>
-                                    <state key="normal" image="Lyric Button"/>
+                                    <rect key="frame" x="127" y="0.0" width="38" height="37"/>
+                                    <state key="normal" image="Lyric Button On"/>
                                     <connections>
                                         <action selector="btnLirik:" destination="iN0-l3-epB" eventType="touchUpInside" id="N3W-IT-Rh1"/>
                                     </connections>
@@ -132,18 +136,11 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1D-eg-bQv">
-                    <rect key="frame" x="374" y="18" width="0.0" height="0.0"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ZgQ-UK-ng4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XY6-Xm-erm"/>
-                <constraint firstItem="ZgQ-UK-ng4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="l0H-OW-Ute"/>
+                <constraint firstItem="BKp-R2-erd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UC3-bk-mx5"/>
+                <constraint firstItem="BKp-R2-erd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vrM-z1-MQj"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -163,18 +160,16 @@
         </view>
     </objects>
     <resources>
-        <image name="Lyric Button" width="34" height="30"/>
-        <image name="Max Slider" width="117" height="8"/>
-        <image name="Min Slider" width="233" height="8"/>
-        <image name="Music Player Bg" width="414" height="183"/>
-        <image name="Oval 2" width="26" height="26"/>
+        <image name="Louder Icon" width="26" height="22"/>
+        <image name="Lyric Button On" width="38" height="37"/>
+        <image name="Main Music Player Bg" width="414" height="217"/>
+        <image name="Next Button (Big)" width="25" height="26"/>
+        <image name="Play Button (Big)" width="95" height="95"/>
+        <image name="Previous Button (Big)" width="23" height="26"/>
+        <image name="Quieter Icon" width="11" height="16"/>
+        <image name="Reload Button" width="18" height="12"/>
+        <image name="Shuffle Button" width="19" height="12"/>
+        <image name="Slider Dot (Big)" width="26" height="26"/>
         <image name="Vibrate Button On" width="38" height="37"/>
-        <image name="icon_repeat" width="18" height="12"/>
-        <image name="icon_shuffle" width="19" height="12"/>
-        <image name="louder icon" width="26" height="22"/>
-        <image name="next-1" width="25" height="26"/>
-        <image name="play" width="97" height="97"/>
-        <image name="prev-1" width="23" height="26"/>
-        <image name="quieter icon" width="11" height="16"/>
     </resources>
 </document>
