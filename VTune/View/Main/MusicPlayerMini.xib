@@ -13,86 +13,69 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Play Bg" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-BO-K6n">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Music Player Bg" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-BO-K6n">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
-                    <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-xa-rF3">
-                    <rect key="frame" x="14" y="11" width="53" height="53"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-mg-ikW">
+                    <rect key="frame" x="20" y="8.5" width="374" height="56"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-xa-rF3">
+                            <rect key="frame" x="0.0" y="1.5" width="53" height="53"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="53" id="Lgg-l4-Fqo"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-2m-fim">
+                            <rect key="frame" x="65" y="18" width="75.5" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16.5"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="i7P-yc-JM9" customClass="DesignSliderProgress" customModule="VTune" customModuleProvider="target">
+                            <rect key="frame" x="150.5" y="15.5" width="105.5" height="26"/>
+                            <color key="minimumTrackTintColor" red="0.43765246870000002" green="0.70033854250000005" blue="0.99219101669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="maximumTrackTintColor" red="0.92157477139999999" green="0.92155748609999999" blue="0.92156922819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Small)"/>
+                            </userDefinedRuntimeAttributes>
+                        </slider>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-H1-uMQ">
+                            <rect key="frame" x="266" y="21" width="14" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="D4Z-V5-n7X"/>
+                                <constraint firstAttribute="width" constant="14" id="Exe-MV-dE4"/>
+                            </constraints>
+                            <state key="normal" image="Previous Button (Small)"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCK-Dv-LtY">
+                            <rect key="frame" x="292" y="0.0" width="56" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="dRf-Pf-sSX"/>
+                                <constraint firstAttribute="width" constant="56" id="xKY-my-LTq"/>
+                            </constraints>
+                            <state key="normal" image="Play Button (Small)"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-hh-vSm">
+                            <rect key="frame" x="360" y="21" width="14" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="Q3i-Oo-woW"/>
+                                <constraint firstAttribute="width" constant="14" id="qSj-Ua-PZ0"/>
+                            </constraints>
+                            <state key="normal" image="Next Button (Small)"/>
+                        </button>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="53" id="kxT-gL-cK1"/>
-                        <constraint firstAttribute="width" constant="53" id="nKe-HE-k3x"/>
+                        <constraint firstItem="fUk-xa-rF3" firstAttribute="top" secondItem="MWA-mg-ikW" secondAttribute="top" constant="1.5" id="qJg-yG-Zgk"/>
                     </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="laskar pela" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-2m-fim">
-                    <rect key="frame" x="85" y="27" width="80" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="eS9-r8-usj"/>
-                        <constraint firstAttribute="width" constant="80" id="rgv-5n-FJT"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16.5"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="i7P-yc-JM9" customClass="DesignSliderProgress" customModule="VTune" customModuleProvider="target">
-                    <rect key="frame" x="185" y="22" width="100" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="29" id="R8y-V6-DjR"/>
-                        <constraint firstAttribute="width" constant="96" id="Xyp-ZQ-mBP"/>
-                    </constraints>
-                    <color key="minimumTrackTintColor" red="0.43765246870000002" green="0.70033854250000005" blue="0.99219101669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <color key="maximumTrackTintColor" red="0.92157477139999999" green="0.92155748609999999" blue="0.92156922819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <color key="thumbTintColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Oval slider"/>
-                    </userDefinedRuntimeAttributes>
-                </slider>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-H1-uMQ">
-                    <rect key="frame" x="305" y="29" width="14" height="14"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="14" id="GNg-Cv-gHg"/>
-                        <constraint firstAttribute="height" constant="14" id="myU-2v-AhN"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="prev"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-hh-vSm">
-                    <rect key="frame" x="387" y="29" width="14" height="14"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="14" id="Tds-vj-flo"/>
-                        <constraint firstAttribute="width" constant="14" id="roj-oM-k1o"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="next"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCK-Dv-LtY">
-                    <rect key="frame" x="332" y="14" width="42" height="42"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="42" id="GcX-ee-7Vf"/>
-                        <constraint firstAttribute="height" constant="42" id="gcU-JY-Okf"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="Mini Play Button"/>
-                </button>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Tuv-hh-vSm" firstAttribute="leading" secondItem="uCK-Dv-LtY" secondAttribute="trailing" constant="13" id="1FE-g4-3Js"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uCK-Dv-LtY" secondAttribute="bottom" constant="17" id="6x2-9D-yPq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fUk-xa-rF3" secondAttribute="bottom" constant="9" id="C6b-oV-i2E"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Tuv-hh-vSm" secondAttribute="bottom" constant="30" id="CMh-tH-aZL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sKi-2m-fim" secondAttribute="bottom" constant="25" id="E2C-bU-nJ2"/>
-                <constraint firstItem="DCu-H1-uMQ" firstAttribute="leading" secondItem="i7P-yc-JM9" secondAttribute="trailing" constant="22" id="Hmo-TV-guC"/>
-                <constraint firstItem="uCK-Dv-LtY" firstAttribute="leading" secondItem="DCu-H1-uMQ" secondAttribute="trailing" constant="13" id="KDX-1g-Mhc"/>
-                <constraint firstItem="sKi-2m-fim" firstAttribute="leading" secondItem="fUk-xa-rF3" secondAttribute="trailing" constant="18" id="MNQ-cX-7bD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DCu-H1-uMQ" secondAttribute="bottom" constant="30" id="VXS-Kk-Zrh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="i7P-yc-JM9" secondAttribute="bottom" constant="22" id="WaW-fq-wsF"/>
-                <constraint firstItem="sKi-2m-fim" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="27" id="d51-fO-eNo"/>
-                <constraint firstItem="i7P-yc-JM9" firstAttribute="leading" secondItem="sKi-2m-fim" secondAttribute="trailing" constant="22" id="fNs-OF-Iy2"/>
-                <constraint firstItem="fUk-xa-rF3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="jl4-ah-S8E"/>
-                <constraint firstItem="Tuv-hh-vSm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="29" id="nbW-H8-Kq3"/>
-                <constraint firstAttribute="trailing" secondItem="Tuv-hh-vSm" secondAttribute="trailing" constant="13" id="q6d-tc-gN6"/>
-                <constraint firstItem="DCu-H1-uMQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="29" id="rQk-z5-frv"/>
-                <constraint firstItem="i7P-yc-JM9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="sgH-SO-wgG"/>
-                <constraint firstItem="uCK-Dv-LtY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="waH-RA-Fnp"/>
-                <constraint firstItem="fUk-xa-rF3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="11" id="x7A-ft-1fg"/>
+                <constraint firstItem="MWA-mg-ikW" firstAttribute="centerY" secondItem="hs2-BO-K6n" secondAttribute="centerY" id="5jU-B1-ai8"/>
+                <constraint firstItem="MWA-mg-ikW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6J6-bO-027"/>
+                <constraint firstItem="MWA-mg-ikW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="G0j-g7-2zg"/>
+                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerX" secondItem="MWA-mg-ikW" secondAttribute="centerX" id="epb-30-NxJ"/>
+                <constraint firstItem="MWA-mg-ikW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="gqB-5E-TPb"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -110,10 +93,10 @@
         </view>
     </objects>
     <resources>
-        <image name="Mini Play Button" width="42" height="43"/>
-        <image name="Oval slider" width="26" height="26"/>
-        <image name="Play Bg" width="414" height="73"/>
-        <image name="next" width="14" height="15"/>
-        <image name="prev" width="13" height="15"/>
+        <image name="Mini Music Player Bg" width="414" height="73"/>
+        <image name="Next Button (Small)" width="19" height="21"/>
+        <image name="Play Button (Small)" width="85" height="85"/>
+        <image name="Previous Button (Small)" width="19" height="21"/>
+        <image name="Slider Dot (Small)" width="26" height="26"/>
     </resources>
 </document>

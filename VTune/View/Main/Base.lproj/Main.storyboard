@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SLW-L0-JNr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SLW-L0-JNr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,6 +27,9 @@
                                             <segment title="First"/>
                                             <segment title="Second"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="switchSegmentedControl:" destination="YIW-J3-JMC" eventType="valueChanged" id="fCb-XL-U2A"/>
+                                        </connections>
                                     </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-Oe-Xjv">
                                         <rect key="frame" x="0.0" y="46" width="414" height="762"/>
@@ -59,9 +62,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" id="Oas-LG-7oc">
-                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A2P-ls-cmK" appends="YES" id="2v7-7P-Mnq"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -69,13 +76,12 @@
                             <constraint firstItem="Lhv-q5-Lsx" firstAttribute="top" secondItem="t3U-vC-aeO" secondAttribute="top" id="J93-hA-XNU"/>
                             <constraint firstItem="Lhv-q5-Lsx" firstAttribute="trailing" secondItem="t3U-vC-aeO" secondAttribute="trailing" id="LcW-oX-yt9"/>
                             <constraint firstItem="Lhv-q5-Lsx" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" id="fV2-Xi-Ru0"/>
-                            <constraint firstItem="Oas-LG-7oc" firstAttribute="bottom" secondItem="Lhv-q5-Lsx" secondAttribute="bottom" id="kl0-Za-US1"/>
                             <constraint firstAttribute="bottom" secondItem="Lhv-q5-Lsx" secondAttribute="bottom" id="l2r-r5-mVv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t3U-vC-aeO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Daftar Lagu" id="3gA-Ee-thf">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Add Lagu" id="7RS-g2-avd">
+                        <barButtonItem key="rightBarButtonItem" image="Right Accessory" id="7RS-g2-avd">
                             <connections>
                                 <action selector="addLaguFromiTunes:" destination="YIW-J3-JMC" id="yW1-jL-kx0"/>
                             </connections>
@@ -83,11 +89,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addLagu" destination="7RS-g2-avd" id="Eb5-2S-MzB"/>
+                        <outlet property="musicPlayerMiniView" destination="Oas-LG-7oc" id="LWs-CA-Pgw"/>
+                        <outlet property="segmentedControl" destination="UYf-Jf-JuA" id="19W-Rb-2wJ"/>
                         <outlet property="tableView" destination="Dkj-Oe-Xjv" id="Vex-fm-qwB"/>
-                        <segue destination="gfp-cf-NV3" kind="show" id="Sja-m2-Uw7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Uu-9E-hEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="A2P-ls-cmK">
+                    <connections>
+                        <segue destination="gfp-cf-NV3" kind="presentation" id="fsz-8o-Hnz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1246.376811594203" y="-529.01785714285711"/>
         </scene>
@@ -121,7 +133,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add Lagu" width="25" height="17"/>
+        <image name="Right Accessory" width="25" height="17"/>
     </resources>
     <color key="tintColor" red="0.29411764705882354" green="0.85882352941176465" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>
