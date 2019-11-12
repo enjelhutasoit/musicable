@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5157B75F23756098005C795E /* MusicPlayerMini.xib */; };
+		5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B761237560D2005C795E /* MusicPlayerMini.swift */; };
+		5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B763237560DA005C795E /* DesignSliderProgress.swift */; };
 		AC054D072374031800E28931 /* PlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC054D062374031800E28931 /* PlayView.xib */; };
 		AC054D092374033100E28931 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC054D082374033100E28931 /* PlayView.swift */; };
 		AC054D0B23740AE300E28931 /* Lirik.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC054D0A23740AE300E28931 /* Lirik.xib */; };
 		AC054D0D23740AF300E28931 /* Lirik.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC054D0C23740AF300E28931 /* Lirik.swift */; };
-		AC9ECE682375535600881D71 /* DurationSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECE672375535600881D71 /* DurationSlider.swift */; };
-		AC9ECE6C2375553300881D71 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECE6B2375553300881D71 /* VolumeSlider.swift */; };
-		5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5157B75F23756098005C795E /* MusicPlayerMini.xib */; };
-		5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B761237560D2005C795E /* MusicPlayerMini.swift */; };
-		5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B763237560DA005C795E /* DesignSliderProgress.swift */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
@@ -25,6 +23,12 @@
 		DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */; };
 		DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC60DADD237036320070F386 /* MusicPlayer.storyboard */; };
 		DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */; };
+		DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC67F451237A9EE2006F6278 /* EqualizerView.xib */; };
+		DC67F455237A9F32006F6278 /* DurationSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F453237A9F31006F6278 /* DurationSlider.swift */; };
+		DC67F456237A9F32006F6278 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F454237A9F32006F6278 /* VolumeSlider.swift */; };
+		DC67F458237A9F42006F6278 /* EqualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F457237A9F42006F6278 /* EqualizerView.swift */; };
+		DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */; };
+		DC67F45C237A9F5B006F6278 /* dummySongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F45A237A9F5B006F6278 /* dummySongList.swift */; };
 		DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */; };
 		DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */; };
 		DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */; };
@@ -34,21 +38,16 @@
 		DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFF6E92373DA93002A45EF /* ViewController.swift */; };
 		EF1C58A5237416B900694932 /* SongListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C58A3237416B900694932 /* SongListTableViewCell.swift */; };
 		EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1C58A4237416B900694932 /* SongListTableViewCell.xib */; };
-		EFA5E2512375413E00EDEC30 /* dummySongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5E2502375413E00EDEC30 /* dummySongList.swift */; };
-		EFA5E253237543C500EDEC30 /* EqualizerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA5E252237543C500EDEC30 /* EqualizerView.xib */; };
-		EFA5E255237543FD00EDEC30 /* EqualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5E254237543FD00EDEC30 /* EqualizerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5157B75F23756098005C795E /* MusicPlayerMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerMini.xib; sourceTree = "<group>"; };
+		5157B761237560D2005C795E /* MusicPlayerMini.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerMini.swift; sourceTree = "<group>"; };
+		5157B763237560DA005C795E /* DesignSliderProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSliderProgress.swift; sourceTree = "<group>"; };
 		AC054D062374031800E28931 /* PlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayView.xib; sourceTree = "<group>"; };
 		AC054D082374033100E28931 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		AC054D0A23740AE300E28931 /* Lirik.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lirik.xib; sourceTree = "<group>"; };
 		AC054D0C23740AF300E28931 /* Lirik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lirik.swift; sourceTree = "<group>"; };
-		AC9ECE672375535600881D71 /* DurationSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSlider.swift; sourceTree = "<group>"; };
-		AC9ECE6B2375553300881D71 /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
-		5157B75F23756098005C795E /* MusicPlayerMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerMini.xib; sourceTree = "<group>"; };
-		5157B761237560D2005C795E /* MusicPlayerMini.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerMini.swift; sourceTree = "<group>"; };
-		5157B763237560DA005C795E /* DesignSliderProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSliderProgress.swift; sourceTree = "<group>"; };
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC501475236C70F300AD39F1 /* VTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +60,12 @@
 		DC501489236C70F500AD39F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC60DADD237036320070F386 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
 		DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		DC67F451237A9EE2006F6278 /* EqualizerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EqualizerView.xib; path = "Music Player/EqualizerView.xib"; sourceTree = "<group>"; };
+		DC67F453237A9F31006F6278 /* DurationSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DurationSlider.swift; path = VTune/Helper/DurationSlider.swift; sourceTree = SOURCE_ROOT; };
+		DC67F454237A9F32006F6278 /* VolumeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeSlider.swift; path = VTune/Helper/VolumeSlider.swift; sourceTree = SOURCE_ROOT; };
+		DC67F457237A9F42006F6278 /* EqualizerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EqualizerView.swift; path = Controller/MusicPlayer/EqualizerView.swift; sourceTree = "<group>"; };
+		DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongFavorit.swift; sourceTree = "<group>"; };
+		DC67F45A237A9F5B006F6278 /* dummySongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongList.swift; sourceTree = "<group>"; };
 		DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerHeader.xib; sourceTree = "<group>"; };
 		DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerHeader.swift; sourceTree = "<group>"; };
 		DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerLyricHeader.xib; sourceTree = "<group>"; };
@@ -70,9 +75,6 @@
 		DCDFF6E92373DA93002A45EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF1C58A3237416B900694932 /* SongListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewCell.swift; sourceTree = "<group>"; };
 		EF1C58A4237416B900694932 /* SongListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongListTableViewCell.xib; sourceTree = "<group>"; };
-		EFA5E2502375413E00EDEC30 /* dummySongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummySongList.swift; sourceTree = SOURCE_ROOT; };
-		EFA5E252237543C500EDEC30 /* EqualizerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EqualizerView.xib; sourceTree = "<group>"; };
-		EFA5E254237543FD00EDEC30 /* EqualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,7 @@
 				DC501490236C716D00AD39F1 /* View */,
 				DC501491236C717B00AD39F1 /* Controller */,
 				DC501478236C70F300AD39F1 /* AppDelegate.swift */,
-				EFA5E254237543FD00EDEC30 /* EqualizerView.swift */,
+				DC67F457237A9F42006F6278 /* EqualizerView.swift */,
 				DC50147A236C70F300AD39F1 /* SceneDelegate.swift */,
 				DC501484236C70F500AD39F1 /* Assets.xcassets */,
 				DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */,
@@ -124,7 +126,8 @@
 		DC50148F236C716400AD39F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EFA5E2502375413E00EDEC30 /* dummySongList.swift */,
+				DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */,
+				DC67F45A237A9F5B006F6278 /* dummySongList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,7 +135,7 @@
 		DC501490236C716D00AD39F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EFA5E252237543C500EDEC30 /* EqualizerView.xib */,
+				DC67F451237A9EE2006F6278 /* EqualizerView.xib */,
 				DCDFF6DC2372F346002A45EF /* Main */,
 				DCDFF6DB2372F33F002A45EF /* Music Player */,
 			);
@@ -162,11 +165,11 @@
 		DCDFF6DA2372F324002A45EF /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				DC67F453237A9F31006F6278 /* DurationSlider.swift */,
+				DC67F454237A9F32006F6278 /* VolumeSlider.swift */,
 				DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */,
 				AC054D082374033100E28931 /* PlayView.swift */,
 				AC054D0C23740AF300E28931 /* Lirik.swift */,
-				AC9ECE672375535600881D71 /* DurationSlider.swift */,
-				AC9ECE6B2375553300881D71 /* VolumeSlider.swift */,
 				DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */,
 				DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */,
 				DCA99FFA23742D5B00312B37 /* MusicPlayerAlbumImage.swift */,
@@ -258,10 +261,10 @@
 				AC054D072374031800E28931 /* PlayView.xib in Resources */,
 				DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
+				DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */,
 				EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */,
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
-				EFA5E253237543C500EDEC30 /* EqualizerView.xib in Resources */,
 				AC054D0B23740AE300E28931 /* Lirik.xib in Resources */,
 				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
 				5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */,
@@ -278,24 +281,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFA5E255237543FD00EDEC30 /* EqualizerView.swift in Sources */,
+				DC67F456237A9F32006F6278 /* VolumeSlider.swift in Sources */,
 				EF1C58A5237416B900694932 /* SongListTableViewCell.swift in Sources */,
-				AC9ECE682375535600881D71 /* DurationSlider.swift in Sources */,
+				DC67F45C237A9F5B006F6278 /* dummySongList.swift in Sources */,
+				DC67F458237A9F42006F6278 /* EqualizerView.swift in Sources */,
 				AC054D092374033100E28931 /* PlayView.swift in Sources */,
-				AC9ECE6C2375553300881D71 /* VolumeSlider.swift in Sources */,
 				DCA99FFB23742D5B00312B37 /* MusicPlayerAlbumImage.swift in Sources */,
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
-				DC50147D236C70F300AD39F1 /* MainViewController.swift in Sources */,
 				AC054D0D23740AF300E28931 /* Lirik.swift in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
 				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
+				DC67F455237A9F32006F6278 /* DurationSlider.swift in Sources */,
 				5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
-				EFA5E2512375413E00EDEC30 /* dummySongList.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
+				DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
