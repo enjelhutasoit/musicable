@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SLW-L0-JNr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SLW-L0-JNr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,58 +10,96 @@
         <!--Main-->
         <scene sceneID="jgI-Je-qvz">
             <objects>
-                <viewController title="Main" id="YIW-J3-JMC" customClass="MainViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="YIW-J3-JMC" customClass="ViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzX-qA-2pN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlE-Ju-nHm" userLabel="Segmented Control View">
-                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Re0-i0-jDP"/>
-                                    <constraint firstAttribute="width" constant="414" id="a4D-IZ-UtS"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLT-0K-LNt" userLabel="Table View">
-                                <rect key="frame" x="0.0" y="156" width="414" height="740"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-q5-Lsx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTY-dZ-lwK">
-                                        <rect key="frame" x="0.0" y="657" width="414" height="83"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UYf-Jf-JuA">
+                                        <rect key="frame" x="36" y="8" width="342" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="83" id="KSo-Gt-LMe"/>
-                                            <constraint firstAttribute="width" constant="414" id="r70-Lg-zmO"/>
+                                            <constraint firstAttribute="height" constant="30" id="sZV-Z4-IJU"/>
                                         </constraints>
-                                    </view>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="switchSegmentedControl:" destination="YIW-J3-JMC" eventType="valueChanged" id="fCb-XL-U2A"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-Oe-Xjv">
+                                        <rect key="frame" x="0.0" y="46" width="414" height="762"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="82z-2z-HW2">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82z-2z-HW2" id="WNA-3k-hQ8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="YIW-J3-JMC" id="JQ0-lQ-2y5"/>
+                                            <outlet property="delegate" destination="YIW-J3-JMC" id="vjf-a4-aGq"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="ZTY-dZ-lwK" firstAttribute="leading" secondItem="zLT-0K-LNt" secondAttribute="leading" id="8sb-Ms-UxO"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZTY-dZ-lwK" secondAttribute="trailing" id="L7o-XM-QUK"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZTY-dZ-lwK" secondAttribute="bottom" id="lRn-li-atU"/>
-                                    <constraint firstAttribute="width" constant="414" id="rM8-8I-7LO"/>
+                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="centerX" secondItem="Dkj-Oe-Xjv" secondAttribute="centerX" id="AfC-Ie-0L0"/>
+                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="leading" secondItem="Lhv-q5-Lsx" secondAttribute="leading" constant="36" id="HLg-pM-4eJ"/>
+                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="centerX" secondItem="Lhv-q5-Lsx" secondAttribute="centerX" id="I43-0r-bud"/>
+                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="top" secondItem="UYf-Jf-JuA" secondAttribute="bottom" constant="8" symbolic="YES" id="Zcm-X6-jzR"/>
+                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="top" secondItem="Lhv-q5-Lsx" secondAttribute="topMargin" id="a8V-YK-CAc"/>
+                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="leading" secondItem="Lhv-q5-Lsx" secondAttribute="leading" id="trK-AV-Rxs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dkj-Oe-Xjv" secondAttribute="bottom" id="wYb-EK-jbj"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="Oas-LG-7oc">
+                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A2P-ls-cmK" appends="YES" id="2v7-7P-Mnq"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="AlE-Ju-nHm" firstAttribute="top" secondItem="t3U-vC-aeO" secondAttribute="top" id="63J-j4-W7i"/>
-                            <constraint firstItem="AlE-Ju-nHm" firstAttribute="trailing" secondItem="t3U-vC-aeO" secondAttribute="trailing" id="F2G-w6-BLP"/>
-                            <constraint firstItem="zLT-0K-LNt" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" id="Nwu-iE-Qnh"/>
-                            <constraint firstAttribute="bottom" secondItem="zLT-0K-LNt" secondAttribute="bottom" id="SK1-gQ-BC7"/>
-                            <constraint firstItem="AlE-Ju-nHm" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" id="tC2-CY-xwy"/>
-                            <constraint firstItem="zLT-0K-LNt" firstAttribute="trailing" secondItem="t3U-vC-aeO" secondAttribute="trailing" id="tnF-Zv-Kcd"/>
-                            <constraint firstItem="zLT-0K-LNt" firstAttribute="top" secondItem="AlE-Ju-nHm" secondAttribute="bottom" constant="8" id="x9O-cB-7Uy"/>
+                            <constraint firstItem="Lhv-q5-Lsx" firstAttribute="top" secondItem="t3U-vC-aeO" secondAttribute="top" id="J93-hA-XNU"/>
+                            <constraint firstItem="Lhv-q5-Lsx" firstAttribute="trailing" secondItem="t3U-vC-aeO" secondAttribute="trailing" id="LcW-oX-yt9"/>
+                            <constraint firstItem="Lhv-q5-Lsx" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" id="fV2-Xi-Ru0"/>
+                            <constraint firstAttribute="bottom" secondItem="Lhv-q5-Lsx" secondAttribute="bottom" id="l2r-r5-mVv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t3U-vC-aeO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fRd-F3-LBO"/>
+                    <navigationItem key="navigationItem" title="Daftar Lagu" id="3gA-Ee-thf">
+                        <barButtonItem key="rightBarButtonItem" image="Right Accessory" id="7RS-g2-avd">
+                            <connections>
+                                <action selector="addLaguFromiTunes:" destination="YIW-J3-JMC" id="yW1-jL-kx0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="gfp-cf-NV3" kind="show" id="Sja-m2-Uw7"/>
+                        <outlet property="addLagu" destination="7RS-g2-avd" id="Eb5-2S-MzB"/>
+                        <outlet property="musicPlayerMiniView" destination="Oas-LG-7oc" id="LWs-CA-Pgw"/>
+                        <outlet property="segmentedControl" destination="UYf-Jf-JuA" id="19W-Rb-2wJ"/>
+                        <outlet property="tableView" destination="Dkj-Oe-Xjv" id="Vex-fm-qwB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Uu-9E-hEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="A2P-ls-cmK">
+                    <connections>
+                        <segue destination="gfp-cf-NV3" kind="presentation" id="fsz-8o-Hnz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1246.376811594203" y="-529.01785714285711"/>
         </scene>
@@ -94,4 +132,8 @@
             <point key="canvasLocation" x="336.23188405797106" y="-529.01785714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Right Accessory" width="25" height="17"/>
+    </resources>
+    <color key="tintColor" red="0.29411764705882354" green="0.85882352941176465" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>

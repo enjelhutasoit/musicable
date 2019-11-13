@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicPlayerHeader" customModule="VTune" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stack swipe Down Button" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-p8-WvN">
+                    <rect key="frame" x="192" y="4" width="30" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="A7J-Of-dFs"/>
+                        <constraint firstAttribute="height" constant="12" id="dko-vl-PHV"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7M-1e-YRx">
+                    <rect key="frame" x="20" y="50" width="374" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6K7-ct-9zK"/>
+                        <constraint firstAttribute="width" constant="374" id="Obx-9X-lIh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-Ur-qYo">
+                    <rect key="frame" x="20" y="73" width="374" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="UcU-PZ-Wqq"/>
+                        <constraint firstAttribute="width" constant="374" id="v6h-SU-HQc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.43137254901960786" green="0.70588235294117641" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.43137254901960786" green="0.70588235294117641" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="I7M-1e-YRx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="29I-B3-7Zp"/>
+                <constraint firstItem="G9V-p8-WvN" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="8Ez-Ar-tTu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BJn-Ur-qYo" secondAttribute="trailing" constant="20" id="JP0-9t-EFe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BJn-Ur-qYo" secondAttribute="bottom" constant="5" id="Mdv-fh-wDK"/>
+                <constraint firstItem="I7M-1e-YRx" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="OOI-J9-nje"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="G9V-p8-WvN" secondAttribute="top" constant="40" id="Tm9-Yz-qtj"/>
+                <constraint firstItem="BJn-Ur-qYo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aby-z6-MIL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I7M-1e-YRx" secondAttribute="trailing" constant="20" id="kNz-GV-22S"/>
+                <constraint firstItem="I7M-1e-YRx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="msE-Rg-4WL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="nowPlayingSinger" destination="BJn-Ur-qYo" id="RX8-NC-iBz"/>
+                <outlet property="nowPlayingSongTitle" destination="I7M-1e-YRx" id="9Ec-NZ-Gzg"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="114.84375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Stack swipe Down Button" width="34" height="11"/>
+    </resources>
+</document>
