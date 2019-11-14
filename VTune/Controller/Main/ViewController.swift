@@ -91,7 +91,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
         mediaPicker.dismiss(animated: true, completion: nil)
         mediaPlayer.play()
         mediaPicker.showsItemsWithProtectedAssets = false
-
+        
+        getData()
     }
 
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
@@ -142,6 +143,13 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
+    }
+    
+    func getData(){
+        if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
+            referenceMusicPlayerMini?.songTitle.text = nowPlaying.title
+            referenceMusicPlayerMini?.photoAlbum.image = nowPlaying.artwork?.image(at: CGSize(width: (referenceMusicPlayerMini?.photoAlbum.frame.width)!, height: (referenceMusicPlayerMini?.photoAlbum.frame.height)!))
+        }
     }
     
     @IBAction func addLaguFromiTunes(_ sender: Any) {
