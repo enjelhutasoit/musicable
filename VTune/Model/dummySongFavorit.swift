@@ -11,9 +11,15 @@ import Foundation
 class DummySongFavorit{
     var songTitle: String?
     var songSinger: String?
+    var songDuration: String?
+    var favIcon:  String?
     
-    init(songTitle: String, songSinger: String) {
+    
+    
+    init(songTitle: String, songSinger: String, songDuration: String, favIcon: String) {
         self.songTitle = songTitle
         self.songSinger = songSinger
+        self.songDuration = songDuration
+        self.favIcon = favIcon
     }
 }

@@ -10,6 +10,9 @@ import UIKit
 
 class MusicPlayerViewController: UIViewController {
 
+    var trackId: Int = 0
+    var library = MusicLibrary().library
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -8,6 +8,11 @@
 
 import UIKit
 import MediaPlayer
+import AVFoundation
+
+protocol FavoriteDelegate {
+    func isFavorite(song: Song?)
+}
 
 class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -18,15 +23,21 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
     
     var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
     var referenceMusicPlayerMini: MusicPlayerMini?
-    var dummyProduct: [DummySongList] = []
-    var dummyFavorit: [DummySongFavorit] = []
+    var dummyProduct: [Song] = []
+    var dummyFavorit: [Song] = []
+    var flag = false
+    var likeCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setView()
+        
         dummyProduct = createArray()
-        dummyFavorit = createArray2()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func setupNavBar(){
@@ -48,36 +59,30 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
         tableView.reloadData()
     }
     
-    func createArray() -> [DummySongList]{
-        var tempSong: [DummySongList] = []
-        
-        let song1 =  DummySongList(songTitle: "Playing With Fire", songSinger: "BLACKPINK")
-        let song2 =  DummySongList(songTitle: "Boombayah", songSinger: "BLACKPINK")
-        let song3 =  DummySongList(songTitle: "Yes or Yes", songSinger: "Twice")
-        let song4 =  DummySongList(songTitle: "Love Shot", songSinger: "EXO")
-        let song5 =  DummySongList(songTitle: "Love, Poem", songSinger: "IU")
-        let song6 =  DummySongList(songTitle: "Bad Boy", songSinger: "Red Velvet")
+    func createArray() -> [Song]{
+        var tempSong: [Song] = []
+        let song1 =  Song(songTitle: "Potong Bebek Angsa", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
         
         tempSong.append(song1)
         tempSong.append(song2)
         tempSong.append(song3)
-        tempSong.append(song4)
-        tempSong.append(song5)
-        tempSong.append(song6)
         
         return tempSong
     }
     
-    func createArray2() -> [DummySongFavorit]{
-        var tempSong: [DummySongFavorit] = []
+    func createArray2() -> [Song]{
+        var tempSong: [Song] = []
         
-        let song1 =  DummySongFavorit(songTitle: "Love Shot", songSinger: "EXO")
-        let song2 =  DummySongFavorit(songTitle: "BYes or Yes", songSinger: "Twice")
-        let song3 =  DummySongFavorit(songTitle: "Bad Boy", songSinger: "Red Velvet")
-     
+        let song1 =  Song(songTitle: "Potong Bebek Angsa", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+        
         tempSong.append(song1)
         tempSong.append(song2)
         tempSong.append(song3)
+        
         
         return tempSong
     }
@@ -85,15 +90,15 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }
-   
+    
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         mediaPlayer.setQueue(with: mediaItemCollection)
         mediaPicker.dismiss(animated: true, completion: nil)
         mediaPlayer.play()
         mediaPicker.showsItemsWithProtectedAssets = false
-
+        
     }
-
+    
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
         mediaPicker.dismiss(animated: true, completion: nil)
     }
@@ -110,7 +115,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
             value =  dummyProduct.count
             break
         case 1:
-            value = dummyFavorit.count
+            for product in dummyProduct {
+                if product.isFavorite {
+                    value+=1
+                }
+            }
             break
         default:
             break
@@ -120,36 +129,55 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        let song = dummyProduct[indexPath.row]
-        //        let favorit = dummyFavorit[indexPath.row]
-                
-                let cell = Bundle.main.loadNibNamed("SongListTableViewCell", owner: self, options: nil)?.first as! SongListTableViewCell
-                
-                switch segmentedControl.selectedSegmentIndex {
-                case 0:
-                    cell.songTitleLabel.text = dummyProduct[indexPath.row].songTitle
-                    cell.singerLabel.text = dummyProduct[indexPath.row].songSinger
-                    break
-                case 1:
-                    cell.songTitleLabel.text = dummyFavorit[indexPath.row].songTitle
-                    cell.singerLabel.text = dummyFavorit[indexPath.row].songSinger
-                    break
-                default:
-                    break
-                }
-                return cell
+        let cell = Bundle.main.loadNibNamed("SongListTableViewCell", owner: self, options: nil)?.first as! SongListTableViewCell
+
+        cell.delegate = self
+        
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            cell.displayData(dummyProduct[indexPath.row])
+            break
+            
+        case 1:
+            if dummyProduct[indexPath.row].isFavorite {
+            cell.displayData(dummyProduct[indexPath.row])
+            }
+            break
+            
+        default:
+            break
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete
+        {
+            dummyProduct.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     @IBAction func addLaguFromiTunes(_ sender: Any) {
         let myMediaPickerVC = MPMediaPickerController(mediaTypes: MPMediaType.music)
         myMediaPickerVC.allowsPickingMultipleItems = true
         myMediaPickerVC.popoverPresentationController?.sourceView = sender as? UIView
-        
         myMediaPickerVC.delegate = self
         self.present(myMediaPickerVC, animated: true, completion: nil)
+    }
+}
+
+extension ViewController: FavoriteDelegate {
+    func isFavorite(song: Song?) {
+        guard let song = song else {return}
+        if let index = dummyProduct.firstIndex(where: {$0.songTitle == song.songTitle}) {
+        let isFav =  dummyProduct[index].isFavorite
+        dummyProduct[index].isFavorite = !isFav
+        tableView.reloadData()
+        }
     }
 }
