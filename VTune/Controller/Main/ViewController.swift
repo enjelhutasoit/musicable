@@ -159,6 +159,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
         {
             dummyProduct.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+
         }
     }
     
