@@ -14,28 +14,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stack swipe Down Button" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-p8-WvN">
-                    <rect key="frame" x="192" y="4" width="30" height="12"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="30" id="A7J-Of-dFs"/>
-                        <constraint firstAttribute="height" constant="12" id="dko-vl-PHV"/>
-                    </constraints>
+                    <rect key="frame" x="192" y="4" width="30" height="11"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7M-1e-YRx">
-                    <rect key="frame" x="20" y="50" width="374" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="6K7-ct-9zK"/>
-                        <constraint firstAttribute="width" constant="374" id="Obx-9X-lIh"/>
-                    </constraints>
+                    <rect key="frame" x="20" y="47" width="374" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-Ur-qYo">
-                    <rect key="frame" x="20" y="73" width="374" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="UcU-PZ-Wqq"/>
-                        <constraint firstAttribute="width" constant="374" id="v6h-SU-HQc"/>
-                    </constraints>
+                    <rect key="frame" x="20" y="77" width="374" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -44,15 +32,15 @@
             <color key="backgroundColor" red="0.43137254901960786" green="0.70588235294117641" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="0.43137254901960786" green="0.70588235294117641" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="I7M-1e-YRx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="29I-B3-7Zp"/>
-                <constraint firstItem="G9V-p8-WvN" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="8Ez-Ar-tTu"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BJn-Ur-qYo" secondAttribute="trailing" constant="20" id="JP0-9t-EFe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BJn-Ur-qYo" secondAttribute="bottom" constant="5" id="Mdv-fh-wDK"/>
-                <constraint firstItem="I7M-1e-YRx" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="OOI-J9-nje"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="G9V-p8-WvN" secondAttribute="top" constant="40" id="Tm9-Yz-qtj"/>
-                <constraint firstItem="BJn-Ur-qYo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aby-z6-MIL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I7M-1e-YRx" secondAttribute="trailing" constant="20" id="kNz-GV-22S"/>
-                <constraint firstItem="I7M-1e-YRx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="msE-Rg-4WL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BJn-Ur-qYo" secondAttribute="trailing" constant="20" id="CL8-TG-TZm"/>
+                <constraint firstItem="G9V-p8-WvN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="DBQ-xP-Wn8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I7M-1e-YRx" secondAttribute="trailing" constant="20" id="Fxb-FR-6bO"/>
+                <constraint firstItem="BJn-Ur-qYo" firstAttribute="top" secondItem="I7M-1e-YRx" secondAttribute="bottom" constant="6" id="dcz-5E-OE1"/>
+                <constraint firstAttribute="trailing" secondItem="G9V-p8-WvN" secondAttribute="trailing" constant="192" id="eo9-dd-hlq"/>
+                <constraint firstItem="G9V-p8-WvN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="192" id="gXr-sv-P2g"/>
+                <constraint firstItem="BJn-Ur-qYo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="k1X-rR-Lhd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BJn-Ur-qYo" secondAttribute="bottom" constant="5" id="k9g-cI-wYi"/>
+                <constraint firstItem="I7M-1e-YRx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="nuu-G4-1mU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Music Player Bg" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-BO-K6n">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                    <rect key="frame" x="0.0" y="-4.5" width="414" height="82"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-mg-ikW">
                     <rect key="frame" x="20" y="8.5" width="374" height="56"/>
@@ -26,19 +26,11 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-2m-fim">
-                            <rect key="frame" x="65" y="18" width="75.5" height="20"/>
+                            <rect key="frame" x="65" y="18" width="189" height="20"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16.5"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="i7P-yc-JM9" customClass="DesignSliderProgress" customModule="VTune" customModuleProvider="target">
-                            <rect key="frame" x="150.5" y="15.5" width="105.5" height="26"/>
-                            <color key="minimumTrackTintColor" red="0.43765246870000002" green="0.70033854250000005" blue="0.99219101669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <color key="maximumTrackTintColor" red="0.92157477139999999" green="0.92155748609999999" blue="0.92156922819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Small)"/>
-                            </userDefinedRuntimeAttributes>
-                        </slider>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-H1-uMQ">
                             <rect key="frame" x="266" y="21" width="14" height="14"/>
                             <constraints>
@@ -46,6 +38,9 @@
                                 <constraint firstAttribute="width" constant="14" id="Exe-MV-dE4"/>
                             </constraints>
                             <state key="normal" image="Previous Button (Small)"/>
+                            <connections>
+                                <action selector="prevButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ue1-5X-Q1d"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCK-Dv-LtY">
                             <rect key="frame" x="292" y="0.0" width="56" height="56"/>
@@ -54,6 +49,9 @@
                                 <constraint firstAttribute="width" constant="56" id="xKY-my-LTq"/>
                             </constraints>
                             <state key="normal" image="Play Button (Small)"/>
+                            <connections>
+                                <action selector="playButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="91H-0U-KQX"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-hh-vSm">
                             <rect key="frame" x="360" y="21" width="14" height="14"/>
@@ -62,6 +60,9 @@
                                 <constraint firstAttribute="width" constant="14" id="qSj-Ua-PZ0"/>
                             </constraints>
                             <state key="normal" image="Next Button (Small)"/>
+                            <connections>
+                                <action selector="nextButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="QQr-W3-1wA"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -73,8 +74,8 @@
             <constraints>
                 <constraint firstItem="MWA-mg-ikW" firstAttribute="centerY" secondItem="hs2-BO-K6n" secondAttribute="centerY" id="5jU-B1-ai8"/>
                 <constraint firstItem="MWA-mg-ikW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6J6-bO-027"/>
-                <constraint firstItem="MWA-mg-ikW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="G0j-g7-2zg"/>
-                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerX" secondItem="MWA-mg-ikW" secondAttribute="centerX" id="epb-30-NxJ"/>
+                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Pil-WI-ywh"/>
+                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerX" secondItem="MWA-mg-ikW" secondAttribute="centerX" id="bCy-Hc-D8Z"/>
                 <constraint firstItem="MWA-mg-ikW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="gqB-5E-TPb"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
@@ -86,17 +87,15 @@
                 <outlet property="photoAlbum" destination="fUk-xa-rF3" id="4ld-UY-1dH"/>
                 <outlet property="playButtonOutlet" destination="uCK-Dv-LtY" id="boi-ja-lAo"/>
                 <outlet property="previewButtonOutlet" destination="DCu-H1-uMQ" id="w9J-vS-5XL"/>
-                <outlet property="sliderProgress" destination="i7P-yc-JM9" id="gy0-un-3zC"/>
                 <outlet property="songTitle" destination="sKi-2m-fim" id="Ghs-jX-CqC"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="168.41517857142856"/>
         </view>
     </objects>
     <resources>
-        <image name="Mini Music Player Bg" width="414" height="73"/>
+        <image name="Mini Music Player Bg" width="414" height="82"/>
         <image name="Next Button (Small)" width="19" height="21"/>
         <image name="Play Button (Small)" width="85" height="85"/>
         <image name="Previous Button (Small)" width="19" height="21"/>
-        <image name="Slider Dot (Small)" width="26" height="26"/>
     </resources>
 </document>
