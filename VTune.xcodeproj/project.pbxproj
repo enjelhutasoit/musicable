@@ -15,6 +15,7 @@
 		AC054D0B23740AE300E28931 /* Lirik.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC054D0A23740AE300E28931 /* Lirik.xib */; };
 		AC054D0D23740AF300E28931 /* Lirik.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC054D0C23740AF300E28931 /* Lirik.swift */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
+		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
 		DC501480236C70F300AD39F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC50147E236C70F300AD39F1 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		AC054D0C23740AF300E28931 /* Lirik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lirik.swift; sourceTree = "<group>"; };
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
+		DC0EE70323819D0900638360 /* RunningText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningText.swift; sourceTree = "<group>"; };
 		DC501475236C70F300AD39F1 /* VTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC501478236C70F300AD39F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC50147A236C70F300AD39F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */,
 				DC501489236C70F500AD39F1 /* Info.plist */,
 				DC501481236C70F300AD39F1 /* VTune.xcdatamodeld */,
+				DC0EE70323819D0900638360 /* RunningText.swift */,
 			);
 			path = VTune;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
+				DC0EE70423819D0900638360 /* RunningText.swift in Sources */,
 				DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

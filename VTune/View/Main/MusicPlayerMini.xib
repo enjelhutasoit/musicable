@@ -39,7 +39,7 @@
                             </constraints>
                             <state key="normal" image="Previous Button (Small)"/>
                             <connections>
-                                <action selector="prevButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ue1-5X-Q1d"/>
+                                <action selector="prevButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="w4h-v4-4he"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCK-Dv-LtY">
@@ -50,7 +50,7 @@
                             </constraints>
                             <state key="normal" image="Play Button (Small)"/>
                             <connections>
-                                <action selector="playButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="91H-0U-KQX"/>
+                                <action selector="playButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="A3e-Fq-r5E"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-hh-vSm">
@@ -61,7 +61,7 @@
                             </constraints>
                             <state key="normal" image="Next Button (Small)"/>
                             <connections>
-                                <action selector="nextButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="QQr-W3-1wA"/>
+                                <action selector="nextButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Cc1-dV-Pmz"/>
                             </connections>
                         </button>
                     </subviews>

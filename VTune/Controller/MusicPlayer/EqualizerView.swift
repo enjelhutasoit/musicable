@@ -8,13 +8,8 @@
 
 import UIKit
 
-class EqualizerViewViewController: UIViewController {
+class EqualizerView: UIView{
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
 
     /*

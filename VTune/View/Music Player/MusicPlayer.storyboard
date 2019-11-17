@@ -40,10 +40,10 @@
                         <viewLayoutGuide key="safeArea" id="rGI-k6-dtd"/>
                     </view>
                     <connections>
-                        <outlet property="albumImageView" destination="fra-Rx-i9V" id="TNG-mu-mkt"/>
-                        <outlet property="equalizerView" destination="ehv-Nh-jEh" id="EQ0-2K-yv3"/>
-                        <outlet property="headerView" destination="kKn-Nv-qum" id="Uz3-Ah-RRx"/>
-                        <outlet property="playView" destination="Z1s-rg-rQl" id="Rku-CJ-aOH"/>
+                        <outlet property="albumImageView" destination="fra-Rx-i9V" id="rsR-dp-1z6"/>
+                        <outlet property="equalizerView" destination="ehv-Nh-jEh" id="a8a-zk-1Ux"/>
+                        <outlet property="headerView" destination="kKn-Nv-qum" id="Slp-Tx-Juu"/>
+                        <outlet property="playView" destination="Z1s-rg-rQl" id="aQl-p6-dgj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWC-Ey-GCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
