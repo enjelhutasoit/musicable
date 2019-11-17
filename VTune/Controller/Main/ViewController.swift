@@ -27,12 +27,17 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
     var dummyFavorit: [Song] = []
     var flag = false
     var likeCounter = 0
+    var nowPlayingSongTitle: String = ""
+    var nowPlayingSongSinger: String = ""
+    var nowPlayingAlbumImage: UIImage?
+    var nowPlayingTotalDuration: Int = 0
+    var nowPlayingCurrentTime: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setView()
-        
+//        runningText()
         dummyProduct = createArray()
     }
     
@@ -87,6 +92,27 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
         return tempSong
     }
     
+    func runningText(){
+        referenceMusicPlayerMini?.songTitle.tag = 601
+        referenceMusicPlayerMini?.songTitle.type = .continuous
+        referenceMusicPlayerMini?.songTitle.speed = .duration(15.0)
+        referenceMusicPlayerMini?.songTitle.fadeLength = 10.0
+        referenceMusicPlayerMini?.songTitle.trailingBuffer = 30.0
+    }
+    
+    func getData(){
+        if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
+            nowPlayingSongTitle = nowPlaying.title!
+            nowPlayingSongSinger = nowPlaying.albumArtist!
+            nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
+            nowPlayingAlbumImage = nowPlaying.artwork?.image(at: CGSize(width: (referenceMusicPlayerMini?.photoAlbum.frame.width)!, height: (referenceMusicPlayerMini?.photoAlbum.frame.height)!))
+            referenceMusicPlayerMini?.songTitle.text = nowPlayingSongTitle
+            referenceMusicPlayerMini?.photoAlbum.image = nowPlayingAlbumImage
+                
+            print("Fungsi getData() Berhasil")
+        }
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }
@@ -96,7 +122,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
         mediaPicker.dismiss(animated: true, completion: nil)
         mediaPlayer.play()
         mediaPicker.showsItemsWithProtectedAssets = false
-        
+        referenceMusicPlayerMini?.playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
+        getData()
     }
     
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
@@ -106,6 +133,21 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
     @IBAction func switchSegmentedControl(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
         self.tableView.reloadData()
+    }
+    
+    @IBAction func goToMusicPlayer(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "goToNextVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! MusicPlayerViewController
+        vc.songTitle = nowPlayingSongTitle
+        vc.songSinger = nowPlayingSongSinger
+        vc.albumImage = nowPlayingAlbumImage
+        vc.totalDuration = nowPlayingTotalDuration
+//        if mediaPlayer.playbackState == .playing{
+//            vc.referencePlayView!.btnPlay.setImage(#imageLiteral(resourceName: "Mini Pause Button-1"), for: .normal)
+//        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -182,3 +224,4 @@ extension ViewController: FavoriteDelegate {
         }
     }
 }
+
