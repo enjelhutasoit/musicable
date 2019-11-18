@@ -24,23 +24,61 @@ class PlayView: UIView {
     @IBOutlet weak var btnLirikOutlet: UIButton!
     
     var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
-    
+
     @IBAction func btnPlay(_ sender: Any) {
-        if mediaPlayer.playbackState == .playing{
+//        if mediaPlayer.playbackState == .playing{
+//            btnPlay.setImage(#imageLiteral(resourceName: "Play Button (Big)"), for: .normal)
+//            mediaPlayer.pause()
+//        }else{
+//            btnPlay.setImage(#imageLiteral(resourceName: "Mini Pause Button-1"), for: .normal)
+//            mediaPlayer.play()
+//        }
+        if audioPlayer.isPlaying == true{
             btnPlay.setImage(#imageLiteral(resourceName: "Play Button (Big)"), for: .normal)
-            mediaPlayer.pause()
+            audioPlayer.pause()
         }else{
             btnPlay.setImage(#imageLiteral(resourceName: "Mini Pause Button-1"), for: .normal)
-            mediaPlayer.play()
+            audioPlayer.play()
         }
     }
 
     @IBAction func btnNext(_ sender: Any) {
-        mediaPlayer.skipToNextItem()
+//        mediaPlayer.skipToNextItem()
+        thisSong += 1
+        
+        if thisSong >= dummyProduct.count {
+            thisSong = 0
+        }
+        
+        do {
+            let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
+            try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            audioPlayer.play()
+            nowPlayingSongTitle = dummyProduct[thisSong].songTitle
+            nowPlayingSongSinger = dummyProduct[thisSong].songSinger
+            UserDefaults.standard.set("true", forKey: "isPlaying")
+        } catch {
+            print("Can't set the next song")
+        }
     }
 
     @IBAction func btnPrevious(_ sender: Any) {
-        mediaPlayer.skipToPreviousItem()
+//        mediaPlayer.skipToPreviousItem()
+        thisSong -= 1
+        
+        if thisSong < 0 {
+            thisSong = dummyProduct.count - 1
+        }
+        
+        do {
+            let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
+            try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            audioPlayer.play()
+            nowPlayingSongTitle = dummyProduct[thisSong].songTitle
+            nowPlayingSongSinger = dummyProduct[thisSong].songSinger
+        } catch {
+            print("Can't set the next song")
+        }
     }
     
     

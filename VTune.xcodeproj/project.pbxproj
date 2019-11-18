@@ -36,6 +36,14 @@
 		DC67F458237A9F42006F6278 /* EqualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F457237A9F42006F6278 /* EqualizerView.swift */; };
 		DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */; };
 		DC67F45C237A9F5B006F6278 /* dummySongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F45A237A9F5B006F6278 /* dummySongList.swift */; };
+		DC74968D2382E68F004B7F42 /* Scarlet Fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496862382E68D004B7F42 /* Scarlet Fire.mp3 */; };
+		DC74968E2382E68F004B7F42 /* In Case You Forgot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496872382E68D004B7F42 /* In Case You Forgot.mp3 */; };
+		DC74968F2382E68F004B7F42 /* Fingers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496882382E68D004B7F42 /* Fingers.mp3 */; };
+		DC7496902382E68F004B7F42 /* Otis McMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496892382E68E004B7F42 /* Otis McMusic.mp3 */; };
+		DC7496912382E68F004B7F42 /* Find My Way Home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC74968A2382E68E004B7F42 /* Find My Way Home.mp3 */; };
+		DC7496922382E68F004B7F42 /* A Girl in Oakland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC74968B2382E68F004B7F42 /* A Girl in Oakland.mp3 */; };
+		DC7496932382E68F004B7F42 /* Mighty Fine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC74968C2382E68F004B7F42 /* Mighty Fine.mp3 */; };
+		DC74969E23832279004B7F42 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74969D23832279004B7F42 /* Manager.swift */; };
 		DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */; };
 		DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */; };
 		DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */; };
@@ -80,6 +88,14 @@
 		DC67F457237A9F42006F6278 /* EqualizerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EqualizerView.swift; path = Controller/MusicPlayer/EqualizerView.swift; sourceTree = "<group>"; };
 		DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongFavorit.swift; sourceTree = "<group>"; };
 		DC67F45A237A9F5B006F6278 /* dummySongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongList.swift; sourceTree = "<group>"; };
+		DC7496862382E68D004B7F42 /* Scarlet Fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scarlet Fire.mp3"; sourceTree = "<group>"; };
+		DC7496872382E68D004B7F42 /* In Case You Forgot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "In Case You Forgot.mp3"; sourceTree = "<group>"; };
+		DC7496882382E68D004B7F42 /* Fingers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fingers.mp3; sourceTree = "<group>"; };
+		DC7496892382E68E004B7F42 /* Otis McMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Otis McMusic.mp3"; sourceTree = "<group>"; };
+		DC74968A2382E68E004B7F42 /* Find My Way Home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Find My Way Home.mp3"; sourceTree = "<group>"; };
+		DC74968B2382E68F004B7F42 /* A Girl in Oakland.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A Girl in Oakland.mp3"; sourceTree = "<group>"; };
+		DC74968C2382E68F004B7F42 /* Mighty Fine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mighty Fine.mp3"; sourceTree = "<group>"; };
+		DC74969D23832279004B7F42 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerHeader.xib; sourceTree = "<group>"; };
 		DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerHeader.swift; sourceTree = "<group>"; };
 		DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerLyricHeader.xib; sourceTree = "<group>"; };
@@ -143,12 +159,14 @@
 		DC501477236C70F300AD39F1 /* VTune */ = {
 			isa = PBXGroup;
 			children = (
+				DC7496852382E681004B7F42 /* Songs */,
 				DC50148F236C716400AD39F1 /* Model */,
 				DC501490236C716D00AD39F1 /* View */,
 				DC501491236C717B00AD39F1 /* Controller */,
 				DC501478236C70F300AD39F1 /* AppDelegate.swift */,
 				DC67F457237A9F42006F6278 /* EqualizerView.swift */,
 				DC50147A236C70F300AD39F1 /* SceneDelegate.swift */,
+				DC74969D23832279004B7F42 /* Manager.swift */,
 				DC501484236C70F500AD39F1 /* Assets.xcassets */,
 				DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */,
 				DC501489236C70F500AD39F1 /* Info.plist */,
@@ -186,6 +204,20 @@
 				DCDFF6DA2372F324002A45EF /* MusicPlayer */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DC7496852382E681004B7F42 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				DC74968B2382E68F004B7F42 /* A Girl in Oakland.mp3 */,
+				DC74968A2382E68E004B7F42 /* Find My Way Home.mp3 */,
+				DC7496882382E68D004B7F42 /* Fingers.mp3 */,
+				DC7496872382E68D004B7F42 /* In Case You Forgot.mp3 */,
+				DC74968C2382E68F004B7F42 /* Mighty Fine.mp3 */,
+				DC7496892382E68E004B7F42 /* Otis McMusic.mp3 */,
+				DC7496862382E68D004B7F42 /* Scarlet Fire.mp3 */,
+			);
+			path = Songs;
 			sourceTree = "<group>";
 		};
 		DCDFF6D92372F31E002A45EF /* Main */ = {
@@ -297,17 +329,24 @@
 			files = (
 				AC054D072374031800E28931 /* PlayView.xib in Resources */,
 				DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */,
+				DC74968D2382E68F004B7F42 /* Scarlet Fire.mp3 in Resources */,
+				DC74968E2382E68F004B7F42 /* In Case You Forgot.mp3 in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
+				DC74968F2382E68F004B7F42 /* Fingers.mp3 in Resources */,
+				DC7496902382E68F004B7F42 /* Otis McMusic.mp3 in Resources */,
 				DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */,
 				EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */,
 				AC9F801623827A8F00752432 /* Slide.xib in Resources */,
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
+				DC7496912382E68F004B7F42 /* Find My Way Home.mp3 in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
 				AC054D0B23740AE300E28931 /* Lirik.xib in Resources */,
 				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
+				DC7496932382E68F004B7F42 /* Mighty Fine.mp3 in Resources */,
 				5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
 				AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */,
+				DC7496922382E68F004B7F42 /* A Girl in Oakland.mp3 in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
 			);
@@ -339,6 +378,7 @@
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
+				DC74969E23832279004B7F42 /* Manager.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
 				AC9F800C238277FB00752432 /* Slide.swift in Sources */,
 				DC0EE70423819D0900638360 /* RunningText.swift in Sources */,

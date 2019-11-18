@@ -21,6 +21,7 @@ class MusicPlayerViewController: UIViewController {
     var referenceAlbumImageView: MusicPlayerAlbumImage?
     var referenceEqualizerView: EqualizerView?
     var referencePlayView: PlayView?
+    
     var songTitle: String = ""
     var songSinger: String = ""
     var albumImage: UIImage?
@@ -61,9 +62,23 @@ class MusicPlayerViewController: UIViewController {
     }
     
     func getData(){
-        referenceHeaderView?.nowPlayingSongTitle.text = songTitle
-        referenceHeaderView?.nowPlayingSinger.text = songSinger
-        referenceAlbumImageView?.nowPlayingAlbumImage.image = albumImage
+        if UserDefaults.standard.string(forKey: "isPlaying") == "true"{
+            songTitle = nowPlayingSongTitle
+            songSinger = nowPlayingSongSinger
+            referenceHeaderView?.nowPlayingSongTitle.text = songTitle
+            referenceHeaderView?.nowPlayingSinger.text = songSinger
+            referenceAlbumImageView?.nowPlayingAlbumImage.image = albumImage
+            referencePlayView?.btnPrevious.isEnabled = true
+            referencePlayView?.btnNext.isEnabled = true
+            referencePlayView?.btnPlay.setImage(#imageLiteral(resourceName: "Pause Button (Big)"), for: .normal)
+        }else{
+            songTitle = "Not Playing"
+            referenceHeaderView?.nowPlayingSongTitle.text = songTitle
+            referenceHeaderView?.nowPlayingSinger.text = ""
+            referencePlayView?.btnPrevious.isEnabled = false
+            referencePlayView?.btnNext.isEnabled = false
+        }
+        
     }
     
     func updateTotalDuration(){
