@@ -14,6 +14,12 @@
 		AC054D092374033100E28931 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC054D082374033100E28931 /* PlayView.swift */; };
 		AC054D0B23740AE300E28931 /* Lirik.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC054D0A23740AE300E28931 /* Lirik.xib */; };
 		AC054D0D23740AF300E28931 /* Lirik.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC054D0C23740AF300E28931 /* Lirik.swift */; };
+		AC9F800A238277D100752432 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F8009238277D100752432 /* OnboardingViewController.swift */; };
+		AC9F800C238277FB00752432 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F800B238277FB00752432 /* Slide.swift */; };
+		AC9F800E2382782A00752432 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F800D2382782A00752432 /* GetStarted.swift */; };
+		AC9F80102382787400752432 /* PageControlOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F800F2382787400752432 /* PageControlOnboarding.swift */; };
+		AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9F80132382798E00752432 /* Onboarding.storyboard */; };
+		AC9F801623827A8F00752432 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9F801523827A8F00752432 /* Slide.xib */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
@@ -49,6 +55,12 @@
 		AC054D082374033100E28931 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		AC054D0A23740AE300E28931 /* Lirik.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lirik.xib; sourceTree = "<group>"; };
 		AC054D0C23740AF300E28931 /* Lirik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lirik.swift; sourceTree = "<group>"; };
+		AC9F8009238277D100752432 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		AC9F800B238277FB00752432 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		AC9F800D2382782A00752432 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
+		AC9F800F2382787400752432 /* PageControlOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlOnboarding.swift; sourceTree = "<group>"; };
+		AC9F80132382798E00752432 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		AC9F801523827A8F00752432 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC0EE70323819D0900638360 /* RunningText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningText.swift; sourceTree = "<group>"; };
@@ -90,6 +102,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC9F80082382776600752432 /*  Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AC9F8009238277D100752432 /* OnboardingViewController.swift */,
+				AC9F800B238277FB00752432 /* Slide.swift */,
+				AC9F800D2382782A00752432 /* GetStarted.swift */,
+				AC9F800F2382787400752432 /* PageControlOnboarding.swift */,
+			);
+			path = " Onboarding";
+			sourceTree = "<group>";
+		};
+		AC9F8012238278D000752432 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				AC9F80132382798E00752432 /* Onboarding.storyboard */,
+				AC9F801523827A8F00752432 /* Slide.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		DC50146C236C70F300AD39F1 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +170,7 @@
 		DC501490236C716D00AD39F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC9F8012238278D000752432 /* New Group */,
 				DC67F451237A9EE2006F6278 /* EqualizerView.xib */,
 				DCDFF6DC2372F346002A45EF /* Main */,
 				DCDFF6DB2372F33F002A45EF /* Music Player */,
@@ -148,6 +181,7 @@
 		DC501491236C717B00AD39F1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AC9F80082382776600752432 /*  Onboarding */,
 				DCDFF6D92372F31E002A45EF /* Main */,
 				DCDFF6DA2372F324002A45EF /* MusicPlayer */,
 			);
@@ -266,12 +300,14 @@
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */,
 				EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */,
+				AC9F801623827A8F00752432 /* Slide.xib in Resources */,
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
 				AC054D0B23740AE300E28931 /* Lirik.xib in Resources */,
 				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
 				5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
+				AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
 			);
@@ -291,16 +327,20 @@
 				AC054D092374033100E28931 /* PlayView.swift in Sources */,
 				DCA99FFB23742D5B00312B37 /* MusicPlayerAlbumImage.swift in Sources */,
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
+				AC9F80102382787400752432 /* PageControlOnboarding.swift in Sources */,
+				AC9F800A238277D100752432 /* OnboardingViewController.swift in Sources */,
 				AC054D0D23740AF300E28931 /* Lirik.swift in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
 				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
 				DC67F455237A9F32006F6278 /* DurationSlider.swift in Sources */,
 				5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
+				AC9F800E2382782A00752432 /* GetStarted.swift in Sources */,
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
+				AC9F800C238277FB00752432 /* Slide.swift in Sources */,
 				DC0EE70423819D0900638360 /* RunningText.swift in Sources */,
 				DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */,
 			);

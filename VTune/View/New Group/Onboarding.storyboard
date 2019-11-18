@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iWU-W0-Fzb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="cU9-uC-hCg">
+            <objects>
+                <viewController storyboardIdentifier="Onboarding" id="iWU-W0-Fzb" customClass="OnboardingViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5U9-Hl-sdL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-lW-cyv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sSw-D0-kND"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="P0O-LD-GAf"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-EM-KOQ">
+                                <rect key="frame" x="20" y="840" width="62" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="cds-hi-VfJ"/>
+                                    <constraint firstAttribute="height" constant="22" id="yGP-sU-1Hx"/>
+                                </constraints>
+                                <state key="normal" image="Lewati"/>
+                                <connections>
+                                    <action selector="nextButtonDidTapped:" destination="iWU-W0-Fzb" eventType="touchUpInside" id="L7M-7H-kW7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-vi-GJB" customClass="GetStarted" customModule="VTune" customModuleProvider="target">
+                                <rect key="frame" x="340" y="840" width="54" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="ClM-ik-1wy"/>
+                                    <constraint firstAttribute="height" constant="22" id="qBT-x5-44g"/>
+                                </constraints>
+                                <state key="normal" image="Mulai"/>
+                                <connections>
+                                    <action selector="nextButtonDidTapped:" destination="iWU-W0-Fzb" eventType="touchUpInside" id="HtO-lz-P0R"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CR4-4r-F53" customClass="PageControlOnboarding" customModule="VTune" customModuleProvider="target">
+                                <rect key="frame" x="195" y="825" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="bnr-qD-A2n"/>
+                                    <constraint firstAttribute="height" constant="37" id="y4Z-a5-Euv"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LZh-vi-GJB" firstAttribute="bottom" secondItem="10k-U0-HCj" secondAttribute="bottom" id="3VT-bw-9nq"/>
+                            <constraint firstItem="LZh-vi-GJB" firstAttribute="trailing" secondItem="5U9-Hl-sdL" secondAttribute="trailingMargin" id="VPB-Va-oal"/>
+                            <constraint firstItem="CR4-4r-F53" firstAttribute="leading" secondItem="5U9-Hl-sdL" secondAttribute="leading" constant="195" id="bM4-BD-XHC"/>
+                            <constraint firstItem="bn5-EM-KOQ" firstAttribute="leading" secondItem="5U9-Hl-sdL" secondAttribute="leadingMargin" id="cbs-un-9Q6"/>
+                            <constraint firstItem="bn5-EM-KOQ" firstAttribute="bottom" secondItem="10k-U0-HCj" secondAttribute="bottom" id="fD6-HV-iVM"/>
+                            <constraint firstItem="CR4-4r-F53" firstAttribute="bottom" secondItem="10k-U0-HCj" secondAttribute="bottom" id="o4i-ph-nyj"/>
+                            <constraint firstItem="CR4-4r-F53" firstAttribute="top" secondItem="10k-U0-HCj" secondAttribute="top" constant="781" id="yQe-na-TQN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="10k-U0-HCj"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="CR4-4r-F53" id="7np-2J-KKa"/>
+                        <outlet property="scrollView" destination="IFN-lW-cyv" id="fFf-j7-uU8"/>
+                        <outlet property="skipBtn" destination="bn5-EM-KOQ" id="jjI-xm-kq3"/>
+                        <outlet property="startBtn" destination="LZh-vi-GJB" id="Ord-ZD-ZBK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6J-Ur-5Al" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.753623188405811" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Lewati" width="62" height="19"/>
+        <image name="Mulai" width="54" height="20"/>
+    </resources>
+</document>

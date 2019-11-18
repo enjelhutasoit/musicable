@@ -32,25 +32,40 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
     var nowPlayingAlbumImage: UIImage?
     var nowPlayingTotalDuration: Int = 0
     var nowPlayingCurrentTime: Int = 0
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredSong: [Song] = []
+    var isSearchBarEmpty: Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+    var isFiltering: Bool {
+      return searchController.isActive && !isSearchBarEmpty
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar()
         setView()
-//        runningText()
+        runningText()
         dummyProduct = createArray()
+        
+
+        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Cari Lagu"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    func setupNavBar(){
-        let searchController = UISearchController(searchResultsController: nil)
-        navigationItem.searchController = searchController
-        searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Cari Lagu"
-        navigationItem.hidesSearchBarWhenScrolling = false
+    func filterContentForSearchText(_ searchText: String) {
+      filteredSong = dummyProduct.filter { (song: Song) -> Bool in
+      return song.songTitle.lowercased().contains(searchText.lowercased())
+      }
+      
+      tableView.reloadData()
     }
     
     func setView(){
@@ -150,45 +165,68 @@ class ViewController: UIViewController, UISearchBarDelegate, MPMediaPickerContro
 //        }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var value = 0
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            value =  dummyProduct.count
-            break
-        case 1:
-            for product in dummyProduct {
-                if product.isFavorite {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+           var value = 0
+           switch segmentedControl.selectedSegmentIndex {
+           case 0:
+               if isFiltering {
+                 value = filteredSong.count
+               } else {
+                 value = dummyProduct.count
+               }
+               break
+           case 1:
+               for product in dummyProduct
+               {
+                   if product.isFavorite
+                   {
                     value+=1
-                }
-            }
-            break
-        default:
-            break
-        }
-        
-        return value
-    }
+                   }
+                
+                  if isFiltering {
+                    value = filteredSong.count
+                  }
+               }
+               break
+           default:
+               break
+           }
+
+           return value
+       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = Bundle.main.loadNibNamed("SongListTableViewCell", owner: self, options: nil)?.first as! SongListTableViewCell
-
+       
+//        let song: Song
+        
         cell.delegate = self
+       
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            cell.displayData(dummyProduct[indexPath.row])
+            if isFiltering {
+                    cell.displayData(filteredSong[indexPath.row])
+                   } else {
+                    cell.displayData(dummyProduct[indexPath.row])
+                   }
             break
-            
+
         case 1:
-            if dummyProduct[indexPath.row].isFavorite {
-            cell.displayData(dummyProduct[indexPath.row])
+            if dummyProduct[indexPath.row].isFavorite && isFiltering
+            {
+               cell.displayData(filteredSong[indexPath.row])
+            } else {
+               cell.displayData(dummyProduct[indexPath.row])
             }
-            break
             
+            break
+
         default:
             break
         }
+      
         return cell
     }
     
@@ -225,3 +263,9 @@ extension ViewController: FavoriteDelegate {
     }
 }
 
+extension ViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+  let searchBar = searchController.searchBar
+    filterContentForSearchText(searchBar.text!)
+  }
+}
