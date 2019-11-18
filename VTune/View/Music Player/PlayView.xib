@@ -155,6 +155,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="btnLirikOutlet" destination="gx8-38-nKp" id="JYG-RJ-12i"/>
+                <outlet property="btnNext" destination="oZ6-nD-XOD" id="fDv-V1-JsU"/>
                 <outlet property="btnPlay" destination="bSY-hU-O2p" id="C3M-dX-PQy"/>
                 <outlet property="btnPrevious" destination="xpv-hQ-BIG" id="zFR-h5-gTj"/>
                 <outlet property="btnRepeat" destination="jo4-TV-mzV" id="Bvv-ee-zXP"/>
