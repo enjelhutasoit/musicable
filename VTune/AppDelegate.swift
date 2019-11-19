@@ -8,21 +8,26 @@
 
 import UIKit
 import CoreData
+import CoreHaptics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    // Property for check if the device supports haptics.
+    var supportsHaptics: Bool = false
+    
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         UITabBar.appearance().backgroundImage = UIImage(named: "tab bar bg")
         UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 0.1537629068, green: 0.148864001, blue: 0.1489192247, alpha: 1)
+        UITabBar.appearance().unselectedItemTintColor =  colorLiteral(red: 0.1537629068, green: 0.148864001, blue: 0.1489192247, alpha: 1)
+
+        // Check if the device supports haptics.
+        let hapticCapability = CHHapticEngine.capabilitiesForHardware()
+        supportsHaptics = hapticCapability.supportsHaptics
         
-        
-        
-        
+        // Override point for customization after application launch.
         return true
     }
 

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E08CD6E238455C200745BFF /* Menunggu Kamu (OST Jelita Sejuba).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD69238455C000745BFF /* Menunggu Kamu (OST Jelita Sejuba).mp3 */; };
+		4E08CD6F238455C200745BFF /* Goyang Dumang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD6A238455C000745BFF /* Goyang Dumang.mp3 */; };
+		4E08CD70238455C200745BFF /* Pesta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD6B238455C100745BFF /* Pesta.mp3 */; };
+		4E08CD71238455C200745BFF /* Sempurna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD6C238455C100745BFF /* Sempurna.mp3 */; };
+		4E08CD72238455C200745BFF /* Harus Bahagia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD6D238455C200745BFF /* Harus Bahagia.mp3 */; };
+		4E08CD742384563D00745BFF /* AudioUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08CD732384563D00745BFF /* AudioUtilities.swift */; };
+		4E08CD762384565400745BFF /* GraphUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08CD752384565400745BFF /* GraphUtility.swift */; };
+		4E08CD792384590300745BFF /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08CD772384590300745BFF /* WaveformView.swift */; };
+		4E08CD7A2384590300745BFF /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD782384590300745BFF /* WaveformView.xib */; };
 		5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5157B75F23756098005C795E /* MusicPlayerMini.xib */; };
 		5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B761237560D2005C795E /* MusicPlayerMini.swift */; };
 		5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B763237560DA005C795E /* DesignSliderProgress.swift */; };
@@ -20,11 +29,6 @@
 		AC9F80102382787400752432 /* PageControlOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F800F2382787400752432 /* PageControlOnboarding.swift */; };
 		AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9F80132382798E00752432 /* Onboarding.storyboard */; };
 		AC9F801623827A8F00752432 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9F801523827A8F00752432 /* Slide.xib */; };
-		ACC1A5A82384047900B3B195 /* Goyang Dumang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A32384047900B3B195 /* Goyang Dumang.mp3 */; };
-		ACC1A5A92384047900B3B195 /* Sempurna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A42384047900B3B195 /* Sempurna.mp3 */; };
-		ACC1A5AA2384047900B3B195 /* Pesta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A52384047900B3B195 /* Pesta.mp3 */; };
-		ACC1A5AB2384047900B3B195 /* Harus Bahagia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A62384047900B3B195 /* Harus Bahagia.mp3 */; };
-		ACC1A5AC2384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A72384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
@@ -54,6 +58,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E08CD69238455C000745BFF /* Menunggu Kamu (OST Jelita Sejuba).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Menunggu Kamu (OST Jelita Sejuba).mp3"; sourceTree = "<group>"; };
+		4E08CD6A238455C000745BFF /* Goyang Dumang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Goyang Dumang.mp3"; sourceTree = "<group>"; };
+		4E08CD6B238455C100745BFF /* Pesta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pesta.mp3; sourceTree = "<group>"; };
+		4E08CD6C238455C100745BFF /* Sempurna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sempurna.mp3; sourceTree = "<group>"; };
+		4E08CD6D238455C200745BFF /* Harus Bahagia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Harus Bahagia.mp3"; sourceTree = "<group>"; };
+		4E08CD732384563D00745BFF /* AudioUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtilities.swift; sourceTree = "<group>"; };
+		4E08CD752384565400745BFF /* GraphUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphUtility.swift; sourceTree = "<group>"; };
+		4E08CD772384590300745BFF /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		4E08CD782384590300745BFF /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
 		5157B75F23756098005C795E /* MusicPlayerMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerMini.xib; sourceTree = "<group>"; };
 		5157B761237560D2005C795E /* MusicPlayerMini.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerMini.swift; sourceTree = "<group>"; };
 		5157B763237560DA005C795E /* DesignSliderProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSliderProgress.swift; sourceTree = "<group>"; };
@@ -67,11 +80,6 @@
 		AC9F800F2382787400752432 /* PageControlOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlOnboarding.swift; sourceTree = "<group>"; };
 		AC9F80132382798E00752432 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		AC9F801523827A8F00752432 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
-		ACC1A5A32384047900B3B195 /* Goyang Dumang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Goyang Dumang.mp3"; path = "../../../../Downloads/Goyang Dumang.mp3"; sourceTree = "<group>"; };
-		ACC1A5A42384047900B3B195 /* Sempurna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sempurna.mp3; path = ../../../../Downloads/Sempurna.mp3; sourceTree = "<group>"; };
-		ACC1A5A52384047900B3B195 /* Pesta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pesta.mp3; path = ../../../../Downloads/Pesta.mp3; sourceTree = "<group>"; };
-		ACC1A5A62384047900B3B195 /* Harus Bahagia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Harus Bahagia.mp3"; path = "../../../../Downloads/Harus Bahagia.mp3"; sourceTree = "<group>"; };
-		ACC1A5A72384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Menunggu Kamu (OST Jelita Sejuba).mp3"; path = "../../../../Downloads/Menunggu Kamu (OST Jelita Sejuba).mp3"; sourceTree = "<group>"; };
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC0EE70323819D0900638360 /* RunningText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningText.swift; sourceTree = "<group>"; };
@@ -177,6 +185,8 @@
 			children = (
 				DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */,
 				DC67F45A237A9F5B006F6278 /* dummySongList.swift */,
+				4E08CD732384563D00745BFF /* AudioUtilities.swift */,
+				4E08CD752384565400745BFF /* GraphUtility.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,11 +215,11 @@
 		DC7496852382E681004B7F42 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
-				ACC1A5A72384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 */,
-				ACC1A5A42384047900B3B195 /* Sempurna.mp3 */,
-				ACC1A5A32384047900B3B195 /* Goyang Dumang.mp3 */,
-				ACC1A5A52384047900B3B195 /* Pesta.mp3 */,
-				ACC1A5A62384047900B3B195 /* Harus Bahagia.mp3 */,
+				4E08CD69238455C000745BFF /* Menunggu Kamu (OST Jelita Sejuba).mp3 */,
+				4E08CD6C238455C100745BFF /* Sempurna.mp3 */,
+				4E08CD6A238455C000745BFF /* Goyang Dumang.mp3 */,
+				4E08CD6B238455C100745BFF /* Pesta.mp3 */,
+				4E08CD6D238455C200745BFF /* Harus Bahagia.mp3 */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -236,6 +246,7 @@
 				DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */,
 				DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */,
 				DCA99FFA23742D5B00312B37 /* MusicPlayerAlbumImage.swift */,
+				4E08CD772384590300745BFF /* WaveformView.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 				DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */,
 				DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */,
 				DCA99FF823742CA400312B37 /* MusicPlayerAlbumImage.xib */,
+				4E08CD782384590300745BFF /* WaveformView.xib */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -321,26 +333,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC1A5A92384047900B3B195 /* Sempurna.mp3 in Resources */,
-				ACC1A5AA2384047900B3B195 /* Pesta.mp3 in Resources */,
-				ACC1A5A82384047900B3B195 /* Goyang Dumang.mp3 in Resources */,
+				4E08CD6E238455C200745BFF /* Menunggu Kamu (OST Jelita Sejuba).mp3 in Resources */,
 				AC054D072374031800E28931 /* PlayView.xib in Resources */,
 				DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */,
+				4E08CD6F238455C200745BFF /* Goyang Dumang.mp3 in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */,
 				EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */,
+				4E08CD71238455C200745BFF /* Sempurna.mp3 in Resources */,
 				AC9F801623827A8F00752432 /* Slide.xib in Resources */,
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
+				4E08CD72238455C200745BFF /* Harus Bahagia.mp3 in Resources */,
 				AC054D0B23740AE300E28931 /* Lirik.xib in Resources */,
 				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
 				5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
-				ACC1A5AB2384047900B3B195 /* Harus Bahagia.mp3 in Resources */,
 				AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */,
-				ACC1A5AC2384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
+				4E08CD70238455C200745BFF /* Pesta.mp3 in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
+				4E08CD7A2384590300745BFF /* WaveformView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +375,7 @@
 				AC9F800A238277D100752432 /* OnboardingViewController.swift in Sources */,
 				AC054D0D23740AF300E28931 /* Lirik.swift in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
+				4E08CD762384565400745BFF /* GraphUtility.swift in Sources */,
 				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
 				DC67F455237A9F32006F6278 /* DurationSlider.swift in Sources */,
 				5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */,
@@ -369,6 +383,8 @@
 				AC9F800E2382782A00752432 /* GetStarted.swift in Sources */,
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
+				4E08CD742384563D00745BFF /* AudioUtilities.swift in Sources */,
+				4E08CD792384590300745BFF /* WaveformView.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 				DC74969E23832279004B7F42 /* Manager.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
