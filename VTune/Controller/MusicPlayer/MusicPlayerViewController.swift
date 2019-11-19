@@ -147,6 +147,8 @@ class MusicPlayerViewController: UIViewController {
         let seconds = totalDuration - minutes * 60
         referencePlayView?.timeDuration.text = String(format: "%02d:%02d", minutes,seconds) as String
     }
+    
+    
 }
 
 extension MusicPlayerViewController: AVAudioPlayerDelegate{
@@ -154,7 +156,7 @@ extension MusicPlayerViewController: AVAudioPlayerDelegate{
         if flag {
 //            doNextSong()
 //            musicIsPlaying = true
-            audioPlayer?.play()
+            audioPlayer!.play()
         }
     }
 }
