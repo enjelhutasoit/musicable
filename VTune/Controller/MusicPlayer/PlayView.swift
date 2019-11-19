@@ -14,6 +14,7 @@ class PlayView: UIView {
 
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var timeDuration: UILabel!
+    @IBOutlet var currentTime: UILabel!
     @IBOutlet weak var volumeSlider: UISlider!
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnPrevious: UIButton!
@@ -33,12 +34,13 @@ class PlayView: UIView {
 //            btnPlay.setImage(#imageLiteral(resourceName: "Mini Pause Button-1"), for: .normal)
 //            mediaPlayer.play()
 //        }
-        if audioPlayer.isPlaying == true{
+        if audioPlayer?.isPlaying == true{
             btnPlay.setImage(#imageLiteral(resourceName: "Play Button (Big)"), for: .normal)
-            audioPlayer.pause()
+            audioPlayer?.pause()
         }else{
             btnPlay.setImage(#imageLiteral(resourceName: "Mini Pause Button-1"), for: .normal)
-            audioPlayer.play()
+            audioPlayer?.play()
+            audioPlayer?.volume = 1.0
         }
     }
 
@@ -53,7 +55,8 @@ class PlayView: UIView {
         do {
             let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-            audioPlayer.play()
+            audioPlayer?.play()
+            audioPlayer?.volume = 1.0
             nowPlayingSongTitle = dummyProduct[thisSong].songTitle
             nowPlayingSongSinger = dummyProduct[thisSong].songSinger
             UserDefaults.standard.set("true", forKey: "isPlaying")
@@ -73,7 +76,7 @@ class PlayView: UIView {
         do {
             let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-            audioPlayer.play()
+            audioPlayer?.play()
             nowPlayingSongTitle = dummyProduct[thisSong].songTitle
             nowPlayingSongSinger = dummyProduct[thisSong].songSinger
         } catch {
@@ -83,12 +86,15 @@ class PlayView: UIView {
     
     
     @IBAction func btnRepeat(_ sender: Any) {
-        
+        audioPlayer?.numberOfLoops = -1
+        audioPlayer?.play()
+        audioPlayer?.volume = 1.0
     }
     
     
     @IBAction func btnShuffle(_ sender: Any) {
-        
+        let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
+        audioPath?.shuffled()
     }
     
     @IBAction func btnVibrate(_ sender: Any) {
@@ -104,6 +110,16 @@ class PlayView: UIView {
             btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button Off"), for: .normal)
         }else{
             btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button On"), for: .normal)
+        }
+    }
+    
+    @IBAction func sliderValueChange(_ sender: Any) {
+        audioPlayer?.currentTime   = Float64(timeSlider.value)
+    }
+    @IBAction func sliderVolume(_ sender: UISlider) {
+        if audioStuffed == true
+        {
+            audioPlayer?.volume = sender.value
         }
     }
 }

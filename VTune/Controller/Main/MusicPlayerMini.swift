@@ -34,7 +34,7 @@ class MusicPlayerMini: UIView
         do {
             let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-            audioPlayer.play()
+            audioPlayer?.play()
             songTitle.text = dummyProduct[thisSong].songTitle
             nowPlayingSongTitle = songTitle.text!
             nowPlayingSongSinger = dummyProduct[thisSong].songSinger
@@ -51,13 +51,29 @@ class MusicPlayerMini: UIView
 //            playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
 //            mediaPlayer.play()
 //        }
-        
-        if audioPlayer.isPlaying == true{
+        if UserDefaults.standard.string(forKey: "isPlaying") == "true"{
+            if audioPlayer?.isPlaying == true{
             playButtonOutlet.setImage(#imageLiteral(resourceName: "Play Button (Small)"), for: .normal)
-            audioPlayer.pause()
+                audioPlayer?.pause()
+            }else{
+                playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
+                audioPlayer?.play()
+            }
         }else{
-            playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
-            audioPlayer.play()
+            do {
+                let audioPath = Bundle.main.path(forResource: dummyProduct[0].songTitle , ofType: ".mp3")
+                try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+                audioPlayer?.play()
+                songTitle.text = dummyProduct[0].songTitle
+                nowPlayingSongTitle = songTitle.text!
+                nowPlayingSongSinger = dummyProduct[thisSong].songSinger
+                UserDefaults.standard.set("true", forKey: "isPlaying")
+                playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
+                NextButtonOutlet.isEnabled = true
+                previewButtonOutlet.isEnabled = true
+            } catch {
+                print("Can't set the next song")
+            }
         }
     }
     
@@ -72,7 +88,7 @@ class MusicPlayerMini: UIView
         do {
             let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-            audioPlayer.play()
+            audioPlayer?.play()
             songTitle.text = dummyProduct[thisSong].songTitle
             nowPlayingSongTitle = songTitle.text!
             nowPlayingSongSinger = dummyProduct[thisSong].songSinger
