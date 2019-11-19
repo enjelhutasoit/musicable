@@ -14,8 +14,6 @@
 		4E08CD72238455C200745BFF /* Harus Bahagia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD6D238455C200745BFF /* Harus Bahagia.mp3 */; };
 		4E08CD742384563D00745BFF /* AudioUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08CD732384563D00745BFF /* AudioUtilities.swift */; };
 		4E08CD762384565400745BFF /* GraphUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08CD752384565400745BFF /* GraphUtility.swift */; };
-		4E08CD792384590300745BFF /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E08CD772384590300745BFF /* WaveformView.swift */; };
-		4E08CD7A2384590300745BFF /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E08CD782384590300745BFF /* WaveformView.xib */; };
 		5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5157B75F23756098005C795E /* MusicPlayerMini.xib */; };
 		5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B761237560D2005C795E /* MusicPlayerMini.swift */; };
 		5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157B763237560DA005C795E /* DesignSliderProgress.swift */; };
@@ -65,8 +63,6 @@
 		4E08CD6D238455C200745BFF /* Harus Bahagia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Harus Bahagia.mp3"; sourceTree = "<group>"; };
 		4E08CD732384563D00745BFF /* AudioUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtilities.swift; sourceTree = "<group>"; };
 		4E08CD752384565400745BFF /* GraphUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphUtility.swift; sourceTree = "<group>"; };
-		4E08CD772384590300745BFF /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
-		4E08CD782384590300745BFF /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
 		5157B75F23756098005C795E /* MusicPlayerMini.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerMini.xib; sourceTree = "<group>"; };
 		5157B761237560D2005C795E /* MusicPlayerMini.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerMini.swift; sourceTree = "<group>"; };
 		5157B763237560DA005C795E /* DesignSliderProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSliderProgress.swift; sourceTree = "<group>"; };
@@ -246,7 +242,6 @@
 				DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */,
 				DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */,
 				DCA99FFA23742D5B00312B37 /* MusicPlayerAlbumImage.swift */,
-				4E08CD772384590300745BFF /* WaveformView.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -260,7 +255,6 @@
 				DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */,
 				DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */,
 				DCA99FF823742CA400312B37 /* MusicPlayerAlbumImage.xib */,
-				4E08CD782384590300745BFF /* WaveformView.xib */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -353,7 +347,6 @@
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 				4E08CD70238455C200745BFF /* Pesta.mp3 in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
-				4E08CD7A2384590300745BFF /* WaveformView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +377,6 @@
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				4E08CD742384563D00745BFF /* AudioUtilities.swift in Sources */,
-				4E08CD792384590300745BFF /* WaveformView.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 				DC74969E23832279004B7F42 /* Manager.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,

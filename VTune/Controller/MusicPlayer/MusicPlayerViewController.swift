@@ -24,15 +24,20 @@ class MusicPlayerViewController: UIViewController {
     @IBOutlet weak var albumImageView: UIView!
     @IBOutlet weak var equalizerView: UIView!
     @IBOutlet weak var playView: UIView!
+    @IBOutlet var lyricView: UIVisualEffectView!
+    @IBOutlet var lyricSubView: UIView!
+    
     //    var trackId: Int = 0
 //    var library = MusicLibrary().library
     
     var updater: CADisplayLink! = nil
+    var effect: UIVisualEffect!
     
-    var referenceHeaderView: MusicPlayerHeader?
+    var referenceHeaderView: MusicPlayerLyricHeader?
     var referenceAlbumImageView: MusicPlayerAlbumImage?
     var referenceEqualizerView: EqualizerView?
     var referencePlayView: PlayView?
+    var referenceLyricView: Lirik?
     
     var songTitle: String = ""
     var songSinger: String = ""
@@ -106,13 +111,30 @@ class MusicPlayerViewController: UIViewController {
         defaultSong()
         MPVolumeView()
         
+        albumImageSmall = referenceHeaderView?.albumImage.image
+        albumImageSmallView = referenceHeaderView?.albumImage
+        albumImageSmallView?.layer.cornerRadius = 7
+        albumImageSmallView?.isHidden = true
+        
+        albumImageViewIsHidden = albumImageView
+        referenceAlbumImageView?.nowPlayingAlbumImage.layer.cornerRadius = 10
+        
+        equalizerViewIsHidden = equalizerView
+        lyricViewIsHidden = lyricView
+        lyricViewIsHidden?.isHidden = true
+        effect = lyricViewIsHidden?.effect
+       
+        nowPlayingTitle = referenceHeaderView?.nowPlayingSongTitle
+        nowPlayingSinger = referenceHeaderView?.nowPlayingSinger
+        nowPlayingAlbum = referenceAlbumImageView?.nowPlayingAlbumImage
+        albumImageSmall = nowPlayingAlbum?.image
         //===========================================================================================================================
         //Function For Render Waveform View (from: rajabun)
         //===========================================================================================================================
         renderGraphView()
         //===========================================================================================================================
                
-        //AudioUtilities.configureAudioUnit(signalProvider: self)
+//        AudioUtilities.configureAudioUnit(signalProvider: self)
                
         //===========================================================================================================================
         //Function For Prepare Haptics (from: rajabun)
@@ -210,7 +232,7 @@ class MusicPlayerViewController: UIViewController {
     }
     
     func setView(){
-        if let referenceHeaderView = Bundle.main.loadNibNamed("MusicPlayerHeader", owner: self, options: nil)?.first as? MusicPlayerHeader{
+        if let referenceHeaderView = Bundle.main.loadNibNamed("MusicPlayerLyricHeader", owner: self, options: nil)?.first as? MusicPlayerLyricHeader{
             headerView.addSubview(referenceHeaderView)
             referenceHeaderView.frame = CGRect(x: 0, y: 0, width: headerView.frame.width, height: headerView.frame.height)
             self.referenceHeaderView = referenceHeaderView
@@ -234,6 +256,11 @@ class MusicPlayerViewController: UIViewController {
             self.referencePlayView = referencePlayView
         }
         
+        if let referenceLyricView = Bundle.main.loadNibNamed("Lirik", owner: self, options: nil)?.first as? Lirik{
+            lyricSubView.addSubview(referenceLyricView)
+            referenceLyricView.frame = CGRect(x: 0, y: 0, width: lyricSubView.frame.width, height: lyricSubView.frame.height)
+            self.referenceLyricView = referenceLyricView
+        }
     }
     
     func getData(){
@@ -246,15 +273,17 @@ class MusicPlayerViewController: UIViewController {
             referencePlayView?.btnPrevious.isEnabled = true
             referencePlayView?.btnNext.isEnabled = true
             referencePlayView?.btnPlay.setImage(#imageLiteral(resourceName: "Pause Button (Big)"), for: .normal)
-            
+            referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlayingAlbumImage
+            referenceHeaderView?.albumImage.image = nowPlayingAlbumImage
             timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updatingProgressItems), userInfo: nil, repeats: true)
         }else{
-            songTitle = "Tidak Sedang Memutar"
+            songTitle = "Tidak Sedang Memutar Lagu"
             referenceHeaderView?.nowPlayingSongTitle.text = songTitle
             referenceHeaderView?.nowPlayingSinger.text = ""
             referencePlayView?.btnPrevious.isEnabled = false
             referencePlayView?.btnNext.isEnabled = false
             referenceAlbumImageView?.nowPlayingAlbumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
+            referenceHeaderView?.albumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
         }
         
     }
@@ -263,6 +292,12 @@ class MusicPlayerViewController: UIViewController {
         let minutes = totalDuration/60
         let seconds = totalDuration - minutes * 60
         referencePlayView?.timeDuration.text = String(format: "%02d:%02d", minutes,seconds) as String
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ViewController
+        vc.referenceMusicPlayerMini?.songTitle.text = nowPlayingSongTitle
+        vc.referenceMusicPlayerMini?.photoAlbum.image = nowPlayingAlbumImage
     }
     
     

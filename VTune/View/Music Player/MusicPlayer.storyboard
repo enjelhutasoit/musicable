@@ -35,6 +35,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-Ao-jqk">
+                                <rect key="frame" x="0.0" y="233" width="414" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="zYB-Wt-oRo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rGI-k6-dtd"/>
@@ -43,12 +52,25 @@
                         <outlet property="albumImageView" destination="fra-Rx-i9V" id="rsR-dp-1z6"/>
                         <outlet property="equalizerView" destination="ehv-Nh-jEh" id="a8a-zk-1Ux"/>
                         <outlet property="headerView" destination="kKn-Nv-qum" id="Slp-Tx-Juu"/>
+                        <outlet property="lyricSubView" destination="zYB-Wt-oRo" id="KbO-Fw-wGW"/>
+                        <outlet property="lyricView" destination="hgv-Ao-jqk" id="hCq-ev-8Lc"/>
                         <outlet property="playView" destination="Z1s-rg-rQl" id="aQl-p6-dgj"/>
+                        <segue destination="CZf-JH-8a4" kind="show" identifier="BackToMainVC" id="iiB-J5-l7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWC-Ey-GCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-52.173913043478265" y="97.767857142857139"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ZS6-cg-RUm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="CZf-JH-8a4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="j2d-IU-DWH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9v-1Q-QuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="105"/>
         </scene>
     </scenes>
 </document>

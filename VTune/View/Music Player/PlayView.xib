@@ -133,7 +133,7 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx8-38-nKp">
                                     <rect key="frame" x="127" y="0.0" width="38" height="37"/>
-                                    <state key="normal" image="Lyric Button On"/>
+                                    <state key="normal" image="Lyric Button Off"/>
                                     <connections>
                                         <action selector="btnLirik:" destination="iN0-l3-epB" eventType="touchUpInside" id="N3W-IT-Rh1"/>
                                     </connections>
@@ -177,7 +177,7 @@
     </objects>
     <resources>
         <image name="Louder Icon" width="26" height="22"/>
-        <image name="Lyric Button On" width="38" height="37"/>
+        <image name="Lyric Button Off" width="38" height="37"/>
         <image name="Main Music Player Bg" width="414" height="216"/>
         <image name="Next Button (Big)" width="25" height="26"/>
         <image name="Play Button (Big)" width="95" height="95"/>

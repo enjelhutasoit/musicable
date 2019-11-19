@@ -46,7 +46,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         runningText()
         dummyProduct = createArray()
         UserDefaults.standard.set("false", forKey: "isPlaying")
-        getData()
+//        getData()
 //        audioPlayer = initializePlayer()!
         searchController.searchResultsUpdater = self as UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        getData()
+        getData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -98,11 +98,11 @@ class ViewController: UIViewController, UISearchBarDelegate{
 //        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
 //        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
         
-        let song1 =  Song(songTitle: "Menunggu Kamu (OST Jelita Sejuba)", songSinger: "Anji", songDuration: "03:49", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song2 =  Song(songTitle: "Sempurna", songSinger: "Andra & The Backbone", songDuration: "04:28", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song3 =  Song(songTitle: "Goyang Dumang", songSinger: "Cita Citata", songDuration: "03:44", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song4 =  Song(songTitle: "Pesta", songSinger: "Isyana Sarasvati", songDuration: "03:30", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song5 =  Song(songTitle: "Harus Bahagia", songSinger: "Yura Yunita", songDuration: "02:53", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song1 =  Song(songTitle: "Menunggu Kamu (OST Jelita Sejuba)", songSinger: "Anji", songDuration: "03:49", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Menunggu Kamu"))
+        let song2 =  Song(songTitle: "Sempurna", songSinger: "Andra & The Backbone", songDuration: "04:28", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Sempurna"))
+        let song3 =  Song(songTitle: "Goyang Dumang", songSinger: "Cita Citata", songDuration: "03:44", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Goyang Dumang"))
+        let song4 =  Song(songTitle: "Pesta", songSinger: "Isyana Sarasvati", songDuration: "03:30", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Pesta"))
+        let song5 =  Song(songTitle: "Harus Bahagia", songSinger: "Yura Yunita", songDuration: "02:53", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Harus Bahagia"))
         
         
         tempSong.append(song1)
@@ -113,20 +113,20 @@ class ViewController: UIViewController, UISearchBarDelegate{
         return tempSong
     }
     
-    func createArray2() -> [Song]{
-        var tempSong: [Song] = []
-        
-        let song1 =  Song(songTitle: "Potong Bebek Angsa", songSinger: "ABC", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "DEF", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "GHE", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        
-        tempSong.append(song1)
-        tempSong.append(song2)
-        tempSong.append(song3)
-        
-        
-        return tempSong
-    }
+//    func createArray2() -> [Song]{
+//        var tempSong: [Song] = []
+//
+//        let song1 =  Song(songTitle: "Potong Bebek Angsa", songSinger: "ABC", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+//        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "DEF", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+//        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "GHE", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+//
+//        tempSong.append(song1)
+//        tempSong.append(song2)
+//        tempSong.append(song3)
+//
+//
+//        return tempSong
+//    }
     
     func runningText(){
         referenceMusicPlayerMini?.songTitle.tag = 601
@@ -151,8 +151,9 @@ class ViewController: UIViewController, UISearchBarDelegate{
             referenceMusicPlayerMini?.songTitle.text = nowPlayingSongTitle
             referenceMusicPlayerMini?.NextButtonOutlet.isEnabled = true
             referenceMusicPlayerMini?.previewButtonOutlet.isEnabled = true
+            referenceMusicPlayerMini?.photoAlbum.image = nowPlayingAlbumImage
         }else{
-            referenceMusicPlayerMini?.songTitle.text = "Tidak Sedang Memutar"
+            referenceMusicPlayerMini?.songTitle.text = "Tidak Sedang Memutar Lagu"
             referenceMusicPlayerMini?.NextButtonOutlet.isEnabled = false
             referenceMusicPlayerMini?.previewButtonOutlet.isEnabled = false
             referenceMusicPlayerMini?.photoAlbum.image = #imageLiteral(resourceName: "tidak sedang memutar image")
@@ -343,6 +344,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         nowPlayingSongTitle = dummyProduct[indexPath.row].songTitle
         nowPlayingSongSinger = dummyProduct[indexPath.row].songSinger
+        nowPlayingAlbumImage = dummyProduct[indexPath.row].albumImage
         referenceMusicPlayerMini?.playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
         UserDefaults.standard.set("true", forKey: "isPlaying")
         getData()
