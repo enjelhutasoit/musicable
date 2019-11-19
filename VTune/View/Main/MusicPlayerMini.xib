@@ -16,26 +16,31 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Music Player Bg" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-BO-K6n">
                     <rect key="frame" x="0.0" y="-4.5" width="414" height="82"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-mg-ikW">
-                    <rect key="frame" x="20" y="8.5" width="374" height="56"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="6Bg-aC-pNI">
+                    <rect key="frame" x="29.5" y="8.5" width="355" height="56"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-xa-rF3">
                             <rect key="frame" x="0.0" y="1.5" width="53" height="53"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="53" id="Lgg-l4-Fqo"/>
+                                <constraint firstAttribute="width" constant="53" id="oVg-F6-Yh0"/>
+                                <constraint firstAttribute="height" constant="53" id="tBs-pk-EUg"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-2m-fim" customClass="MarqueeLabel" customModule="VTune" customModuleProvider="target">
-                            <rect key="frame" x="65" y="18" width="189" height="20"/>
+                            <rect key="frame" x="66" y="18" width="155" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="130-tn-kR7"/>
+                                <constraint firstAttribute="width" constant="155" id="ZMo-H9-zbl"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16.5"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-H1-uMQ">
-                            <rect key="frame" x="266" y="21" width="14" height="14"/>
+                            <rect key="frame" x="234" y="18" width="20" height="20"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="14" id="D4Z-V5-n7X"/>
-                                <constraint firstAttribute="width" constant="14" id="Exe-MV-dE4"/>
+                                <constraint firstAttribute="width" constant="20" id="gLQ-n9-GDK"/>
+                                <constraint firstAttribute="height" constant="20" id="zhC-7u-sIn"/>
                             </constraints>
                             <state key="normal" image="Previous Button (Small)"/>
                             <connections>
@@ -43,10 +48,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCK-Dv-LtY">
-                            <rect key="frame" x="292" y="0.0" width="56" height="56"/>
+                            <rect key="frame" x="267" y="0.0" width="56" height="56"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="56" id="dRf-Pf-sSX"/>
-                                <constraint firstAttribute="width" constant="56" id="xKY-my-LTq"/>
+                                <constraint firstAttribute="height" constant="56" id="ReB-Ig-MSG"/>
+                                <constraint firstAttribute="width" constant="56" id="ed9-Kz-dgg"/>
                             </constraints>
                             <state key="normal" image="Play Button (Small)"/>
                             <connections>
@@ -54,10 +59,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-hh-vSm">
-                            <rect key="frame" x="360" y="21" width="14" height="14"/>
+                            <rect key="frame" x="336" y="18" width="19" height="20"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="14" id="Q3i-Oo-woW"/>
-                                <constraint firstAttribute="width" constant="14" id="qSj-Ua-PZ0"/>
+                                <constraint firstAttribute="height" constant="20" id="chx-Pv-yNI"/>
+                                <constraint firstAttribute="width" constant="19" id="r2a-M6-pj9"/>
                             </constraints>
                             <state key="normal" image="Next Button (Small)"/>
                             <connections>
@@ -65,18 +70,14 @@
                             </connections>
                         </button>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="fUk-xa-rF3" firstAttribute="top" secondItem="MWA-mg-ikW" secondAttribute="top" constant="1.5" id="qJg-yG-Zgk"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="MWA-mg-ikW" firstAttribute="centerY" secondItem="hs2-BO-K6n" secondAttribute="centerY" id="5jU-B1-ai8"/>
-                <constraint firstItem="MWA-mg-ikW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6J6-bO-027"/>
+                <constraint firstItem="6Bg-aC-pNI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ERA-1m-6tS"/>
+                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerX" secondItem="6Bg-aC-pNI" secondAttribute="centerX" id="JS8-HF-wFc"/>
                 <constraint firstItem="hs2-BO-K6n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Pil-WI-ywh"/>
-                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerX" secondItem="MWA-mg-ikW" secondAttribute="centerX" id="bCy-Hc-D8Z"/>
-                <constraint firstItem="MWA-mg-ikW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="gqB-5E-TPb"/>
+                <constraint firstItem="6Bg-aC-pNI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qXC-9s-fcN"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

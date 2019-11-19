@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().backgroundImage = UIImage(named: "tab bar bg")
         UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().unselectedItemTintColor =  colorLiteral(red: 0.1537629068, green: 0.148864001, blue: 0.1489192247, alpha: 1)
+//        UITabBar.appearance().unselectedItemTintColor =  colorLiteral(red: 0.1537629068, green: 0.148864001, blue: 0.1489192247, alpha: 1)
 
         // Check if the device supports haptics.
         let hapticCapability = CHHapticEngine.capabilitiesForHardware()

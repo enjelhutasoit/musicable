@@ -21,3 +21,12 @@ var nowPlayingSongSinger: String = ""
 var nowPlayingAlbumImage: UIImage?
 var nowPlayingTotalDuration: Int = 0
 var nowPlayingCurrentTime: Int = 0
+
+var lyricViewIsHidden: UIVisualEffectView?
+var albumImageViewIsHidden: UIView?
+var equalizerViewIsHidden: UIView?
+var albumImageSmall: UIImage?
+var albumImageSmallView: UIImageView?
+var nowPlayingTitle: UILabel?
+var nowPlayingSinger: UILabel?
+var nowPlayingAlbum: UIImageView?

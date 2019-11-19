@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 class DummySongList{
     var songTitle: String?
     var songSinger: String?
@@ -29,4 +29,5 @@ struct Song {
     let songDuration: String
     let favIcon:  String
     var isFavorite: Bool
+    var albumImage: UIImage
 }
