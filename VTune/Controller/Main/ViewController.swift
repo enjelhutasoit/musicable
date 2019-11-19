@@ -98,13 +98,11 @@ class ViewController: UIViewController, UISearchBarDelegate{
 //        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
 //        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
         
-        let song1 =  Song(songTitle: "A Girl in Oakland", songSinger: "Aku", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song2 =  Song(songTitle: "Fingers", songSinger: "Kamu", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song3 =  Song(songTitle: "Otis McMusic", songSinger: "Dia", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song4 =  Song(songTitle: "Find My Way Home", songSinger: "sfrgr", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song5 =  Song(songTitle: "In Case You Forgot", songSinger: "ku8yty", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song6 =  Song(songTitle: "Mighty Fine", songSinger: "ewrtreg", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        let song7 =  Song(songTitle: "Scarlet Fire", songSinger: "bgfge", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song1 =  Song(songTitle: "Menunggu Kamu (OST Jelita Sejuba)", songSinger: "Anji", songDuration: "03:49", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song2 =  Song(songTitle: "Sempurna", songSinger: "Andra & The Backbone", songDuration: "04:28", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song3 =  Song(songTitle: "Goyang Dumang", songSinger: "Cita Citata", songDuration: "03:44", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song4 =  Song(songTitle: "Pesta", songSinger: "Isyana Sarasvati", songDuration: "03:30", favIcon: "Favourite Options Button.png", isFavorite: false)
+        let song5 =  Song(songTitle: "Harus Bahagia", songSinger: "Yura Yunita", songDuration: "02:53", favIcon: "Favourite Options Button.png", isFavorite: false)
         
         
         tempSong.append(song1)
@@ -112,9 +110,6 @@ class ViewController: UIViewController, UISearchBarDelegate{
         tempSong.append(song3)
         tempSong.append(song4)
         tempSong.append(song5)
-        tempSong.append(song6)
-        tempSong.append(song7)
-        tempSong.shuffle()
         return tempSong
     }
     

@@ -20,6 +20,11 @@
 		AC9F80102382787400752432 /* PageControlOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F800F2382787400752432 /* PageControlOnboarding.swift */; };
 		AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9F80132382798E00752432 /* Onboarding.storyboard */; };
 		AC9F801623827A8F00752432 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9F801523827A8F00752432 /* Slide.xib */; };
+		ACC1A5A82384047900B3B195 /* Goyang Dumang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A32384047900B3B195 /* Goyang Dumang.mp3 */; };
+		ACC1A5A92384047900B3B195 /* Sempurna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A42384047900B3B195 /* Sempurna.mp3 */; };
+		ACC1A5AA2384047900B3B195 /* Pesta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A52384047900B3B195 /* Pesta.mp3 */; };
+		ACC1A5AB2384047900B3B195 /* Harus Bahagia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A62384047900B3B195 /* Harus Bahagia.mp3 */; };
+		ACC1A5AC2384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACC1A5A72384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
@@ -36,13 +41,6 @@
 		DC67F458237A9F42006F6278 /* EqualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F457237A9F42006F6278 /* EqualizerView.swift */; };
 		DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */; };
 		DC67F45C237A9F5B006F6278 /* dummySongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F45A237A9F5B006F6278 /* dummySongList.swift */; };
-		DC74968D2382E68F004B7F42 /* Scarlet Fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496862382E68D004B7F42 /* Scarlet Fire.mp3 */; };
-		DC74968E2382E68F004B7F42 /* In Case You Forgot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496872382E68D004B7F42 /* In Case You Forgot.mp3 */; };
-		DC74968F2382E68F004B7F42 /* Fingers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496882382E68D004B7F42 /* Fingers.mp3 */; };
-		DC7496902382E68F004B7F42 /* Otis McMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7496892382E68E004B7F42 /* Otis McMusic.mp3 */; };
-		DC7496912382E68F004B7F42 /* Find My Way Home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC74968A2382E68E004B7F42 /* Find My Way Home.mp3 */; };
-		DC7496922382E68F004B7F42 /* A Girl in Oakland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC74968B2382E68F004B7F42 /* A Girl in Oakland.mp3 */; };
-		DC7496932382E68F004B7F42 /* Mighty Fine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC74968C2382E68F004B7F42 /* Mighty Fine.mp3 */; };
 		DC74969E23832279004B7F42 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74969D23832279004B7F42 /* Manager.swift */; };
 		DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */; };
 		DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */; };
@@ -69,6 +67,11 @@
 		AC9F800F2382787400752432 /* PageControlOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlOnboarding.swift; sourceTree = "<group>"; };
 		AC9F80132382798E00752432 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		AC9F801523827A8F00752432 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		ACC1A5A32384047900B3B195 /* Goyang Dumang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Goyang Dumang.mp3"; path = "../../../../Downloads/Goyang Dumang.mp3"; sourceTree = "<group>"; };
+		ACC1A5A42384047900B3B195 /* Sempurna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sempurna.mp3; path = ../../../../Downloads/Sempurna.mp3; sourceTree = "<group>"; };
+		ACC1A5A52384047900B3B195 /* Pesta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pesta.mp3; path = ../../../../Downloads/Pesta.mp3; sourceTree = "<group>"; };
+		ACC1A5A62384047900B3B195 /* Harus Bahagia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Harus Bahagia.mp3"; path = "../../../../Downloads/Harus Bahagia.mp3"; sourceTree = "<group>"; };
+		ACC1A5A72384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Menunggu Kamu (OST Jelita Sejuba).mp3"; path = "../../../../Downloads/Menunggu Kamu (OST Jelita Sejuba).mp3"; sourceTree = "<group>"; };
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC0EE70323819D0900638360 /* RunningText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningText.swift; sourceTree = "<group>"; };
@@ -88,13 +91,6 @@
 		DC67F457237A9F42006F6278 /* EqualizerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EqualizerView.swift; path = Controller/MusicPlayer/EqualizerView.swift; sourceTree = "<group>"; };
 		DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongFavorit.swift; sourceTree = "<group>"; };
 		DC67F45A237A9F5B006F6278 /* dummySongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongList.swift; sourceTree = "<group>"; };
-		DC7496862382E68D004B7F42 /* Scarlet Fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scarlet Fire.mp3"; sourceTree = "<group>"; };
-		DC7496872382E68D004B7F42 /* In Case You Forgot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "In Case You Forgot.mp3"; sourceTree = "<group>"; };
-		DC7496882382E68D004B7F42 /* Fingers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fingers.mp3; sourceTree = "<group>"; };
-		DC7496892382E68E004B7F42 /* Otis McMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Otis McMusic.mp3"; sourceTree = "<group>"; };
-		DC74968A2382E68E004B7F42 /* Find My Way Home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Find My Way Home.mp3"; sourceTree = "<group>"; };
-		DC74968B2382E68F004B7F42 /* A Girl in Oakland.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A Girl in Oakland.mp3"; sourceTree = "<group>"; };
-		DC74968C2382E68F004B7F42 /* Mighty Fine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mighty Fine.mp3"; sourceTree = "<group>"; };
 		DC74969D23832279004B7F42 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerHeader.xib; sourceTree = "<group>"; };
 		DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerHeader.swift; sourceTree = "<group>"; };
@@ -209,13 +205,11 @@
 		DC7496852382E681004B7F42 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
-				DC74968B2382E68F004B7F42 /* A Girl in Oakland.mp3 */,
-				DC74968A2382E68E004B7F42 /* Find My Way Home.mp3 */,
-				DC7496882382E68D004B7F42 /* Fingers.mp3 */,
-				DC7496872382E68D004B7F42 /* In Case You Forgot.mp3 */,
-				DC74968C2382E68F004B7F42 /* Mighty Fine.mp3 */,
-				DC7496892382E68E004B7F42 /* Otis McMusic.mp3 */,
-				DC7496862382E68D004B7F42 /* Scarlet Fire.mp3 */,
+				ACC1A5A72384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 */,
+				ACC1A5A42384047900B3B195 /* Sempurna.mp3 */,
+				ACC1A5A32384047900B3B195 /* Goyang Dumang.mp3 */,
+				ACC1A5A52384047900B3B195 /* Pesta.mp3 */,
+				ACC1A5A62384047900B3B195 /* Harus Bahagia.mp3 */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -327,26 +321,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC1A5A92384047900B3B195 /* Sempurna.mp3 in Resources */,
+				ACC1A5AA2384047900B3B195 /* Pesta.mp3 in Resources */,
+				ACC1A5A82384047900B3B195 /* Goyang Dumang.mp3 in Resources */,
 				AC054D072374031800E28931 /* PlayView.xib in Resources */,
 				DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */,
-				DC74968D2382E68F004B7F42 /* Scarlet Fire.mp3 in Resources */,
-				DC74968E2382E68F004B7F42 /* In Case You Forgot.mp3 in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
-				DC74968F2382E68F004B7F42 /* Fingers.mp3 in Resources */,
-				DC7496902382E68F004B7F42 /* Otis McMusic.mp3 in Resources */,
 				DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */,
 				EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */,
 				AC9F801623827A8F00752432 /* Slide.xib in Resources */,
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
-				DC7496912382E68F004B7F42 /* Find My Way Home.mp3 in Resources */,
 				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
 				AC054D0B23740AE300E28931 /* Lirik.xib in Resources */,
 				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
-				DC7496932382E68F004B7F42 /* Mighty Fine.mp3 in Resources */,
 				5157B76023756098005C795E /* MusicPlayerMini.xib in Resources */,
 				DC501480236C70F300AD39F1 /* Main.storyboard in Resources */,
+				ACC1A5AB2384047900B3B195 /* Harus Bahagia.mp3 in Resources */,
 				AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */,
-				DC7496922382E68F004B7F42 /* A Girl in Oakland.mp3 in Resources */,
+				ACC1A5AC2384047900B3B195 /* Menunggu Kamu (OST Jelita Sejuba).mp3 in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
 			);
