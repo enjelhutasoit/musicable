@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import MediaPlayer
 
 class MusicPlayerViewController: UIViewController {
 
@@ -17,6 +19,8 @@ class MusicPlayerViewController: UIViewController {
     //    var trackId: Int = 0
 //    var library = MusicLibrary().library
     
+    var updater: CADisplayLink! = nil
+    
     var referenceHeaderView: MusicPlayerHeader?
     var referenceAlbumImageView: MusicPlayerAlbumImage?
     var referenceEqualizerView: EqualizerView?
@@ -26,12 +30,66 @@ class MusicPlayerViewController: UIViewController {
     var songSinger: String = ""
     var albumImage: UIImage?
     var totalDuration: Int = 0
+    var timer:Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         getData()
         updateTotalDuration()
+        defaultSong()
+        MPVolumeView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        setUpdater()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        updater.invalidate()
+    }
+    
+    func defaultSong() {
+        if musicIsPlaying == true {
+            do {
+                let audioPath = Bundle.main.path(forResource: dummyProduct[thisSong].songTitle , ofType: ".mp3")
+                try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            } catch {
+                print("Eror!")
+            }
+        }
+    }
+    
+    func setUpdater() {
+        updater = CADisplayLink(target: self, selector: #selector(updatingProgressItems))
+        updater.preferredFramesPerSecond = 2
+        updater.add(to: .current, forMode: .default)
+    }
+    
+    @objc func updatingProgressItems() {
+
+        audioPlayer?.delegate = self
+                
+        referencePlayView?.timeSlider.setValue(Float(audioPlayer!.currentTime), animated: true)
+        referencePlayView?.timeSlider.maximumValue = Float(audioPlayer!.duration)
+        
+        
+        // making normal time format of song
+        let currentTimePlaying = Int(audioPlayer!.currentTime)
+        let minutesPlaying = currentTimePlaying / 60
+        let secondsPlaying = currentTimePlaying - minutesPlaying * 60
+        referencePlayView?.currentTime.text = NSString(format: "%02d:%02d", minutesPlaying, secondsPlaying) as String
+        
+        let currentTimeDuration = Int(audioPlayer!.duration)
+        let minutesDuration = currentTimeDuration / 60
+        let secondsDuration = currentTimeDuration - minutesDuration * 60
+        referencePlayView?.timeDuration.text = NSString(format: "%02d:%02d", minutesDuration, secondsDuration) as String
+        
+//        if audioPlayer.isPlaying {
+//            playButton.setImage(#imageLiteral(resourceName: "pause-btn"), for: .normal)
+//        } else {
+//            playButton.setImage(#imageLiteral(resourceName: "play-btn"), for: .normal)
+//        }
     }
     
     func setView(){
@@ -71,12 +129,15 @@ class MusicPlayerViewController: UIViewController {
             referencePlayView?.btnPrevious.isEnabled = true
             referencePlayView?.btnNext.isEnabled = true
             referencePlayView?.btnPlay.setImage(#imageLiteral(resourceName: "Pause Button (Big)"), for: .normal)
+            
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updatingProgressItems), userInfo: nil, repeats: true)
         }else{
-            songTitle = "Not Playing"
+            songTitle = "Tidak Sedang Memutar"
             referenceHeaderView?.nowPlayingSongTitle.text = songTitle
             referenceHeaderView?.nowPlayingSinger.text = ""
             referencePlayView?.btnPrevious.isEnabled = false
             referencePlayView?.btnNext.isEnabled = false
+            referenceAlbumImageView?.nowPlayingAlbumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
         }
         
     }
@@ -85,5 +146,15 @@ class MusicPlayerViewController: UIViewController {
         let minutes = totalDuration/60
         let seconds = totalDuration - minutes * 60
         referencePlayView?.timeDuration.text = String(format: "%02d:%02d", minutes,seconds) as String
+    }
+}
+
+extension MusicPlayerViewController: AVAudioPlayerDelegate{
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if flag {
+//            doNextSong()
+//            musicIsPlaying = true
+            audioPlayer?.play()
+        }
     }
 }

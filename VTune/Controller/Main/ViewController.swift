@@ -114,7 +114,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         tempSong.append(song5)
         tempSong.append(song6)
         tempSong.append(song7)
-        
+        tempSong.shuffle()
         return tempSong
     }
     
@@ -157,9 +157,10 @@ class ViewController: UIViewController, UISearchBarDelegate{
             referenceMusicPlayerMini?.NextButtonOutlet.isEnabled = true
             referenceMusicPlayerMini?.previewButtonOutlet.isEnabled = true
         }else{
-            referenceMusicPlayerMini?.songTitle.text = "Not Playing"
+            referenceMusicPlayerMini?.songTitle.text = "Tidak Sedang Memutar"
             referenceMusicPlayerMini?.NextButtonOutlet.isEnabled = false
             referenceMusicPlayerMini?.previewButtonOutlet.isEnabled = false
+            referenceMusicPlayerMini?.photoAlbum.image = #imageLiteral(resourceName: "tidak sedang memutar image")
         }
     }
     
@@ -284,7 +285,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 {
                     let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
                     try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                    audioPlayer.play()
+                    audioPlayer?.play()
                     thisSong = indexPath.row
                     audioStuffed = true
                 }
@@ -297,7 +298,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 {
                     let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
                     try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                    audioPlayer.play()
+                    audioPlayer?.play()
                     thisSong = indexPath.row
                     audioStuffed = true
                 }
@@ -316,7 +317,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                     {
                         let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
                         try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                        audioPlayer.play()
+                        audioPlayer?.play()
                         thisSong = indexPath.row
                         audioStuffed = true
                     }
@@ -331,7 +332,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                     {
                         let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
                         try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                        audioPlayer.play()
+                        audioPlayer?.play()
                         thisSong = indexPath.row
                         audioStuffed = true
                     }

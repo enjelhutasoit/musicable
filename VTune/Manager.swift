@@ -10,10 +10,12 @@ import Foundation
 import AVFoundation
 import UIKit
 
-var audioPlayer = AVAudioPlayer()
+var audioPlayer: AVAudioPlayer?
 var thisSong = 0
 var audioStuffed = false
 var dummyProduct: [Song] = []
+var musicIsPlaying: Bool = false
+
 var nowPlayingSongTitle: String = ""
 var nowPlayingSongSinger: String = ""
 var nowPlayingAlbumImage: UIImage?

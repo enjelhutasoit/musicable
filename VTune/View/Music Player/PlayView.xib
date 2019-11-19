@@ -29,7 +29,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WA5-pc-FIQ" customClass="DurationSlider" customModule="VTune" customModuleProvider="target">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="WA5-pc-FIQ" customClass="DurationSlider" customModule="VTune" customModuleProvider="target">
                                     <rect key="frame" x="34" y="0.0" width="333" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="IEj-94-os7"/>
@@ -38,6 +38,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Big)"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="sliderValueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="lEF-Es-h5i"/>
+                                    </connections>
                                 </slider>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyV-cn-nNW">
                                     <rect key="frame" x="372" y="0.0" width="28" height="25"/>
@@ -100,7 +103,7 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quieter Icon" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-E1-WF7">
                                     <rect key="frame" x="0.0" y="0.0" width="11" height="25"/>
                                 </imageView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QCa-cJ-OZT" customClass="VolumeSlider" customModule="VTune" customModuleProvider="target">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QCa-cJ-OZT" customClass="MPVolumeView">
                                     <rect key="frame" x="19" y="0.0" width="333" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="329" id="hhP-jl-XDf"/>
@@ -109,6 +112,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Big)"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="sliderVolume:" destination="iN0-l3-epB" eventType="valueChanged" id="Cog-ch-eVb"/>
+                                    </connections>
                                 </slider>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Louder Icon" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-Mg-iQJ">
                                     <rect key="frame" x="360" y="0.0" width="26" height="25"/>
@@ -161,6 +167,7 @@
                 <outlet property="btnRepeat" destination="jo4-TV-mzV" id="Bvv-ee-zXP"/>
                 <outlet property="btnShuffle" destination="EqU-bo-6yj" id="kc7-f6-iIr"/>
                 <outlet property="btnVibrateOutlet" destination="J22-w7-hsT" id="6DK-c3-fS6"/>
+                <outlet property="currentTime" destination="2cr-fm-yPe" id="unT-KU-bCw"/>
                 <outlet property="timeDuration" destination="HyV-cn-nNW" id="b5U-q0-yDC"/>
                 <outlet property="timeSlider" destination="WA5-pc-FIQ" id="wGp-nc-Cgb"/>
                 <outlet property="volumeSlider" destination="QCa-cJ-OZT" id="S1w-pC-fvn"/>
