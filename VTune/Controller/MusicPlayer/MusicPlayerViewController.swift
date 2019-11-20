@@ -224,6 +224,35 @@ class MusicPlayerViewController: UIViewController {
         let secondsDuration = currentTimeDuration - minutesDuration * 60
         referencePlayView?.timeDuration.text = NSString(format: "%02d:%02d", minutesDuration, secondsDuration) as String
         
+        if nowPlayingSongTitle == "Menunggu Kamu (OST Jelita Sejuba)"{
+            switch (minutesDuration,secondsDuration) {
+            case (0,18...29): referenceLyricView?.lblLirik.text = "'Ku selalu mencoba untuk menguatkan hati"
+            case (0,31...37): referenceLyricView?.lblLirik.text = "Dari kamu yang belum juga kembali"
+            case (0,38...51): referenceLyricView?.lblLirik.text = "Ada satu keyakinan yang membuatku bertahan"
+            case (0,52...58): referenceLyricView?.lblLirik.text = "Penantian ini 'kan terbayar pasti"
+            case (1,0...5): referenceLyricView?.lblLirik.text = "Lihat aku, sayang, yang sudah berjuang"
+            case (1,6...12): referenceLyricView?.lblLirik.text = "Menunggumu datang, menjemputmu pulang"
+            case (1,13...20): referenceLyricView?.lblLirik.text = "Ingat selalu, sayang, hatiku kau genggam"
+            case (1,21...30): referenceLyricView?.lblLirik.text = "Aku tak 'kan pergi, menunggu kamu di sini"
+            case (1,34...38): referenceLyricView?.lblLirik.text = "Tetap di sini"
+            case (1,43...47): referenceLyricView?.lblLirik.text = "Jika bukan kepadamu"
+            case (1,48...55): referenceLyricView?.lblLirik.text = "aku tidak tahu lagi"
+            case (1,56...59): referenceLyricView?.lblLirik.text = "Pada siapa rindu ini 'kan kuberi"
+            case (2,2...11): referenceLyricView?.lblLirik.text = "Pada siapa rindu ini 'kan kuberi, oh"
+            case (2,12...20): referenceLyricView?.lblLirik.text = "Lihat aku, sayang, yang sudah berjuang"
+            case (2,21...26): referenceLyricView?.lblLirik.text = "Menunggumu datang, menjemputmu pulang"
+            case (2,27...34): referenceLyricView?.lblLirik.text = "Ingat selalu, sayang, hatiku kau genggam"
+            case (2,35...44): referenceLyricView?.lblLirik.text = "Aku tak 'kan pergi, menunggu kamu di sini"
+            case (2,49...51): referenceLyricView?.lblLirik.text = "Di sini"
+            case (3,0...4): referenceLyricView?.lblLirik.text = "Lihat aku, sayang, sudah berjuang"
+            case (3,5...12): referenceLyricView?.lblLirik.text = "Menunggumu datang, menjemputmu pulang"
+            case (3,14...21): referenceLyricView?.lblLirik.text = "Ingat selalu, sayang, hatiku kau genggam"
+            case (3,22...27): referenceLyricView?.lblLirik.text = "Aku tak 'kan pergi"
+            case (3,28...40): referenceLyricView?.lblLirik.text = "Aku tak 'kan pergi, menunggu kamu di sini"
+            default:
+            referenceLyricView?.lblLirik.text = ""
+            }
+        }
 //        if audioPlayer.isPlaying {
 //            playButton.setImage(#imageLiteral(resourceName: "pause-btn"), for: .normal)
 //        } else {
