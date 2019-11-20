@@ -225,7 +225,7 @@ class MusicPlayerViewController: UIViewController {
         referencePlayView?.timeDuration.text = NSString(format: "%02d:%02d", minutesDuration, secondsDuration) as String
         
         if nowPlayingSongTitle == "Menunggu Kamu (OST Jelita Sejuba)"{
-            switch (minutesDuration,secondsDuration) {
+            switch (minutesPlaying,secondsPlaying) {
             case (0,18...29): referenceLyricView?.lblLirik.text = "'Ku selalu mencoba untuk menguatkan hati"
             case (0,31...37): referenceLyricView?.lblLirik.text = "Dari kamu yang belum juga kembali"
             case (0,38...51): referenceLyricView?.lblLirik.text = "Ada satu keyakinan yang membuatku bertahan"
@@ -253,43 +253,8 @@ class MusicPlayerViewController: UIViewController {
             referenceLyricView?.lblLirik.text = ""
             }
         }
-//        00:14 - 00:20 Detak suara ku dengar dari seberang sana
-//        00:22 - 00:28 Ku hampiri suasana pesta
-//        00:30 - 00:34 Rasaya rasanya ku ingin ikut berdansa
-//        00:38 - 00:41 Tak tahan tak tahan dengar alunan musiknya
-//        00:42 - 00:44 (ayo berdansa)
-//        00:45 - 00:47 Pesta di malam minggu
-//        00:48 - 00:51 Semua suka suka
-//        00:52 - 00:55 Pesta di lantai dansa
-//        00:56 - 00:59 Semua suka suka
-//        01:00 - 01:05 Pesta kau telah mengusik rasa
-//        01:06 - 01:13 Pesta membuat euforia
-//        01:14 -  01:22 Kelip lampu menambah semaraknya pesta uh yeah
-//        01:23 - 01:27 Detak lagu semakin menggebu
-//        01:29 -  01:34 Rasanya rasanya tak ingin henti berdansa
-//        01:37 - 01:43 Tak tahan tak tahan dengar alunan musiknya (ho ho berdansa)
-//        01:44 - 01:47 Pesta di malam minggu
-//        01:48 - 01:51 Semua suka suka
-//        01:52 - 01:54 Pesta di lantai dansa
-//        01:55 - 01:59 Semua suka suka
-//        02:00 - 02:06 Pesta kau tlah mengusik rasa
-//        02:07 - 02:14 Pesta membuat euforia
-//        02:15 - 02:21 Aku percaya kau meraskan hal yang sama
-//        02:22 - 02:29 Kita bahagia semuanya suka dan terus tertawa
-//        02:30 - 02:33 Berpesta tak lelah Berdansa
-//        02:34 - 02:37 Pesta di malam minggu
-//        02:38 - 02:41 Semua suka suka
-//        02:42 - 02:45 Pesta di lantai dansa
-//        02:46 - 02:50 Semua suka suka oh
-//        02:51 - 02:53 Pesta di malam minggu
-//        02:54 - 02:55 Semua suka suka
-//        02:56 - 03.00 Pesta di lantai dansa
-//        03:01 - 03:03 Semua suka suka
-//        03:04 - 03:12 Pesta kau tlah mengusik rasa
-//        03:13 - 03:20 Pesta membuat euforia
-//        03:21 - 03:22 Pesta
         if nowPlayingSongTitle == "Pesta"{
-                  switch (minutesDuration,secondsDuration) {
+                  switch (minutesPlaying,secondsPlaying) {
                   case (0,14...20): referenceLyricView?.lblLirik.text = "Detak suara ku dengar dari seberang sana"
                   case (0,22...28): referenceLyricView?.lblLirik.text = "Ku hampiri suasana pesta"
                   case (0,30...34): referenceLyricView?.lblLirik.text = "Rasaya rasanya ku ingin ikut berdansa"
@@ -331,7 +296,7 @@ class MusicPlayerViewController: UIViewController {
               }
         
         if nowPlayingSongTitle == "Sempurna"{
-                      switch (minutesDuration,secondsDuration) {
+                      switch (minutesPlaying,secondsPlaying) {
                       case (0,9...12): referenceLyricView?.lblLirik.text = "Kau begitu sempurna"
                       case (0,13...18): referenceLyricView?.lblLirik.text = "Dimataku kau begitu indah"
                       case (0,19...25): referenceLyricView?.lblLirik.text = "Kau membuat diriku akan slalu memujamu"
@@ -382,7 +347,7 @@ class MusicPlayerViewController: UIViewController {
                   }
         
         if nowPlayingSongTitle == "Goyang Dumang"{
-                  switch (minutesDuration,secondsDuration) {
+                  switch (minutesPlaying,secondsPlaying) {
                   case (0,29...31): referenceLyricView?.lblLirik.text = "Sakit rasanya putus cinta"
                   case (0,32...35): referenceLyricView?.lblLirik.text = "Sesaknya di dada"
                   case (0,36...38): referenceLyricView?.lblLirik.text = "Membuat kita jadi gegana"
@@ -426,7 +391,7 @@ class MusicPlayerViewController: UIViewController {
               }
         
         if nowPlayingSongTitle == "Harus Bahagia"{
-                  switch (minutesDuration,secondsDuration) {
+                  switch (minutesPlaying,secondsPlaying) {
                   case (0,7...10): referenceLyricView?.lblLirik.text = "Baru putus, baru saja putus"
                   case (0,11...13): referenceLyricView?.lblLirik.text = "Tak perlu engkau bingung"
                   case (0,14...15): referenceLyricView?.lblLirik.text = "(Terlalu lama)"
