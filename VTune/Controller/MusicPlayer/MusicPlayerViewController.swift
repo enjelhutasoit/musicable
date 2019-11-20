@@ -253,6 +253,222 @@ class MusicPlayerViewController: UIViewController {
             referenceLyricView?.lblLirik.text = ""
             }
         }
+//        00:14 - 00:20 Detak suara ku dengar dari seberang sana
+//        00:22 - 00:28 Ku hampiri suasana pesta
+//        00:30 - 00:34 Rasaya rasanya ku ingin ikut berdansa
+//        00:38 - 00:41 Tak tahan tak tahan dengar alunan musiknya
+//        00:42 - 00:44 (ayo berdansa)
+//        00:45 - 00:47 Pesta di malam minggu
+//        00:48 - 00:51 Semua suka suka
+//        00:52 - 00:55 Pesta di lantai dansa
+//        00:56 - 00:59 Semua suka suka
+//        01:00 - 01:05 Pesta kau telah mengusik rasa
+//        01:06 - 01:13 Pesta membuat euforia
+//        01:14 -  01:22 Kelip lampu menambah semaraknya pesta uh yeah
+//        01:23 - 01:27 Detak lagu semakin menggebu
+//        01:29 -  01:34 Rasanya rasanya tak ingin henti berdansa
+//        01:37 - 01:43 Tak tahan tak tahan dengar alunan musiknya (ho ho berdansa)
+//        01:44 - 01:47 Pesta di malam minggu
+//        01:48 - 01:51 Semua suka suka
+//        01:52 - 01:54 Pesta di lantai dansa
+//        01:55 - 01:59 Semua suka suka
+//        02:00 - 02:06 Pesta kau tlah mengusik rasa
+//        02:07 - 02:14 Pesta membuat euforia
+//        02:15 - 02:21 Aku percaya kau meraskan hal yang sama
+//        02:22 - 02:29 Kita bahagia semuanya suka dan terus tertawa
+//        02:30 - 02:33 Berpesta tak lelah Berdansa
+//        02:34 - 02:37 Pesta di malam minggu
+//        02:38 - 02:41 Semua suka suka
+//        02:42 - 02:45 Pesta di lantai dansa
+//        02:46 - 02:50 Semua suka suka oh
+//        02:51 - 02:53 Pesta di malam minggu
+//        02:54 - 02:55 Semua suka suka
+//        02:56 - 03.00 Pesta di lantai dansa
+//        03:01 - 03:03 Semua suka suka
+//        03:04 - 03:12 Pesta kau tlah mengusik rasa
+//        03:13 - 03:20 Pesta membuat euforia
+//        03:21 - 03:22 Pesta
+        if nowPlayingSongTitle == "Pesta"{
+                  switch (minutesDuration,secondsDuration) {
+                  case (0,14...20): referenceLyricView?.lblLirik.text = "Detak suara ku dengar dari seberang sana"
+                  case (0,22...28): referenceLyricView?.lblLirik.text = "Ku hampiri suasana pesta"
+                  case (0,30...34): referenceLyricView?.lblLirik.text = "Rasaya rasanya ku ingin ikut berdansa"
+                  case (0,38...41): referenceLyricView?.lblLirik.text = "Tak tahan tak tahan dengar alunan musiknya"
+                  case (0,42...44): referenceLyricView?.lblLirik.text = "(ayo berdansa)"
+                  case (0,45...47): referenceLyricView?.lblLirik.text = "Pesta di malam minggu"
+                  case (0,48...51): referenceLyricView?.lblLirik.text = "Semua suka suka"
+                  case (0,52...55): referenceLyricView?.lblLirik.text = "Pesta di lantai dansa"
+                  case (0,56...59): referenceLyricView?.lblLirik.text = "Semua suka suka"
+                  case (1,0...5): referenceLyricView?.lblLirik.text = "Pesta kau telah mengusik rasa"
+                  case (1,6...13): referenceLyricView?.lblLirik.text = "Pesta membuat euforia"
+                  case (1,14...22): referenceLyricView?.lblLirik.text = "Kelip lampu menambah semaraknya pesta uh yeah"
+                  case (1,23...27): referenceLyricView?.lblLirik.text = "Detak lagu semakin menggebu"
+                  case (1,29...34): referenceLyricView?.lblLirik.text = "Rasanya rasanya tak ingin henti berdansa"
+                  case (1,37...43): referenceLyricView?.lblLirik.text = "Tak tahan tak tahan dengar alunan musiknya (ho ho berdansa)"
+                  case (1,44...47): referenceLyricView?.lblLirik.text = "Pesta di malam minggu"
+                  case (1,48...51): referenceLyricView?.lblLirik.text = "Semua suka suka"
+                  case (1,52...54): referenceLyricView?.lblLirik.text = "Pesta di lantai dansa"
+                  case (1,55...59): referenceLyricView?.lblLirik.text = "Semua suka suka"
+                  case (2,0...6): referenceLyricView?.lblLirik.text = "Pesta kau tlah mengusik rasa"
+                  case (2,7...14): referenceLyricView?.lblLirik.text = "Pesta membuat euforia"
+                  case (2,15...21): referenceLyricView?.lblLirik.text = "Aku percaya kau meraskan hal yang sama"
+                  case (2,22...29): referenceLyricView?.lblLirik.text = "Kita bahagia semuanya suka dan terus tertawa"
+                  case (2,30...33): referenceLyricView?.lblLirik.text = "Berpesta tak lelah Berdansa"
+                  case (2,34...37): referenceLyricView?.lblLirik.text = "Pesta di malam minggu"
+                  case (2,38...41): referenceLyricView?.lblLirik.text = "Semua suka suka"
+                  case (2,42...45): referenceLyricView?.lblLirik.text = "Pesta di lantai dansa"
+                  case (2,46...50): referenceLyricView?.lblLirik.text = "Semua suka suka oh"
+                  case (2,51...53): referenceLyricView?.lblLirik.text = "Pesta di malam minggu"
+                  case (2,54...55): referenceLyricView?.lblLirik.text = "Semua suka suka"
+                  case (2,56...59): referenceLyricView?.lblLirik.text = "Pesta di lantai dansa"
+                  case (3,1...3): referenceLyricView?.lblLirik.text = "Semua suka suka"
+                  case (3,4...12): referenceLyricView?.lblLirik.text = "Pesta kau tlah mengusik rasa"
+                  case (3,13...20): referenceLyricView?.lblLirik.text = "Pesta membuat euforia"
+                  case (3,21...22): referenceLyricView?.lblLirik.text = "Pesta"
+                  default:
+                  referenceLyricView?.lblLirik.text = ""
+                  }
+              }
+        
+        if nowPlayingSongTitle == "Sempurna"{
+                      switch (minutesDuration,secondsDuration) {
+                      case (0,9...12): referenceLyricView?.lblLirik.text = "Kau begitu sempurna"
+                      case (0,13...18): referenceLyricView?.lblLirik.text = "Dimataku kau begitu indah"
+                      case (0,19...25): referenceLyricView?.lblLirik.text = "Kau membuat diriku akan slalu memujamu"
+                      case (0,29...32): referenceLyricView?.lblLirik.text = "Disetiap langkahku"
+                      case (0,33...37): referenceLyricView?.lblLirik.text = "Ku kan slalu memikirkan dirimu"
+                      case (0,38...45): referenceLyricView?.lblLirik.text = "Tak bisa kubayangkan hidupku tanpa cintamu"
+                      case (0,48...52): referenceLyricView?.lblLirik.text = "Janganlah kau tinggalkan diriku"
+                      case (0,53...57): referenceLyricView?.lblLirik.text = "Takkan mampu menghadapi semua"
+                      case (1,0...2): referenceLyricView?.lblLirik.text = "Hanya bersamamu ku akan bisa"
+                      case (1,3...6): referenceLyricView?.lblLirik.text = "Kau adalah darahku"
+                      case (1,7...12): referenceLyricView?.lblLirik.text = "Kau adalah jantungku"
+                      case (1,13...14): referenceLyricView?.lblLirik.text = "Kau adalah hidupku"
+                      case (1,15...17): referenceLyricView?.lblLirik.text = "Lengkapi diriku"
+                      case (1,18...21): referenceLyricView?.lblLirik.text = "Oh sayangku, kau begitu"
+                      case (1,25...34): referenceLyricView?.lblLirik.text = "Sempurna... Sempurna..."
+                      case (1,35...37): referenceLyricView?.lblLirik.text = "Kau genggam tanganku"
+                      case (1,38...44): referenceLyricView?.lblLirik.text = "Saat diriku lemah dan terjatuh"
+                      case (1,45...52): referenceLyricView?.lblLirik.text = "Kau bisikkan kata dan hapus semua sesalku"
+                      case (1,54...58): referenceLyricView?.lblLirik.text = "Janganlah kau tinggalkan dirikuu"
+                      case (2,0...3): referenceLyricView?.lblLirik.text = "Takkan mampu menghadapi semua"
+                      case (2,4...8): referenceLyricView?.lblLirik.text = "Hanya bersamamu ku akan bisa"
+                      case (2,9...12): referenceLyricView?.lblLirik.text = "Kau adalah darahku"
+                      case (2,13...17): referenceLyricView?.lblLirik.text = "Kau adalah jantungku"
+                      case (2,18...20): referenceLyricView?.lblLirik.text = "Kau adalah hidupku"
+                      case (2,21...23): referenceLyricView?.lblLirik.text = "Lengkapi diriku"
+                      case (2,24...28): referenceLyricView?.lblLirik.text = "Oh sayangku, kau begitu"
+                      case (2,30...40): referenceLyricView?.lblLirik.text = "Sempurna... Sempurna..."
+                      case (2,41...49): referenceLyricView?.lblLirik.text = "---intro---"
+                      case (2,50...54): referenceLyricView?.lblLirik.text = "Janganlah kau tinggalkan diriku"
+                      case (2,55...59): referenceLyricView?.lblLirik.text = "Takkan mampu menghadapi semuaa"
+                      case (3,0...4): referenceLyricView?.lblLirik.text = "Hanya bersamamu ku akan bisaa"
+                      case (3,5...9): referenceLyricView?.lblLirik.text = "Kau adalah darahkuu"
+                      case (3,10...14): referenceLyricView?.lblLirik.text = "Kau adalah jantungku"
+                      case (3,15...17): referenceLyricView?.lblLirik.text = "Kau adalah hidupku"
+                      case (3,18...20): referenceLyricView?.lblLirik.text = "Lengkapi diriku"
+                      case (3,21...24): referenceLyricView?.lblLirik.text = "Oh sayangku, kau begituu"
+                      case (3,25...29): referenceLyricView?.lblLirik.text = "Kau adalah darahkuu(darahhkuu)"
+                      case (3,30...34): referenceLyricView?.lblLirik.text = "Kau adalah jantungkuu(jantungkuu)"
+                      case (3,35...36): referenceLyricView?.lblLirik.text = "Kau adalah hidupkuu(hidupkuu)"
+                      case (3,37...39): referenceLyricView?.lblLirik.text = "Lengkapi dirikuu"
+                      case (3,40...44): referenceLyricView?.lblLirik.text = "Oh sayangku, kau begituu"
+                      case (3,45...49): referenceLyricView?.lblLirik.text = "sayangku, kau begituu"
+                      case (3,51...59): referenceLyricView?.lblLirik.text = "Sempurna... Sempurna…"
+                        
+                      default:
+                      referenceLyricView?.lblLirik.text = ""
+                      }
+                  }
+        
+        if nowPlayingSongTitle == "Goyang Dumang"{
+                  switch (minutesDuration,secondsDuration) {
+                  case (0,29...31): referenceLyricView?.lblLirik.text = "Sakit rasanya putus cinta"
+                  case (0,32...35): referenceLyricView?.lblLirik.text = "Sesaknya di dada"
+                  case (0,36...38): referenceLyricView?.lblLirik.text = "Membuat kita jadi gegana"
+                  case (0,39...42): referenceLyricView?.lblLirik.text = "Gelisah Galau Merana"
+                  case (0,43...46): referenceLyricView?.lblLirik.text = "Mendingan kita happy aja"
+                  case (0,47...50): referenceLyricView?.lblLirik.text = "Lupakan semua"
+                  case (0,51...53): referenceLyricView?.lblLirik.text = "Marilah kita goyang bersama"
+                  case (0,54...58): referenceLyricView?.lblLirik.text = "Goyang Dumang namanya"
+                  case (1,0...2): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senang"
+                  case (1,3...5): referenceLyricView?.lblLirik.text = "Pikiran pun tenang, galau jadi hilan"
+                  case (1,6...9): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senang"
+                  case (1,10...12): referenceLyricView?.lblLirik.text = "Semua masalah jadi hilang"
+                  case (1,13...16): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senang"
+                  case (1,17...20): referenceLyricView?.lblLirik.text = " Pikiran pun tenang, galau jadi hilang"
+                  case (1,21...24): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senang"
+                  case (1,25...28): referenceLyricView?.lblLirik.text = "Semua masalah jadi hilang"
+                  case (1,33...37): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang"
+                  case (1,48...51): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang"
+                  case (2,2...6): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang"
+                  case (2,17...21): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang"
+                  case (2,25...28): referenceLyricView?.lblLirik.text = "Sakit rasanya putus cinta"
+                  case (2,29...32): referenceLyricView?.lblLirik.text = "Sesaknya di dada"
+                  case (2,33...35): referenceLyricView?.lblLirik.text = "Membuat kita jadi gegana"
+                  case (2,36...38): referenceLyricView?.lblLirik.text = "Gelisah Galau Merana"
+                  case (2,39...43): referenceLyricView?.lblLirik.text = "Mendingan kita happy ajaa"
+                  case (2,44...46): referenceLyricView?.lblLirik.text = "Lupakan semua"
+                  case (2,47...50): referenceLyricView?.lblLirik.text = "Marilah kita goyang bersama"
+                  case (2,51...53): referenceLyricView?.lblLirik.text = "Goyang Dumang namanya"
+                  case (2,54...59): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senang"
+                  case (3,0...2): referenceLyricView?.lblLirik.text = "Pikiran pun tenang, galau jadi hilanga"
+                  case (3,3...5): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senang"
+                  case (3,6...9): referenceLyricView?.lblLirik.text = "Semua masalah jadi hilang"
+                  case (3,10...13): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senang"
+                  case (3,14...16): referenceLyricView?.lblLirik.text = " Pikiran pun tenang, galau jadi hilang"
+                  case (3,17...20): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang biar hati senangg"
+                  case (3,21...24): referenceLyricView?.lblLirik.text = "Semua masalah jadi hilang"
+                  case (3,29...31): referenceLyricView?.lblLirik.text = "Ayo Goyang Dumang"
+                  default:
+                  referenceLyricView?.lblLirik.text = ""
+                  }
+              }
+        
+        if nowPlayingSongTitle == "Harus Bahagia"{
+                  switch (minutesDuration,secondsDuration) {
+                  case (0,7...10): referenceLyricView?.lblLirik.text = "Baru putus, baru saja putus"
+                  case (0,11...13): referenceLyricView?.lblLirik.text = "Tak perlu engkau bingung"
+                  case (0,14...15): referenceLyricView?.lblLirik.text = "(Terlalu lama)"
+                  case (0,16...17): referenceLyricView?.lblLirik.text = "Lebih baik kita terus maju"
+                  case (0,18...21): referenceLyricView?.lblLirik.text = "Gapai mimpi yang baru"
+                  case (0,24...27): referenceLyricView?.lblLirik.text = "Punya pacar harus lebih baik"
+                  case (0,28...32): referenceLyricView?.lblLirik.text = "Punya pacar harus lebih keren"
+                  case (0,33...34): referenceLyricView?.lblLirik.text = "Tapi keren nggak cukup"
+                  case (0,35...36): referenceLyricView?.lblLirik.text = "Yang paling penting"
+                  case (0,37...38): referenceLyricView?.lblLirik.text = "Kita harus bahagia"
+                  case (0,44...48): referenceLyricView?.lblLirik.text = "Hati-hati, harus hati-hati"
+                  case (0,45...46): referenceLyricView?.lblLirik.text = "Kalau masalah hati"
+                  case (0,47...48): referenceLyricView?.lblLirik.text = "(Masalah hati)"
+                  case (0,49...51): referenceLyricView?.lblLirik.text = "Jangan sampai mengulang cerita"
+                  case (0,53...54): referenceLyricView?.lblLirik.text = "Salah pilih kekasih"
+                  case (0,56...59): referenceLyricView?.lblLirik.text = "Punya pacar harus lebih baik"
+                  case (1,2...4): referenceLyricView?.lblLirik.text = "Punya pacar harus lebih keren"
+                  case (1,5...7): referenceLyricView?.lblLirik.text = "Tapi keren nggak cukup"
+                  case (1,8...9): referenceLyricView?.lblLirik.text = "Yang paling penting"
+                  case (1,10...11): referenceLyricView?.lblLirik.text = "Kita harus bahagia"
+                  case (1,34...37): referenceLyricView?.lblLirik.text = "Hati-hati, harus hati-hati"
+                  case (1,38...40): referenceLyricView?.lblLirik.text = "Kalau masalah hati"
+                  case (1,41...42): referenceLyricView?.lblLirik.text = "(Masalah hati)"
+                  case (1,43...46): referenceLyricView?.lblLirik.text = "Jangan sampai mengulang cerita"
+                  case (1,47...49): referenceLyricView?.lblLirik.text = "Salah pilih kekasih"
+                  case (1,50...54): referenceLyricView?.lblLirik.text = "Punya pacar harus lebih baik"
+                  case (1,55...58): referenceLyricView?.lblLirik.text = "Punya pacar harus lebih keren"
+                  case (2,0): referenceLyricView?.lblLirik.text = "Tapi keren nggak cukup"
+                  case (2,1...2): referenceLyricView?.lblLirik.text = "Yang paling penting)"
+                  case (2,3...6): referenceLyricView?.lblLirik.text = "Kita harus bahagia"
+                  case (2,7...9): referenceLyricView?.lblLirik.text = "Kita harus bahagia)"
+                  case (2,11...14): referenceLyricView?.lblLirik.text = "Kita harus bahagia"
+                  case (2,15...17): referenceLyricView?.lblLirik.text = "Kita harus bahagia"
+                  case (2,20...22): referenceLyricView?.lblLirik.text = "Kamu, kamu harus bahagia"
+                  case (2,21...24): referenceLyricView?.lblLirik.text = "Kamu, kamu harus bahagia"
+                  case (2,25...27): referenceLyricView?.lblLirik.text = "Kamu, kamu harus bahagia"
+                  case (2,28...30): referenceLyricView?.lblLirik.text = "Kamu, kamu harus bahagia"
+                  case (2,44...46): referenceLyricView?.lblLirik.text = "Kita harus bahagia"
+                  default:
+                  referenceLyricView?.lblLirik.text = ""
+                  }
+              }
 //        if audioPlayer.isPlaying {
 //            playButton.setImage(#imageLiteral(resourceName: "pause-btn"), for: .normal)
 //        } else {
