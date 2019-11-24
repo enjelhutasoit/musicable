@@ -21,7 +21,7 @@ class SongListTableViewCell: UITableViewCell {
     static let shared = SongListTableViewCell()
     
     var song: Song?
-    var delegate: FavoriteDelegate?
+//    var delegate: FavoriteDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,7 +52,7 @@ class SongListTableViewCell: UITableViewCell {
             self.favoriteButtonLabel.setImage(image1, for: .normal)
             likeCounter = 0
         }
-        delegate?.isFavorite(song: song)
+//        delegate?.isFavorite(song: song)
     }
     
     func displayData(_ data: Song) {
@@ -60,14 +60,14 @@ class SongListTableViewCell: UITableViewCell {
         songTitleLabel.text = data.songTitle
         singerLabel.text = data.songSinger
         songDurationLabel.text = data.songDuration
-        var image1: UIImage?
-        if data.isFavorite {
-            image1 = UIImage(named: "Like Icon.png")!
-        }else {
-            image1 = UIImage(named: "Favourite Options Button.png")!
-        }
-        guard let image2  =  image1 else  {return}
-        self.favoriteButtonLabel.setImage(image2, for: .normal)
+//        var image1: UIImage?
+//        if data.isFavorite {
+//            image1 = UIImage(named: "Like Icon.png")!
+//        }else {
+//            image1 = UIImage(named: "Favourite Options Button.png")!
+//        }
+//        guard let image2  =  image1 else  {return}
+//        self.favoriteButtonLabel.setImage(image2, for: .normal)
     }
     
 }

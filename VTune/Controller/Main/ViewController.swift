@@ -21,10 +21,8 @@ class ViewController: UIViewController, UISearchBarDelegate{
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet var addSongButtonOutlet: UIBarButtonItem!
     
-//    var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
     var referenceMusicPlayerMini: MusicPlayerMini?
-    
-    var dummyFavorit: [Song] = []
+    var songs: [Song] = []
     var flag = false
     var likeCounter = 0
     let searchController = UISearchController(searchResultsController: nil)
@@ -41,13 +39,10 @@ class ViewController: UIViewController, UISearchBarDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = nil
         setView()
         runningText()
-        dummyProduct = createArray()
         UserDefaults.standard.set("false", forKey: "isPlaying")
 //        getData()
-//        audioPlayer = initializePlayer()!
         searchController.searchResultsUpdater = self as UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Cari Lagu"
@@ -63,18 +58,8 @@ class ViewController: UIViewController, UISearchBarDelegate{
         super.viewDidAppear(animated)
     }
     
-    private func initializePlayer() -> AVAudioPlayer?
-    {
-        guard let path = Bundle.main.path(forResource: songList?.songTitleLabel.text, ofType: "mp3")
-        else {
-            return nil
-        }
-
-        return try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-    }
-    
     func filterContentForSearchText(_ searchText: String) {
-      filteredSong = dummyProduct.filter { (song: Song) -> Bool in
+      filteredSong = songs.filter { (song: Song) -> Bool in
       return song.songTitle.lowercased().contains(searchText.lowercased())
       }
       
@@ -92,42 +77,6 @@ class ViewController: UIViewController, UISearchBarDelegate{
         tableView.reloadData()
     }
     
-    func createArray() -> [Song]{
-        var tempSong: [Song] = []
-//        let song1 =  Song(songTitle: "Potong Bebek Angsa", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-//        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-//        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "NN", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-        
-        let song1 =  Song(songTitle: "Menunggu Kamu (OST Jelita Sejuba)", songSinger: "Anji", songDuration: "03:49", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Menunggu Kamu"))
-        let song2 =  Song(songTitle: "Sempurna", songSinger: "Andra & The Backbone", songDuration: "04:28", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Sempurna"))
-        let song3 =  Song(songTitle: "Goyang Dumang", songSinger: "Cita Citata", songDuration: "03:44", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Goyang Dumang"))
-        let song4 =  Song(songTitle: "Pesta", songSinger: "Isyana Sarasvati", songDuration: "03:30", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Pesta"))
-        let song5 =  Song(songTitle: "Harus Bahagia", songSinger: "Yura Yunita", songDuration: "02:53", favIcon: "Favourite Options Button.png", isFavorite: false, albumImage: #imageLiteral(resourceName: "Harus Bahagia"))
-        
-        
-        tempSong.append(song1)
-        tempSong.append(song2)
-        tempSong.append(song3)
-        tempSong.append(song4)
-        tempSong.append(song5)
-        return tempSong
-    }
-    
-//    func createArray2() -> [Song]{
-//        var tempSong: [Song] = []
-//
-//        let song1 =  Song(songTitle: "Potong Bebek Angsa", songSinger: "ABC", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-//        let song2 =  Song(songTitle: "Indonesia Raya", songSinger: "DEF", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-//        let song3 =  Song(songTitle: "Indonesia Pusaka", songSinger: "GHE", songDuration: "00:00", favIcon: "Favourite Options Button.png", isFavorite: false)
-//
-//        tempSong.append(song1)
-//        tempSong.append(song2)
-//        tempSong.append(song3)
-//
-//
-//        return tempSong
-//    }
-    
     func runningText(){
         referenceMusicPlayerMini?.songTitle.tag = 601
         referenceMusicPlayerMini?.songTitle.type = .continuous
@@ -136,17 +85,31 @@ class ViewController: UIViewController, UISearchBarDelegate{
         referenceMusicPlayerMini?.songTitle.trailingBuffer = 30.0
     }
     
+    func playSong(songs: [Song], completion: @escaping ((Error?) -> Void)) {
+        self.songs = songs
+//        self.queuedSongs = songs
+//        self.nowPlayingSong = nil
+        var songIdentifiers = [String]()
+        songs.forEach { (song) in
+            songIdentifiers.append(song.id)
+        }
+        mediaPlayer.beginGeneratingPlaybackNotifications()
+        mediaPlayer.setQueue(with: songIdentifiers)
+        mediaPlayer.play()
+        getData()
+        completion(nil)
+    }
+    
     func getData(){
-//        if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
-//            nowPlayingSongTitle = nowPlaying.title!
-//            nowPlayingSongSinger = nowPlaying.albumArtist!
-//            nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
-//            nowPlayingAlbumImage = nowPlaying.artwork?.image(at: CGSize(width: (referenceMusicPlayerMini?.photoAlbum.frame.width)!, height: (referenceMusicPlayerMini?.photoAlbum.frame.height)!))
-//            referenceMusicPlayerMini?.songTitle.text = nowPlayingSongTitle
-//            referenceMusicPlayerMini?.photoAlbum.image = nowPlayingAlbumImage
-//
-//            print("Fungsi getData() Berhasil")
-//        }
+        if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
+            nowPlayingSongTitle = nowPlaying.title!
+            nowPlayingSongSinger = nowPlaying.albumArtist!
+            nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
+            nowPlayingAlbumImage = nowPlaying.artwork?.image(at: CGSize(width: (referenceMusicPlayerMini?.photoAlbum.frame.width)!, height: (referenceMusicPlayerMini?.photoAlbum.frame.height)!))
+            referenceMusicPlayerMini?.songTitle.text = nowPlayingSongTitle
+            referenceMusicPlayerMini?.photoAlbum.image = nowPlayingAlbumImage
+            print("Fungsi getData() Berhasil")
+        }
         if UserDefaults.standard.string(forKey: "isPlaying") == "true"{
             referenceMusicPlayerMini?.songTitle.text = nowPlayingSongTitle
             referenceMusicPlayerMini?.NextButtonOutlet.isEnabled = true
@@ -187,11 +150,11 @@ class ViewController: UIViewController, UISearchBarDelegate{
      
     
     @IBAction func addLaguFromiTunes(_ sender: Any) {
-//        let myMediaPickerVC = MPMediaPickerController(mediaTypes: MPMediaType.music)
-//        myMediaPickerVC.allowsPickingMultipleItems = true
-//        myMediaPickerVC.popoverPresentationController?.sourceView = sender as? UIView
-//        myMediaPickerVC.delegate = self
-//        self.present(myMediaPickerVC, animated: true, completion: nil)
+        let myMediaPickerVC = MPMediaPickerController(mediaTypes: MPMediaType.music)
+        myMediaPickerVC.allowsPickingMultipleItems = true
+        myMediaPickerVC.popoverPresentationController?.sourceView = sender as? UIView
+        myMediaPickerVC.delegate = self
+        self.present(myMediaPickerVC, animated: true, completion: nil)
     }
 }
 
@@ -204,11 +167,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             if isFiltering {
                 value = filteredSong.count
             } else {
-                value = dummyProduct.count
+                value = songs.count
             }
             break
         case 1:
-            for product in dummyProduct
+            for product in songs
             {
                 if product.isFavorite
                 {
@@ -230,29 +193,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("SongListTableViewCell", owner: self, options: nil)?.first as! SongListTableViewCell
-           
-    //        let song: Song
-            
-        cell.delegate = self
-           
+    
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             if isFiltering {
                 cell.displayData(filteredSong[indexPath.row])
             } else {
-                cell.displayData(dummyProduct[indexPath.row])
+                cell.displayData(songs[indexPath.row])
+                cell.songTitleLabel.text = songs[indexPath.row].songTitle
             }
             break
 
         case 1:
-            if dummyProduct[indexPath.row].isFavorite && isFiltering
+            if songs[indexPath.row].isFavorite && isFiltering
             {
                 cell.displayData(filteredSong[indexPath.row])
             } else {
-                cell.displayData(dummyProduct[indexPath.row])
+                cell.displayData(songs[indexPath.row])
         }
             break
-            
+
         default:
             break
         }
@@ -267,7 +227,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete
         {
-            dummyProduct.remove(at: indexPath.row)
+            songs.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             }
     }
@@ -277,75 +237,34 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             if isFiltering {
-                do
-                {
-                    let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
-                    try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                    audioPlayer?.play()
-                    thisSong = indexPath.row
-                    audioStuffed = true
-                }
-                catch
-                {
-                    print ("ERROR")
-                }
+                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
+                self.playSong(songs: slicedTracks, completion: { (error) in
+                      let cell = tableView.cellForRow(at: indexPath)
+                      cell?.setSelected(false, animated: true)
+                  })
             } else {
-                do
-                {
-                    let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
-                    try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                    audioPlayer?.play()
-                    thisSong = indexPath.row
-                    audioStuffed = true
+                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
+                self.playSong(songs: slicedTracks, completion: { (error) in
+                        let cell = tableView.cellForRow(at: indexPath)
+                        cell?.setSelected(false, animated: true)
+                    })
                 }
-                catch
-                {
-                    print ("ERROR")
-                }
-            }
-            break
         case 1:
-            for product in dummyProduct
+            for product in songs
             {
                 if product.isFavorite
                 {
-                    do
-                    {
-                        let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
-                        try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                        audioPlayer?.play()
-                        thisSong = indexPath.row
-                        audioStuffed = true
-                    }
-                    catch
-                    {
-                        print ("ERROR")
-                    }
+                    
                 }
                     
                 if isFiltering {
-                    do
-                    {
-                        let audioPath = Bundle.main.path(forResource: dummyProduct[indexPath.row].songTitle , ofType: ".mp3")
-                        try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-                        audioPlayer?.play()
-                        thisSong = indexPath.row
-                        audioStuffed = true
-                    }
-                    catch
-                    {
-                        print ("ERROR")
-                    }
+                   
                 }
             }
-            break
         default:
             break
         }
-        nowPlayingSongTitle = dummyProduct[indexPath.row].songTitle
-        nowPlayingSongSinger = dummyProduct[indexPath.row].songSinger
-        nowPlayingAlbumImage = dummyProduct[indexPath.row].albumImage
-        referenceMusicPlayerMini?.playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
+            
         UserDefaults.standard.set("true", forKey: "isPlaying")
         getData()
     }
@@ -354,9 +273,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: FavoriteDelegate {
     func isFavorite(song: Song?) {
         guard let song = song else {return}
-        if let index = dummyProduct.firstIndex(where: {$0.songTitle == song.songTitle}) {
-        let isFav =  dummyProduct[index].isFavorite
-        dummyProduct[index].isFavorite = !isFav
+        if let index = songs.firstIndex(where: {$0.songTitle == song.songTitle}) {
+        let isFav =  songs[index].isFavorite
+        songs[index].isFavorite = !isFav
         tableView.reloadData()
         }
     }
@@ -370,7 +289,7 @@ extension ViewController: UISearchResultsUpdating {
 }
 
 // Music Kit
-/*
+
 extension ViewController: MPMediaPickerControllerDelegate{
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         mediaPlayer.setQueue(with: mediaItemCollection)
@@ -378,11 +297,21 @@ extension ViewController: MPMediaPickerControllerDelegate{
         mediaPlayer.play()
         mediaPicker.showsItemsWithProtectedAssets = false
         referenceMusicPlayerMini?.playButtonOutlet.setImage(#imageLiteral(resourceName: "Pause Button (Small)"), for: .normal)
+        UserDefaults.standard.set("true", forKey: "isPlaying")
         getData()
+        
+        for i in 0...(mediaItemCollection.count-1){
+            let currentTime = Int(mediaItemCollection.items[i].playbackDuration)
+            let minutes = currentTime/60
+            let seconds = currentTime - minutes * 60
+            
+            songs.append(Song(songTitle: (mediaItemCollection.items[i].title)!, songSinger: (mediaItemCollection.items[i].albumArtist)!, songDuration: String(format: "%02d:%02d", minutes,seconds) as String, favIcon: "Favourite Options Button.png", isFavorite: false, id: mediaItemCollection.items[i].playbackStoreID))
+        }
+        tableView.reloadData()
     }
     
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
         mediaPicker.dismiss(animated: true, completion: nil)
     }
 }
-*/
+

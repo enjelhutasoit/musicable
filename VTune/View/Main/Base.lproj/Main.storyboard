@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-q5-Lsx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UYf-Jf-JuA">
                                         <rect key="frame" x="36" y="8" width="342" height="31"/>
@@ -24,15 +24,15 @@
                                             <constraint firstAttribute="height" constant="30" id="sZV-Z4-IJU"/>
                                         </constraints>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="Lagu"/>
+                                            <segment title="Favorit"/>
                                         </segments>
                                         <connections>
                                             <action selector="switchSegmentedControl:" destination="YIW-J3-JMC" eventType="valueChanged" id="fCb-XL-U2A"/>
                                         </connections>
                                     </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-Oe-Xjv">
-                                        <rect key="frame" x="0.0" y="46" width="414" height="728"/>
+                                        <rect key="frame" x="0.0" y="46" width="414" height="762"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="82z-2z-HW2" customClass="SongListTableViewCell" customModule="VTune" customModuleProvider="target">
@@ -73,10 +73,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Lhv-q5-Lsx" secondAttribute="bottom" id="0WY-Ng-pro"/>
                             <constraint firstItem="Lhv-q5-Lsx" firstAttribute="top" secondItem="t3U-vC-aeO" secondAttribute="top" id="J93-hA-XNU"/>
                             <constraint firstItem="Lhv-q5-Lsx" firstAttribute="trailing" secondItem="t3U-vC-aeO" secondAttribute="trailing" id="LcW-oX-yt9"/>
                             <constraint firstItem="Lhv-q5-Lsx" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" id="fV2-Xi-Ru0"/>
-                            <constraint firstAttribute="bottom" secondItem="Lhv-q5-Lsx" secondAttribute="bottom" constant="34" id="l2r-r5-mVv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t3U-vC-aeO"/>
                     </view>
