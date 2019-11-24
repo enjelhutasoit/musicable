@@ -29,6 +29,8 @@
 		AC9F801623827A8F00752432 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9F801523827A8F00752432 /* Slide.xib */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
+		DC222CA623898F6400B00C82 /* Helper in Resources */ = {isa = PBXBuildFile; fileRef = DC222CA523898F6400B00C82 /* Helper */; };
+		DC222CAA2389965800B00C82 /* MXMLyricsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC222CA82389965800B00C82 /* MXMLyricsAction.m */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
 		DC501480236C70F300AD39F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC50147E236C70F300AD39F1 /* Main.storyboard */; };
@@ -79,7 +81,11 @@
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC0EE70323819D0900638360 /* RunningText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningText.swift; sourceTree = "<group>"; };
-		DC501475236C70F300AD39F1 /* VTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC222CA523898F6400B00C82 /* Helper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helper; sourceTree = "<group>"; };
+		DC222CA72389965700B00C82 /* VTune-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VTune-Bridging-Header.h"; sourceTree = "<group>"; };
+		DC222CA82389965800B00C82 /* MXMLyricsAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMLyricsAction.m; sourceTree = "<group>"; };
+		DC222CA92389965800B00C82 /* MXMLyricsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMLyricsAction.h; sourceTree = "<group>"; };
+		DC501475236C70F300AD39F1 /* Musicable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC501478236C70F300AD39F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC50147A236C70F300AD39F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC50147F236C70F300AD39F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,7 +157,7 @@
 		DC501476236C70F300AD39F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC501475236C70F300AD39F1 /* VTune.app */,
+				DC501475236C70F300AD39F1 /* Musicable.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +248,9 @@
 				DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */,
 				DCA99FF6237421C800312B37 /* MusicPlayerLyricHeader.swift */,
 				DCA99FFA23742D5B00312B37 /* MusicPlayerAlbumImage.swift */,
+				DC222CA92389965800B00C82 /* MXMLyricsAction.h */,
+				DC222CA82389965800B00C82 /* MXMLyricsAction.m */,
+				DC222CA72389965700B00C82 /* VTune-Bridging-Header.h */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -286,7 +295,7 @@
 			);
 			name = VTune;
 			productName = VTune;
-			productReference = DC501475236C70F300AD39F1 /* VTune.app */;
+			productReference = DC501475236C70F300AD39F1 /* Musicable.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -301,6 +310,7 @@
 				TargetAttributes = {
 					DC501474236C70F300AD39F1 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -373,6 +383,7 @@
 				DC67F455237A9F32006F6278 /* DurationSlider.swift in Sources */,
 				5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
+				DC222CAA2389965800B00C82 /* MXMLyricsAction.m in Sources */,
 				AC9F800E2382782A00752432 /* GetStarted.swift in Sources */,
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
@@ -526,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X29NU3BMGT;
 				INFOPLIST_FILE = VTune/Info.plist;
@@ -535,7 +547,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasmine.VTune;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Musicable;
+				SWIFT_OBJC_BRIDGING_HEADER = "VTune/Controller/MusicPlayer/VTune-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -545,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4H65A594JP;
 				INFOPLIST_FILE = VTune/Info.plist;
@@ -554,7 +569,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasmine.VTune;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Musicable;
+				SWIFT_OBJC_BRIDGING_HEADER = "VTune/Controller/MusicPlayer/VTune-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

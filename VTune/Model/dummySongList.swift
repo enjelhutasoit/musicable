@@ -8,20 +8,6 @@
 
 import Foundation
 import UIKit
-class DummySongList{
-    var songTitle: String?
-    var songSinger: String?
-    var songDuration: String?
-    var favIcon:  String?
-    
-    init(songTitle: String, songSinger: String, songDuration: String, favIcon: String, songs: String) {
-        self.songTitle = songTitle
-        self.songSinger = songSinger
-        self.songDuration = songDuration
-        self.favIcon = favIcon
-    }
-}
-
 
 struct Song {
     let songTitle: String
@@ -29,5 +15,5 @@ struct Song {
     let songDuration: String
     let favIcon:  String
     var isFavorite: Bool
-    var albumImage: UIImage
+    var id: String
 }
