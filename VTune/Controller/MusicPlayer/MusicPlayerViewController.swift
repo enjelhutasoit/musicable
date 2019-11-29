@@ -113,7 +113,13 @@ class MusicPlayerViewController: UIViewController {
         referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowOpacity = 0.3
         referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowRadius = 10
         
-        referencePlayView?.volumeSlider.self.setVolumeThumbImage(#imageLiteral(resourceName: "Oval 2"), for: .normal)
+             
+//        referencePlayView?.volumeSlider.setVolumeThumbImage(#imageLiteral(resourceName: "Slider Dot"), for: .normal)
+        referencePlayView?.volumeSlider.setMaximumTrackImage(#imageLiteral(resourceName: "Minimal Slider"), for: .normal)
+        referencePlayView?.volumeSlider.setMinimumTrackImage(#imageLiteral(resourceName: "Slider Filler"), for: .normal)
+        referencePlayView?.timeSlider.setMinimumTrackImage(#imageLiteral(resourceName: "Slider Filler"), for: .normal)
+        referencePlayView?.timeSlider.setMaximumTrackImage(#imageLiteral(resourceName: "Minimal Slider"), for: .normal)
+        
     //===========================================================================================================================
         //Function For Render Waveform View (from: rajabun)
         //===========================================================================================================================
@@ -379,7 +385,7 @@ extension MusicPlayerViewController: SignalProvider
             let index = self.frequencyDomainGraphLayerIndex % self.frequencyDomainGraphLayers.count
             
             GraphUtility.drawGraphInLayer(self.frequencyDomainGraphLayers[index],
-                                          strokeColor: UIColor.blue.withAlphaComponent(1).cgColor,
+                                          strokeColor: #colorLiteral(red: 0.3254901961, green: 0.8901960784, blue: 0.7803921569, alpha: 1),
                                           lineWidth: 2,
                                           values: frequencyDomain,
                                           minimum: -20,
@@ -390,7 +396,7 @@ extension MusicPlayerViewController: SignalProvider
             {
                 if let alpha = $0.strokeColor?.alpha
                 {
-                    $0.strokeColor = UIColor.blue.withAlphaComponent(alpha * 0.75).cgColor
+                    $0.strokeColor = #colorLiteral(red: 0.3254901961, green: 0.8901960784, blue: 0.7803921569, alpha: 1)
                 }
             }
             
