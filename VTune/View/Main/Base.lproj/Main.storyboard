@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SLW-L0-JNr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SLW-L0-JNr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Main-->
         <scene sceneID="jgI-Je-qvz">
             <objects>
-                <viewController storyboardIdentifier="Main" title="Main" id="YIW-J3-JMC" customClass="ViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" title="Main" id="YIW-J3-JMC" customClass="ViewController" customModule="Musicable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzX-qA-2pN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,24 +18,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-q5-Lsx">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UYf-Jf-JuA">
-                                        <rect key="frame" x="36" y="8" width="342" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="sZV-Z4-IJU"/>
-                                        </constraints>
-                                        <segments>
-                                            <segment title="Lagu"/>
-                                            <segment title="Favorit"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="switchSegmentedControl:" destination="YIW-J3-JMC" eventType="valueChanged" id="fCb-XL-U2A"/>
-                                        </connections>
-                                    </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-Oe-Xjv">
-                                        <rect key="frame" x="0.0" y="46" width="414" height="762"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="82z-2z-HW2" customClass="SongListTableViewCell" customModule="VTune" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="82z-2z-HW2" customClass="SongListTableViewCell" customModule="Musicable" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82z-2z-HW2" id="WNA-3k-hQ8">
@@ -53,16 +40,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Dkj-Oe-Xjv" secondAttribute="bottom" id="5g4-Uy-ARa"/>
-                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="centerX" secondItem="Dkj-Oe-Xjv" secondAttribute="centerX" id="AfC-Ie-0L0"/>
-                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="leading" secondItem="Lhv-q5-Lsx" secondAttribute="leading" constant="36" id="HLg-pM-4eJ"/>
-                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="centerX" secondItem="Lhv-q5-Lsx" secondAttribute="centerX" id="I43-0r-bud"/>
-                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="top" secondItem="UYf-Jf-JuA" secondAttribute="bottom" constant="8" symbolic="YES" id="Zcm-X6-jzR"/>
-                                    <constraint firstItem="UYf-Jf-JuA" firstAttribute="top" secondItem="Lhv-q5-Lsx" secondAttribute="topMargin" id="a8V-YK-CAc"/>
+                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="centerX" secondItem="Lhv-q5-Lsx" secondAttribute="centerX" id="FGp-7A-Q7J"/>
+                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="centerY" secondItem="Lhv-q5-Lsx" secondAttribute="centerY" id="SCh-ol-bwB"/>
                                     <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="leading" secondItem="Lhv-q5-Lsx" secondAttribute="leading" id="trK-AV-Rxs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" id="Oas-LG-7oc">
-                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                                <rect key="frame" x="11" y="779" width="392" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -81,7 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="t3U-vC-aeO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Daftar Lagu" id="3gA-Ee-thf">
-                        <barButtonItem key="rightBarButtonItem" image="Right Accessory" id="7RS-g2-avd">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Right Accessory" id="7RS-g2-avd">
                             <connections>
                                 <action selector="addLaguFromiTunes:" destination="YIW-J3-JMC" id="yW1-jL-kx0"/>
                             </connections>
@@ -90,7 +74,6 @@
                     <connections>
                         <outlet property="addSongButtonOutlet" destination="7RS-g2-avd" id="LvA-u5-TO9"/>
                         <outlet property="musicPlayerMiniView" destination="Oas-LG-7oc" id="LWs-CA-Pgw"/>
-                        <outlet property="segmentedControl" destination="UYf-Jf-JuA" id="19W-Rb-2wJ"/>
                         <outlet property="tableView" destination="Dkj-Oe-Xjv" id="Vex-fm-qwB"/>
                         <segue destination="gfp-cf-NV3" kind="presentation" identifier="goToNextVC" id="jfR-5y-gIX"/>
                     </connections>

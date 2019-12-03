@@ -15,7 +15,7 @@ class PlayView: UIView {
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var timeDuration: UILabel!
     @IBOutlet var currentTime: UILabel!
-    @IBOutlet weak var volumeSlider: MPVolumeView!
+    @IBOutlet weak var volumeSlider: UISlider!
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnPrevious: UIButton!
     @IBOutlet weak var btnNext: UIButton!
@@ -34,7 +34,7 @@ class PlayView: UIView {
             btnPlay.setImage(#imageLiteral(resourceName: "Play Button (Big)"), for: .normal)
             mediaPlayer.pause()
         }else{
-            btnPlay.setImage(#imageLiteral(resourceName: "Mini Pause Button-1"), for: .normal)
+            btnPlay.setImage(#imageLiteral(resourceName: "Pause Button (Big)"), for: .normal)
             mediaPlayer.play()
         }
     }

@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayView" customModule="VTune" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayView" customModule="Musicable" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main Music Player Bg" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-9G-bcY">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BKp-R2-erd">
                     <rect key="frame" x="7" y="9" width="400" height="199"/>
                     <subviews>
@@ -29,14 +25,14 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="WA5-pc-FIQ" customClass="DurationSlider" customModule="VTune" customModuleProvider="target">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="WA5-pc-FIQ" customClass="DurationSlider" customModule="Musicable" customModuleProvider="target">
                                     <rect key="frame" x="34" y="0.0" width="333" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="IEj-94-os7"/>
                                         <constraint firstAttribute="width" constant="329" id="dMF-7J-vRR"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Big)"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="sliderValueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="lEF-Es-h5i"/>
@@ -103,14 +99,14 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quieter Icon" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-E1-WF7">
                                     <rect key="frame" x="0.0" y="0.0" width="11" height="25"/>
                                 </imageView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QCa-cJ-OZT" customClass="MPVolumeView">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="QCa-cJ-OZT" customClass="VolumeSlider" customModule="Musicable" customModuleProvider="target">
                                     <rect key="frame" x="19" y="0.0" width="333" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="329" id="hhP-jl-XDf"/>
                                         <constraint firstAttribute="height" constant="25" id="k9G-JG-z8T"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot (Big)"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Slider Dot"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="sliderVolume:" destination="iN0-l3-epB" eventType="valueChanged" id="Cog-ch-eVb"/>
@@ -178,14 +174,13 @@
     <resources>
         <image name="Louder Icon" width="26" height="22"/>
         <image name="Lyric Button Off" width="38" height="37"/>
-        <image name="Main Music Player Bg" width="414" height="216"/>
         <image name="Next Button (Big)" width="25" height="26"/>
         <image name="Play Button (Big)" width="95" height="95"/>
         <image name="Previous Button (Big)" width="23" height="26"/>
         <image name="Quieter Icon" width="11" height="16"/>
         <image name="Reload Button" width="18" height="12"/>
         <image name="Shuffle Button" width="19" height="12"/>
-        <image name="Slider Dot (Big)" width="26" height="26"/>
+        <image name="Slider Dot" width="18" height="18"/>
         <image name="Vibrate Button On" width="38" height="37"/>
     </resources>
 </document>

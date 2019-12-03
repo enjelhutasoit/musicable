@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicPlayerMini" customModule="VTune" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicPlayerMini" customModule="Musicable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="83"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Music Player Bg" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-BO-K6n">
-                    <rect key="frame" x="0.0" y="-4.5" width="414" height="82"/>
-                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="6Bg-aC-pNI">
-                    <rect key="frame" x="19.5" y="8.5" width="375" height="56"/>
+                    <rect key="frame" x="8.5" y="13.5" width="375" height="56"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-xa-rF3">
                             <rect key="frame" x="0.0" y="1.5" width="53" height="53"/>
@@ -26,7 +23,7 @@
                                 <constraint firstAttribute="height" constant="53" id="tBs-pk-EUg"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-2m-fim" customClass="MarqueeLabel" customModule="VTune" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-2m-fim" customClass="MarqueeLabel" customModule="Musicable" customModuleProvider="target">
                             <rect key="frame" x="71" y="18" width="155" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="130-tn-kR7"/>
@@ -72,11 +69,9 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.76898705959320068" green="0.80349260568618774" blue="0.83530634641647339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="6Bg-aC-pNI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ERA-1m-6tS"/>
-                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerX" secondItem="6Bg-aC-pNI" secondAttribute="centerX" id="JS8-HF-wFc"/>
-                <constraint firstItem="hs2-BO-K6n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Pil-WI-ywh"/>
                 <constraint firstItem="6Bg-aC-pNI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qXC-9s-fcN"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
@@ -90,11 +85,10 @@
                 <outlet property="previewButtonOutlet" destination="DCu-H1-uMQ" id="w9J-vS-5XL"/>
                 <outlet property="songTitle" destination="sKi-2m-fim" id="Ghs-jX-CqC"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="168.41517857142856"/>
+            <point key="canvasLocation" x="365" y="124"/>
         </view>
     </objects>
     <resources>
-        <image name="Mini Music Player Bg" width="414" height="82"/>
         <image name="Next Button (Small)" width="19" height="21"/>
         <image name="Play Button (Small)" width="85" height="85"/>
         <image name="Previous Button (Small)" width="19" height="21"/>

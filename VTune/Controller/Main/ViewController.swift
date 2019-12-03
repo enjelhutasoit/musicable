@@ -14,11 +14,10 @@ protocol FavoriteDelegate {
     func isFavorite(song: Song?)
 }
 
-class ViewController: UIViewController, UISearchBarDelegate{
+class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var musicPlayerMiniView: UIView!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet var addSongButtonOutlet: UIBarButtonItem!
     
     var referenceMusicPlayerMini: MusicPlayerMini?
@@ -47,7 +46,11 @@ class ViewController: UIViewController, UISearchBarDelegate{
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Cari Lagu"
         navigationItem.searchController = searchController
+        navigationController?.navigationBar.prefersLargeTitles = true
         definesPresentationContext = true
+        
+        referenceMusicPlayerMini?.layer.cornerRadius = 10
+        musicPlayerMiniView.layer.cornerRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -162,30 +165,30 @@ class ViewController: UIViewController, UISearchBarDelegate{
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var value = 0
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            if isFiltering {
-                value = filteredSong.count
-            } else {
-                value = songs.count
-            }
-            break
-        case 1:
-            for product in songs
-            {
-                if product.isFavorite
-                {
-                    value+=1
-                }
-                    
-                if isFiltering {
-                    value = filteredSong.count
-                }
-            }
-            break
-        default:
-            break
-        }
+//        switch segmentedControl.selectedSegmentIndex {
+//        case 0:
+//            if isFiltering {
+//                value = filteredSong.count
+//            } else {
+//                value = songs.count
+//            }
+//            break
+//        case 1:
+//            for product in songs
+//            {
+//                if product.isFavorite
+//                {
+//                    value+=1
+//                }
+//
+//                if isFiltering {
+//                    value = filteredSong.count
+//                }
+//            }
+//            break
+//        default:
+//            break
+//        }
 
         return value
     }
@@ -194,29 +197,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = Bundle.main.loadNibNamed("SongListTableViewCell", owner: self, options: nil)?.first as! SongListTableViewCell
     
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            if isFiltering {
-                cell.displayData(filteredSong[indexPath.row])
-            } else {
-                cell.displayData(songs[indexPath.row])
-                cell.songTitleLabel.text = songs[indexPath.row].songTitle
-            }
-            break
-
-        case 1:
-            if songs[indexPath.row].isFavorite && isFiltering
-            {
-                cell.displayData(filteredSong[indexPath.row])
-            } else {
-                cell.displayData(songs[indexPath.row])
-        }
-            break
-
-        default:
-            break
-        }
-    
+//        switch segmentedControl.selectedSegmentIndex {
+//        case 0:
+//            if isFiltering {
+//                cell.displayData(filteredSong[indexPath.row])
+//            } else {
+//                cell.displayData(songs[indexPath.row])
+//                cell.songTitleLabel.text = songs[indexPath.row].songTitle
+//            }
+//            break
+//
+//        case 1:
+//            if songs[indexPath.row].isFavorite && isFiltering
+//            {
+//                cell.displayData(filteredSong[indexPath.row])
+//            } else {
+//                cell.displayData(songs[indexPath.row])
+//        }
+//            break
+//
+//        default:
+//            break
+//        }
+//
         return cell
     }
         
@@ -234,37 +237,37 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            if isFiltering {
-                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
-                self.playSong(songs: slicedTracks, completion: { (error) in
-                      let cell = tableView.cellForRow(at: indexPath)
-                      cell?.setSelected(false, animated: true)
-                  })
-            } else {
-                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
-                self.playSong(songs: slicedTracks, completion: { (error) in
-                        let cell = tableView.cellForRow(at: indexPath)
-                        cell?.setSelected(false, animated: true)
-                    })
-                }
-        case 1:
-            for product in songs
-            {
-                if product.isFavorite
-                {
-                    
-                }
-                    
-                if isFiltering {
-                   
-                }
-            }
-        default:
-            break
-        }
-            
+//        switch segmentedControl.selectedSegmentIndex {
+//        case 0:
+//            if isFiltering {
+//                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
+//                self.playSong(songs: slicedTracks, completion: { (error) in
+//                      let cell = tableView.cellForRow(at: indexPath)
+//                      cell?.setSelected(false, animated: true)
+//                  })
+//            } else {
+//                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
+//                self.playSong(songs: slicedTracks, completion: { (error) in
+//                        let cell = tableView.cellForRow(at: indexPath)
+//                        cell?.setSelected(false, animated: true)
+//                    })
+//                }
+//        case 1:
+//            for product in songs
+//            {
+//                if product.isFavorite
+//                {
+//
+//                }
+//
+//                if isFiltering {
+//
+//                }
+//            }
+//        default:
+//            break
+//        }
+
         UserDefaults.standard.set("true", forKey: "isPlaying")
         getData()
     }
