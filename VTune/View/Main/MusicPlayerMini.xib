@@ -67,11 +67,19 @@
                             </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="sKi-2m-fim" firstAttribute="leading" secondItem="fUk-xa-rF3" secondAttribute="trailing" constant="18" id="2cH-Xz-muo"/>
+                        <constraint firstItem="Tuv-hh-vSm" firstAttribute="leading" secondItem="uCK-Dv-LtY" secondAttribute="trailing" constant="18" id="AdM-rd-vPc"/>
+                        <constraint firstItem="uCK-Dv-LtY" firstAttribute="leading" secondItem="DCu-H1-uMQ" secondAttribute="trailing" constant="18" id="AnA-iK-ibW"/>
+                        <constraint firstItem="DCu-H1-uMQ" firstAttribute="leading" secondItem="sKi-2m-fim" secondAttribute="trailing" constant="18" id="emw-1r-ROT"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.76898705959320068" green="0.80349260568618774" blue="0.83530634641647339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="fUk-xa-rF3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8.5" id="7YE-3j-dCo"/>
                 <constraint firstItem="6Bg-aC-pNI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ERA-1m-6tS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Tuv-hh-vSm" secondAttribute="trailing" constant="8.5" id="or6-Q2-G4O"/>
                 <constraint firstItem="6Bg-aC-pNI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qXC-9s-fcN"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

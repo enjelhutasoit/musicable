@@ -10,7 +10,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="cU9-uC-hCg">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="iWU-W0-Fzb" customClass="OnboardingViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" id="iWU-W0-Fzb" customClass="OnboardingViewController" customModule="Musicable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5U9-Hl-sdL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                     <action selector="nextButtonDidTapped:" destination="iWU-W0-Fzb" eventType="touchUpInside" id="L7M-7H-kW7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-vi-GJB" customClass="GetStarted" customModule="VTune" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-vi-GJB" customClass="GetStarted" customModule="Musicable" customModuleProvider="target">
                                 <rect key="frame" x="340" y="840" width="54" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="ClM-ik-1wy"/>
@@ -43,7 +43,7 @@
                                     <action selector="nextButtonDidTapped:" destination="iWU-W0-Fzb" eventType="touchUpInside" id="HtO-lz-P0R"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CR4-4r-F53" customClass="PageControlOnboarding" customModule="VTune" customModuleProvider="target">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CR4-4r-F53" customClass="PageControlOnboarding" customModule="Musicable" customModuleProvider="target">
                                 <rect key="frame" x="195" y="825" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="bnr-qD-A2n"/>

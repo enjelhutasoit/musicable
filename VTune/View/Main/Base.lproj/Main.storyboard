@@ -15,52 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-q5-Lsx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-Oe-Xjv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="82z-2z-HW2" customClass="SongListTableViewCell" customModule="Musicable" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82z-2z-HW2" id="WNA-3k-hQ8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="YIW-J3-JMC" id="JQ0-lQ-2y5"/>
-                                            <outlet property="delegate" destination="YIW-J3-JMC" id="vjf-a4-aGq"/>
-                                        </connections>
-                                    </tableView>
-                                </subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-Oe-Xjv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="82z-2z-HW2" customClass="SongListTableViewCell" customModule="Musicable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82z-2z-HW2" id="WNA-3k-hQ8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YIW-J3-JMC" id="JQ0-lQ-2y5"/>
+                                    <outlet property="delegate" destination="YIW-J3-JMC" id="vjf-a4-aGq"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beT-93-zvR">
+                                <rect key="frame" x="20" y="742" width="374" height="83"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Dkj-Oe-Xjv" secondAttribute="bottom" id="5g4-Uy-ARa"/>
-                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="centerX" secondItem="Lhv-q5-Lsx" secondAttribute="centerX" id="FGp-7A-Q7J"/>
-                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="centerY" secondItem="Lhv-q5-Lsx" secondAttribute="centerY" id="SCh-ol-bwB"/>
-                                    <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="leading" secondItem="Lhv-q5-Lsx" secondAttribute="leading" id="trK-AV-Rxs"/>
+                                    <constraint firstAttribute="height" constant="83" id="tBO-Un-BRT"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" id="Oas-LG-7oc">
-                                <rect key="frame" x="11" y="779" width="392" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="A2P-ls-cmK" appends="YES" id="2v7-7P-Mnq"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Lhv-q5-Lsx" secondAttribute="bottom" id="0WY-Ng-pro"/>
-                            <constraint firstItem="Lhv-q5-Lsx" firstAttribute="top" secondItem="t3U-vC-aeO" secondAttribute="top" id="J93-hA-XNU"/>
-                            <constraint firstItem="Lhv-q5-Lsx" firstAttribute="trailing" secondItem="t3U-vC-aeO" secondAttribute="trailing" id="LcW-oX-yt9"/>
-                            <constraint firstItem="Lhv-q5-Lsx" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" id="fV2-Xi-Ru0"/>
+                            <constraint firstItem="beT-93-zvR" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" constant="20" id="06t-bd-MOd"/>
+                            <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="top" secondItem="CzX-qA-2pN" secondAttribute="top" id="5eD-tp-Ohx"/>
+                            <constraint firstItem="t3U-vC-aeO" firstAttribute="trailing" secondItem="beT-93-zvR" secondAttribute="trailing" constant="20" id="EnG-uW-jsG"/>
+                            <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="leading" secondItem="t3U-vC-aeO" secondAttribute="leading" id="I8e-6b-RGy"/>
+                            <constraint firstItem="t3U-vC-aeO" firstAttribute="bottom" secondItem="beT-93-zvR" secondAttribute="bottom" constant="20" id="def-Kt-LUy"/>
+                            <constraint firstItem="t3U-vC-aeO" firstAttribute="bottom" secondItem="Dkj-Oe-Xjv" secondAttribute="bottom" id="iuB-kS-dLi"/>
+                            <constraint firstItem="Dkj-Oe-Xjv" firstAttribute="trailing" secondItem="t3U-vC-aeO" secondAttribute="trailing" id="k4a-Si-huR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t3U-vC-aeO"/>
                     </view>
@@ -73,7 +62,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addSongButtonOutlet" destination="7RS-g2-avd" id="LvA-u5-TO9"/>
-                        <outlet property="musicPlayerMiniView" destination="Oas-LG-7oc" id="LWs-CA-Pgw"/>
+                        <outlet property="musicPlayerMiniView" destination="beT-93-zvR" id="xNf-1e-zaH"/>
                         <outlet property="tableView" destination="Dkj-Oe-Xjv" id="Vex-fm-qwB"/>
                         <segue destination="gfp-cf-NV3" kind="presentation" identifier="goToNextVC" id="jfR-5y-gIX"/>
                     </connections>
