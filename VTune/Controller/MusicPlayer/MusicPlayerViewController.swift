@@ -209,14 +209,15 @@ class MusicPlayerViewController: UIViewController {
             referencePlayView?.btnPrevious.isEnabled = true
             referencePlayView?.btnNext.isEnabled = true
             referencePlayView?.btnPlay.setImage(#imageLiteral(resourceName: "Pause Button (Big)"), for: .normal)
-            referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlayingAlbumImage
+//            referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlayingAlbumImage
             referenceHeaderView?.albumImage.image = nowPlayingAlbumImage
             
-            if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
+            if let nowPlaying = MPMusicPlayerApplicationController.applicationQueuePlayer.nowPlayingItem{
                 referencePlayView?.timeSlider.maximumValue = Float(nowPlayingTotalDuration)
                 nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
                 referencePlayView?.timeSlider.maximumValue = Float(nowPlayingTotalDuration)
-
+                referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlaying.artwork?.image(at: CGSize(width: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.width)!, height: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.height)!))
+                
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateSlider), userInfo: nil, repeats: true)
                 timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime),
                 userInfo: nil, repeats: true)

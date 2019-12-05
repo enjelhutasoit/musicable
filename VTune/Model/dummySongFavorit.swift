@@ -13,9 +13,7 @@ class DummySongFavorit{
     var songSinger: String?
     var songDuration: String?
     var favIcon:  String?
-    
-    
-    
+   
     init(songTitle: String, songSinger: String, songDuration: String, favIcon: String) {
         self.songTitle = songTitle
         self.songSinger = songSinger
