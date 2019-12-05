@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swipe Down Button" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-p8-WvN">
-                    <rect key="frame" x="192" y="4" width="30" height="31"/>
+                    <rect key="frame" x="192" y="20" width="30" height="5"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7M-1e-YRx">
                     <rect key="frame" x="20" y="47" width="374" height="24"/>
@@ -33,7 +33,7 @@
             <color key="tintColor" red="0.43137254901960786" green="0.70588235294117641" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BJn-Ur-qYo" secondAttribute="trailing" constant="20" id="CL8-TG-TZm"/>
-                <constraint firstItem="G9V-p8-WvN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="DBQ-xP-Wn8"/>
+                <constraint firstItem="G9V-p8-WvN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="DBQ-xP-Wn8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I7M-1e-YRx" secondAttribute="trailing" constant="20" id="Fxb-FR-6bO"/>
                 <constraint firstItem="BJn-Ur-qYo" firstAttribute="top" secondItem="I7M-1e-YRx" secondAttribute="bottom" constant="6" id="dcz-5E-OE1"/>
                 <constraint firstAttribute="trailing" secondItem="G9V-p8-WvN" secondAttribute="trailing" constant="192" id="eo9-dd-hlq"/>
@@ -52,6 +52,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Swipe Down Button" width="38" height="31"/>
+        <image name="Swipe Down Button" width="28" height="5"/>
     </resources>
 </document>
