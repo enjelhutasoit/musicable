@@ -19,12 +19,10 @@ class MusicPlayerMini: UIView
     @IBOutlet weak var playButtonOutlet: UIButton!
     @IBOutlet weak var NextButtonOutlet: UIButton!
     
-    var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
-    
     func getData(){
-        if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
+        if let nowPlaying = MPMusicPlayerApplicationController.applicationQueuePlayer.nowPlayingItem{
             nowPlayingSongTitle = nowPlaying.title!
-            nowPlayingSongSinger = nowPlaying.albumArtist!
+//            nowPlayingSongSinger = nowPlaying.artist!
             nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
             nowPlayingAlbumImage = nowPlaying.artwork?.image(at: CGSize(width: (photoAlbum.frame.width), height: (photoAlbum.frame.height)))
             songTitle.text = nowPlayingSongTitle
@@ -35,7 +33,9 @@ class MusicPlayerMini: UIView
     
     @IBAction func prevButton(_ sender: Any) {
         mediaPlayer.skipToPreviousItem()
+        mediaPlayer.stop()
         getData()
+        mediaPlayer.play()
     }
     
     @IBAction func playButton(_ sender: Any) {
@@ -51,7 +51,9 @@ class MusicPlayerMini: UIView
     
     @IBAction func nextButton(_ sender: Any) {
         mediaPlayer.skipToNextItem()
+        mediaPlayer.stop()
         getData()
+        mediaPlayer.play()
     }
     
 }

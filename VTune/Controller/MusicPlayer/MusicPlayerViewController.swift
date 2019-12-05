@@ -29,7 +29,7 @@ class MusicPlayerViewController: UIViewController {
     @IBOutlet weak var equalizerView: UIView!
     @IBOutlet weak var playView: UIView!
         
-    var referenceHeaderView: MusicPlayerLyricHeader?
+    var referenceHeaderView: MusicPlayerHeader?
     var referenceAlbumImageView: MusicPlayerAlbumImage?
     var referenceEqualizerView: EqualizerView?
     var referencePlayView: PlayView?
@@ -105,8 +105,8 @@ class MusicPlayerViewController: UIViewController {
         getData()
         updateTotalDuration()
 
-        referenceHeaderView?.albumImage.layer.cornerRadius = 7
-        referenceHeaderView?.albumImage.isHidden = true
+//        referenceHeaderView?.albumImage.layer.cornerRadius = 7
+//        referenceHeaderView?.albumImage.isHidden = true
         
         referenceAlbumImageView?.nowPlayingAlbumImage.layer.cornerRadius = 10
         referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -173,7 +173,7 @@ class MusicPlayerViewController: UIViewController {
     //==========================================================================================================================
     
     func setView(){
-        if let referenceHeaderView = Bundle.main.loadNibNamed("MusicPlayerLyricHeader", owner: self, options: nil)?.first as? MusicPlayerLyricHeader{
+        if let referenceHeaderView = Bundle.main.loadNibNamed("MusicPlayerHeader", owner: self, options: nil)?.first as? MusicPlayerHeader{
             headerView.addSubview(referenceHeaderView)
             referenceHeaderView.frame = CGRect(x: 0, y: 0, width: headerView.frame.width, height: headerView.frame.height)
             self.referenceHeaderView = referenceHeaderView
@@ -210,13 +210,14 @@ class MusicPlayerViewController: UIViewController {
             referencePlayView?.btnNext.isEnabled = true
             referencePlayView?.btnPlay.setImage(#imageLiteral(resourceName: "Pause Button (Big)"), for: .normal)
             referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlayingAlbumImage
-            referenceHeaderView?.albumImage.image = nowPlayingAlbumImage
+//            referenceHeaderView?.albumImage.image = nowPlayingAlbumImage
             
-            if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
+            if let nowPlaying = MPMusicPlayerApplicationController.applicationQueuePlayer.nowPlayingItem{
                 referencePlayView?.timeSlider.maximumValue = Float(nowPlayingTotalDuration)
                 nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
                 referencePlayView?.timeSlider.maximumValue = Float(nowPlayingTotalDuration)
-
+                referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlaying.artwork?.image(at: CGSize(width: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.width)!, height: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.height)!))
+                
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateSlider), userInfo: nil, repeats: true)
                 timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime),
                 userInfo: nil, repeats: true)
@@ -228,7 +229,7 @@ class MusicPlayerViewController: UIViewController {
             referencePlayView?.btnPrevious.isEnabled = false
             referencePlayView?.btnNext.isEnabled = false
             referenceAlbumImageView?.nowPlayingAlbumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
-            referenceHeaderView?.albumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
+//            referenceHeaderView?.albumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
         }
         
     }
