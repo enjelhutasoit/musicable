@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YkH-ub-R2Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YkH-ub-R2Y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,35 +10,59 @@
         <!--MusicPlayer-->
         <scene sceneID="jky-pI-Jae">
             <objects>
-                <viewController title="MusicPlayer" id="YkH-ub-R2Y" customClass="MusicPlayerViewController" customModule="VTune" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MusicPlayer" id="YkH-ub-R2Y" customClass="MusicPlayerViewController" customModule="Musicable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gEW-FR-xOd" userLabel="ParentView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKn-Nv-qum" userLabel="Navigation View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKn-Nv-qum" userLabel="Navigation View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="57J-F2-DTD"/>
+                                    <constraint firstAttribute="height" constant="99" id="UQd-UR-gvQ"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fra-Rx-i9V" userLabel="Image View">
-                                <rect key="frame" x="0.0" y="119" width="414" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-Nh-jEh" userLabel="Waveform View">
+                                <rect key="frame" x="0.0" y="369" width="414" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="MY9-2j-3Nx"/>
+                                    <constraint firstAttribute="height" constant="148" id="cFO-hc-pVN"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1s-rg-rQl" userLabel="Music Player Control View">
-                                <rect key="frame" x="0.0" y="599" width="414" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fra-Rx-i9V" userLabel="Image View">
+                                <rect key="frame" x="0.0" y="132" width="414" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="S0D-1a-Q8R"/>
+                                    <constraint firstAttribute="height" constant="230" id="Xww-45-fIC"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-Nh-jEh" userLabel="Waveform View">
-                                <rect key="frame" x="0.0" y="430" width="414" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1s-rg-rQl" userLabel="Music Player Control View">
+                                <rect key="frame" x="0.0" y="545" width="414" height="297"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="297" id="WXg-jJ-qdu"/>
+                                    <constraint firstAttribute="width" constant="414" id="n0h-Sm-Nmm"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fra-Rx-i9V" firstAttribute="top" secondItem="kKn-Nv-qum" secondAttribute="bottom" constant="33" id="1Nn-lq-2wc"/>
+                            <constraint firstItem="Z1s-rg-rQl" firstAttribute="bottom" secondItem="rGI-k6-dtd" secondAttribute="bottom" constant="34" id="39b-Bb-Sn3"/>
+                            <constraint firstItem="kKn-Nv-qum" firstAttribute="leading" secondItem="rGI-k6-dtd" secondAttribute="leading" id="3ia-2a-d2Z"/>
+                            <constraint firstItem="Z1s-rg-rQl" firstAttribute="leading" secondItem="rGI-k6-dtd" secondAttribute="leading" id="7rB-uq-rMJ"/>
+                            <constraint firstItem="ehv-Nh-jEh" firstAttribute="leading" secondItem="rGI-k6-dtd" secondAttribute="leading" id="BTg-od-mvu"/>
+                            <constraint firstItem="ehv-Nh-jEh" firstAttribute="top" secondItem="fra-Rx-i9V" secondAttribute="bottom" constant="7" id="Bcj-UA-nlp"/>
+                            <constraint firstItem="rGI-k6-dtd" firstAttribute="trailing" secondItem="kKn-Nv-qum" secondAttribute="trailing" id="JYm-1N-Soc"/>
+                            <constraint firstItem="rGI-k6-dtd" firstAttribute="trailing" secondItem="ehv-Nh-jEh" secondAttribute="trailing" id="Ng3-Kn-gZn"/>
+                            <constraint firstItem="rGI-k6-dtd" firstAttribute="trailing" secondItem="Z1s-rg-rQl" secondAttribute="trailing" id="Wbu-1C-CS6"/>
+                            <constraint firstItem="rGI-k6-dtd" firstAttribute="trailing" secondItem="fra-Rx-i9V" secondAttribute="trailing" id="XaK-MV-Je8"/>
+                            <constraint firstItem="kKn-Nv-qum" firstAttribute="top" secondItem="rGI-k6-dtd" secondAttribute="top" id="Yef-Kc-lIe"/>
+                            <constraint firstItem="Z1s-rg-rQl" firstAttribute="top" secondItem="ehv-Nh-jEh" secondAttribute="bottom" constant="28" id="a6E-wc-c9Y"/>
+                            <constraint firstItem="fra-Rx-i9V" firstAttribute="leading" secondItem="rGI-k6-dtd" secondAttribute="leading" id="rVd-C3-3R3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rGI-k6-dtd"/>
                     </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="albumImageView" destination="fra-Rx-i9V" id="rsR-dp-1z6"/>
                         <outlet property="equalizerView" destination="ehv-Nh-jEh" id="a8a-zk-1Ux"/>

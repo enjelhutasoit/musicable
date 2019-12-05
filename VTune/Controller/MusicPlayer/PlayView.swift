@@ -67,7 +67,12 @@ class PlayView: UIView {
     }
 
     @IBAction func btnLirik(_ sender: UIButton) {
-        delegate?.getLyric(button: sender)
+        if btnLirikOutlet.currentImage == #imageLiteral(resourceName: "Lyric Button On"){
+            btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button Off"), for: .normal)
+        }else{
+            btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button On"), for: .normal)
+            delegate?.getLyric(button: sender)
+        }
     }
     
     @IBAction func sliderValueChange(_ sender: Any) {

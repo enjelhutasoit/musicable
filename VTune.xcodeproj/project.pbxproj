@@ -29,7 +29,6 @@
 		AC9F801623827A8F00752432 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9F801523827A8F00752432 /* Slide.xib */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
-		DC222CA623898F6400B00C82 /* Helper in Resources */ = {isa = PBXBuildFile; fileRef = DC222CA523898F6400B00C82 /* Helper */; };
 		DC222CAA2389965800B00C82 /* MXMLyricsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC222CA82389965800B00C82 /* MXMLyricsAction.m */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
@@ -81,7 +80,6 @@
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC0EE70323819D0900638360 /* RunningText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningText.swift; sourceTree = "<group>"; };
-		DC222CA523898F6400B00C82 /* Helper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helper; sourceTree = "<group>"; };
 		DC222CA72389965700B00C82 /* VTune-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VTune-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC222CA82389965800B00C82 /* MXMLyricsAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMLyricsAction.m; sourceTree = "<group>"; };
 		DC222CA92389965800B00C82 /* MXMLyricsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMLyricsAction.h; sourceTree = "<group>"; };
