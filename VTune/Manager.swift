@@ -11,11 +11,13 @@ import AVFoundation
 import UIKit
 import MediaPlayer
 
-var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
+var mediaPlayer = MPMusicPlayerApplicationController.applicationQueuePlayer
 
 var thisSong = 0
 var audioStuffed = false
 var dummyProduct: [Song] = []
+var nowPlayingSong: Song?
+var queuedSongs : [Song]?
 
 var nowPlayingSongTitle: String = ""
 var nowPlayingSongSinger: String = ""

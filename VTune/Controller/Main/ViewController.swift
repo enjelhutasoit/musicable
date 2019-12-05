@@ -26,9 +26,14 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
     var likeCounter = 0
     let searchController = UISearchController(searchResultsController: nil)
     var filteredSong: [Song] = []
-
     var songList: SongListTableViewCell?
-    
+    var tracks = [Song]() {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
     }
@@ -41,7 +46,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
         setView()
         runningText()
         UserDefaults.standard.set("false", forKey: "isPlaying")
-//        getData()
         searchController.searchResultsUpdater = self as UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Cari Lagu"
@@ -49,8 +53,8 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
         navigationController?.navigationBar.prefersLargeTitles = true
         definesPresentationContext = true
         
-        referenceMusicPlayerMini?.layer.cornerRadius = 10
-        musicPlayerMiniView.layer.cornerRadius = 10
+        referenceMusicPlayerMini?.layer.cornerRadius = 25
+        musicPlayerMiniView.layer.cornerRadius = 25
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +77,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
         if let referenceMusicPlayerMini = Bundle.main.loadNibNamed("MusicPlayerMini", owner: self, options: nil)?.first as? MusicPlayerMini{
             musicPlayerMiniView.addSubview(referenceMusicPlayerMini)
             referenceMusicPlayerMini.frame = CGRect(x: 0, y: 0, width: musicPlayerMiniView.frame.width, height: musicPlayerMiniView.frame.height)
+            referenceMusicPlayerMini.photoAlbum.layer.cornerRadius = 10
             self.referenceMusicPlayerMini = referenceMusicPlayerMini
         }
         
@@ -88,10 +93,10 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
         referenceMusicPlayerMini?.songTitle.trailingBuffer = 30.0
     }
     
-    func playSong(songs: [Song], completion: @escaping ((Error?) -> Void)) {
-        self.songs = songs
-//        self.queuedSongs = songs
-//        self.nowPlayingSong = nil
+    func playSong(song: [Song], completion: @escaping ((Error?) -> Void)) {
+        songs = song
+        queuedSongs = songs
+        nowPlayingSong = nil
         var songIdentifiers = [String]()
         songs.forEach { (song) in
             songIdentifiers.append(song.id)
@@ -100,13 +105,12 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
         mediaPlayer.setQueue(with: songIdentifiers)
         mediaPlayer.play()
         getData()
-        completion(nil)
     }
     
     func getData(){
-        if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
+        if let nowPlaying = MPMusicPlayerApplicationController.applicationQueuePlayer.nowPlayingItem{
             nowPlayingSongTitle = nowPlaying.title!
-            nowPlayingSongSinger = nowPlaying.albumArtist!
+//            nowPlayingSongSinger = nowPlaying.albumArtist!
             nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
             nowPlayingAlbumImage = nowPlaying.artwork?.image(at: CGSize(width: (referenceMusicPlayerMini?.photoAlbum.frame.width)!, height: (referenceMusicPlayerMini?.photoAlbum.frame.height)!))
             referenceMusicPlayerMini?.songTitle.text = nowPlayingSongTitle
@@ -130,16 +134,11 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
         print(searchText)
     }
     
-    @IBAction func switchSegmentedControl(_ sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
-        self.tableView.reloadData()
-    }
-    
     @IBAction func goToMusicPlayer(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "goToNextVC", sender: self)
+        performSegue(withIdentifier: "goToMusicPlayer", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        let vc = segue.destination as! MusicPlayerViewController
 //        vc.songTitle = nowPlayingSongTitle
 //        vc.songSinger = nowPlayingSongSinger
@@ -148,9 +147,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
 //        if mediaPlayer.playbackState == .playing{
 //            vc.referencePlayView!.btnPlay.setImage(#imageLiteral(resourceName: "Mini Pause Button-1"), for: .normal)
 //        }
-    }
-    
-     
+//    }
     
     @IBAction func addLaguFromiTunes(_ sender: Any) {
         let myMediaPickerVC = MPMediaPickerController(mediaTypes: MPMediaType.music)
@@ -164,62 +161,17 @@ class ViewController: UIViewController, UISearchBarDelegate, UINavigationBarDele
 // Table View
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var value = 0
-//        switch segmentedControl.selectedSegmentIndex {
-//        case 0:
-//            if isFiltering {
-//                value = filteredSong.count
-//            } else {
-//                value = songs.count
-//            }
-//            break
-//        case 1:
-//            for product in songs
-//            {
-//                if product.isFavorite
-//                {
-//                    value+=1
-//                }
-//
-//                if isFiltering {
-//                    value = filteredSong.count
-//                }
-//            }
-//            break
-//        default:
-//            break
-//        }
-
-        return value
+        return tracks.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let song = tracks[indexPath.row]
         let cell = Bundle.main.loadNibNamed("SongListTableViewCell", owner: self, options: nil)?.first as! SongListTableViewCell
+        
+        cell.songTitleLabel.text = song.songTitle
+        cell.singerLabel.text = song.songSinger
+        cell.songDurationLabel.text = song.songDuration
     
-//        switch segmentedControl.selectedSegmentIndex {
-//        case 0:
-//            if isFiltering {
-//                cell.displayData(filteredSong[indexPath.row])
-//            } else {
-//                cell.displayData(songs[indexPath.row])
-//                cell.songTitleLabel.text = songs[indexPath.row].songTitle
-//            }
-//            break
-//
-//        case 1:
-//            if songs[indexPath.row].isFavorite && isFiltering
-//            {
-//                cell.displayData(filteredSong[indexPath.row])
-//            } else {
-//                cell.displayData(songs[indexPath.row])
-//        }
-//            break
-//
-//        default:
-//            break
-//        }
-//
         return cell
     }
         
@@ -237,37 +189,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        switch segmentedControl.selectedSegmentIndex {
-//        case 0:
-//            if isFiltering {
-//                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
-//                self.playSong(songs: slicedTracks, completion: { (error) in
-//                      let cell = tableView.cellForRow(at: indexPath)
-//                      cell?.setSelected(false, animated: true)
-//                  })
-//            } else {
-//                let slicedTracks = Array(self.songs[indexPath.row...(self.songs.count - 1)])
-//                self.playSong(songs: slicedTracks, completion: { (error) in
-//                        let cell = tableView.cellForRow(at: indexPath)
-//                        cell?.setSelected(false, animated: true)
-//                    })
-//                }
-//        case 1:
-//            for product in songs
-//            {
-//                if product.isFavorite
-//                {
-//
-//                }
-//
-//                if isFiltering {
-//
-//                }
-//            }
-//        default:
-//            break
-//        }
-
+        let slicedTracks = Array(self.tracks[indexPath.row...(self.tracks.count - 1)])
+        self.playSong(song: slicedTracks, completion: { (error) in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.setSelected(false, animated: true)
+        })
         UserDefaults.standard.set("true", forKey: "isPlaying")
         getData()
     }
@@ -308,7 +234,7 @@ extension ViewController: MPMediaPickerControllerDelegate{
             let minutes = currentTime/60
             let seconds = currentTime - minutes * 60
             
-            songs.append(Song(songTitle: (mediaItemCollection.items[i].title)!, songSinger: (mediaItemCollection.items[i].albumArtist)!, songDuration: String(format: "%02d:%02d", minutes,seconds) as String, favIcon: "Favourite Options Button.png", isFavorite: false, id: mediaItemCollection.items[i].playbackStoreID))
+            tracks.append(Song(songTitle: (mediaItemCollection.items[i].title)!, songSinger: (mediaItemCollection.items[i].artist)!, songDuration: String(format: "%02d:%02d", minutes,seconds) as String, favIcon: "Favourite Options Button.png", isFavorite: false, id: mediaItemCollection.items[i].playbackStoreID))
         }
         tableView.reloadData()
     }
