@@ -22,10 +22,10 @@
                 </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="90v-qS-Hvh" secondAttribute="trailing" constant="89" id="NAG-BN-kUy"/>
-                <constraint firstItem="90v-qS-Hvh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="90" id="UJZ-zJ-v2c"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="90v-qS-Hvh" secondAttribute="top" constant="39" id="ZiI-5O-SLd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="90v-qS-Hvh" secondAttribute="bottom" constant="5" id="qfZ-Ap-aLe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="90v-qS-Hvh" secondAttribute="trailing" constant="89" id="luH-bT-GcI"/>
+                <constraint firstItem="90v-qS-Hvh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="trB-jQ-XRt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="90v-qS-Hvh" secondAttribute="bottom" constant="5" id="xC4-bq-ou9"/>
+                <constraint firstItem="90v-qS-Hvh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="90" id="yLY-2V-fMY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

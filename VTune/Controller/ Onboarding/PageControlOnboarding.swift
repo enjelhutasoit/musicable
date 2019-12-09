@@ -35,15 +35,15 @@ class PageControlOnboarding: UIPageControl {
             var imageView = self.imageView(forSubview: view)
             if imageView == nil {
                 if i == 0 {
-                    imageView = UIImageView(image: #imageLiteral(resourceName: "Page Control On"))
+                    imageView = UIImageView(image: #imageLiteral(resourceName: "Dot 1"))
                 } else {
-                    imageView = UIImageView(image: #imageLiteral(resourceName: "Page Control On"))
+                    imageView = UIImageView(image: #imageLiteral(resourceName: "Dot 1"))
                 }
                 
                 if i == 1 {
-                    imageView = UIImageView(image: #imageLiteral(resourceName: "Page Control On"))
+                    imageView = UIImageView(image: #imageLiteral(resourceName: "Dot 1"))
                 } else {
-                    imageView = UIImageView(image: #imageLiteral(resourceName: "Page Control On"))
+                    imageView = UIImageView(image: #imageLiteral(resourceName: "Dot 1"))
                 }
                 
                 imageView!.center = view.center

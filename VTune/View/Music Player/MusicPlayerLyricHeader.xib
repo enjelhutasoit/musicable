@@ -48,12 +48,12 @@
             </subviews>
             <color key="tintColor" red="0.43137254899999999" green="0.70588235290000001" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="e6e-Aj-0pD" firstAttribute="top" secondItem="2GL-GL-Mnz" secondAttribute="top" constant="12" id="8LD-ig-UNm"/>
                 <constraint firstItem="P2V-ch-Xqe" firstAttribute="bottom" secondItem="m4x-y9-aQa" secondAttribute="bottom" constant="5" id="C3B-zN-lCl"/>
-                <constraint firstItem="m4x-y9-aQa" firstAttribute="top" secondItem="P2V-ch-Xqe" secondAttribute="top" constant="6" id="GJe-Z0-qHt"/>
+                <constraint firstItem="P2V-ch-Xqe" firstAttribute="top" secondItem="e6e-Aj-0pD" secondAttribute="top" constant="32" id="ScQ-EJ-scH"/>
                 <constraint firstItem="m4x-y9-aQa" firstAttribute="leading" secondItem="P2V-ch-Xqe" secondAttribute="leading" constant="20" id="djO-cf-EQx"/>
                 <constraint firstAttribute="trailing" secondItem="e6e-Aj-0pD" secondAttribute="trailing" constant="192" id="f9W-te-JsJ"/>
                 <constraint firstItem="P2V-ch-Xqe" firstAttribute="trailing" secondItem="m4x-y9-aQa" secondAttribute="trailing" constant="20" id="h7f-34-VWK"/>
+                <constraint firstItem="m4x-y9-aQa" firstAttribute="top" secondItem="e6e-Aj-0pD" secondAttribute="bottom" constant="26" id="hWt-TV-Y8B"/>
                 <constraint firstItem="e6e-Aj-0pD" firstAttribute="leading" secondItem="2GL-GL-Mnz" secondAttribute="leading" constant="192" id="x8A-hZ-iZ3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
