@@ -29,7 +29,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
                scrollView.showsHorizontalScrollIndicator = false
                scrollView.showsVerticalScrollIndicator = false
                view.bringSubviewToFront(pageControl)
-               
+                    
        }
        
        @IBAction func nextButtonDidTapped(_ sender: Any) {
@@ -55,17 +55,18 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
        func createSlides() -> [Slide] {
            
            let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-           slide1.imgBg.image = UIImage(named: "On Boarding Bg")
            slide1.imageView.image = UIImage(named: "On Boarding Icon Page 1")
-           slide1.labelTitle.text = "Selamat Datang di VTune !"
-           slide1.labelDesc.text = "“VTune” membantu Teman Tuli menikmati musik dengan getaran, gelombang musik, dan lirik."
+           slide1.labelTitle.text = "Selamat Datang di Musicable !"
+           slide1.labelDesc.text = "“Musicable” membantu Teman Tuli menikmati musik dengan getaran, gelombang musik, dan lirik."
            
            let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-           slide2.imgBg.image = UIImage(named: "On Boarding Bg")
            slide2.imageView.image = UIImage(named: "On Boarding Icon Page 2")
+//           slide2.imageView.layer.shadowOffset  = CGSize(width: 100, height: 0)
+//           slide2.imageView.layer.shadowPath = CGPath(rect: CGRect(x: 50, y: -50, width: slide2.imageView.frame.width, height: 350), transform: .none)
+//           slide2.imageView.layer.shadowOpacity = 0.1
+//           slide2.imageView.layer.shadowColor = #colorLiteral(red: 0, green: 0.8413510919, blue: 0.8253892064, alpha: 1)
            slide2.labelTitle.text = "iTunes"
-           slide2.labelDesc.text = "“VTune” mengambil lagu dari Perpustakaan Lagu iTunes."
-           
+           slide2.labelDesc.text = "“Musicable” mengambil lagu dari Perpustakaan Lagu iTunes."
            
            return [slide1, slide2]
        }

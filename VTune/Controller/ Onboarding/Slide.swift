@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class Slide: UIView {
-    @IBOutlet weak var imgBg: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDesc: UILabel!
