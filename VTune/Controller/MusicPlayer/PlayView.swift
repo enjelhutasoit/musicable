@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 import MediaPlayer
+//
+//protocol GetDataDelegate{
+//    func getData()
+//}
 
 class PlayView: UIView {
 
@@ -24,10 +28,31 @@ class PlayView: UIView {
     @IBOutlet weak var btnVibrateOutlet: UIButton!
     @IBOutlet weak var btnLirikOutlet: UIButton!
     
-    var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
     var lirik = true
     var delegate: GetLyricDelegate?
     var vc: MusicPlayerViewController?
+    var referenceHeaderView: MusicPlayerHeader?
+    var referenceAlbumImageView: MusicPlayerAlbumImage?
+    var getDataDelegate: GetDataDelegate?
+    
+    func getData(){
+        if let nowPlaying = mediaPlayer.nowPlayingItem{
+        nowPlayingSongTitle = nowPlaying.title!
+        nowPlayingSongSinger = nowPlaying.artist!
+        nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
+        referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlaying.artwork?.image(at: CGSize(width: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.width)!, height: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.height)!))
+        referenceHeaderView?.nowPlayingSongTitle.text = nowPlayingSongTitle
+        referenceHeaderView?.nowPlayingSinger.text = nowPlayingSongSinger
+        referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlayingAlbumImage
+        print("Fungsi getData() Berhasil")
+        }
+    }
+    
+    func updateTotalDuration(){
+        let minutes = nowPlayingTotalDuration/60
+        let seconds = nowPlayingTotalDuration - minutes * 60
+        timeDuration.text = String(format: "%02d:%02d", minutes,seconds) as String
+    }
     
     @IBAction func btnPlay(_ sender: UIButton) {
         if mediaPlayer.playbackState == .playing{
@@ -41,11 +66,18 @@ class PlayView: UIView {
 
     @IBAction func btnNext(_ sender: Any) {
         mediaPlayer.skipToNextItem()
-        
+        mediaPlayer.stop()
+        updateTotalDuration()
+        getData()
+        mediaPlayer.play()
     }
 
     @IBAction func btnPrevious(_ sender: Any) {
         mediaPlayer.skipToPreviousItem()
+        mediaPlayer.stop()
+        updateTotalDuration()
+        getData()
+        mediaPlayer.play()
     }
     
     
