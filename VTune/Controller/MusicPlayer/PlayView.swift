@@ -80,7 +80,17 @@ class PlayView: UIView {
     }
     
     @IBAction func sliderVolume(_ sender: UISlider) {
-      
+    }
+    
+}
+
+extension MPVolumeView {
+    static func setVolume(_ volume: Float){
+        let volumeView = MPVolumeView()
+        let volumeSlider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
+        
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+    volumeSlider?.value = volume;
+        }
     }
 }
-   

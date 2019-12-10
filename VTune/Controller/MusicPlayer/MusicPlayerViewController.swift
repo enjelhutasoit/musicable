@@ -109,17 +109,17 @@ class MusicPlayerViewController: UIViewController {
 //        referenceHeaderView?.albumImage.isHidden = true
         
         referenceAlbumImageView?.nowPlayingAlbumImage.layer.cornerRadius = 10
-        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowOpacity = 0.3
-        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowRadius = 10
+//        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowOpacity = 0.3
+//        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowRadius = 10
         
-             
-//        referencePlayView?.volumeSlider.setVolumeThumbImage(#imageLiteral(resourceName: "Slider Dot"), for: .normal)
-        referencePlayView?.volumeSlider.setMaximumTrackImage(#imageLiteral(resourceName: "Minimal Slider"), for: .normal)
-        referencePlayView?.volumeSlider.setMinimumTrackImage(#imageLiteral(resourceName: "Slider Filler"), for: .normal)
+        referencePlayView?.volumeSlider.self.setMaximumTrackImage(#imageLiteral(resourceName: "Minimal Slider"), for: .normal)
+        referencePlayView?.volumeSlider.self.setMinimumTrackImage(#imageLiteral(resourceName: "Slider Filler"), for: .normal)
+        referencePlayView?.volumeSlider.self.setThumbImage(#imageLiteral(resourceName: "Slider Dot (Big)"), for: .normal)
         referencePlayView?.timeSlider.setMinimumTrackImage(#imageLiteral(resourceName: "Slider Filler"), for: .normal)
         referencePlayView?.timeSlider.setMaximumTrackImage(#imageLiteral(resourceName: "Minimal Slider"), for: .normal)
         
+        MPVolumeView.setVolume(0.5)
     //===========================================================================================================================
         //Function For Render Waveform View (from: rajabun)
         //===========================================================================================================================
@@ -572,12 +572,3 @@ extension MusicPlayerViewController
 }
 
 //===========================================================================================================================
-
-extension MusicPlayerViewController: GetLyricDelegate{
-    func getLyric(button: UIButton) {
-        if let nowPlaying = MPMusicPlayerController.systemMusicPlayer.nowPlayingItem{
-            MXMLyricsAction.sharedExtension()?.findLyricsForSong(withTitle: nowPlaying.title, artist: nowPlaying.artist, album: nowPlaying.albumTitle, artWork: nowPlaying.artwork?.image(at: CGSize(width: 100, height: 100)), currentProgress: mediaPlayer.currentPlaybackTime, trackDuration: nowPlaying.playbackDuration, for: self, sender: button, competionHandler: nil)
-            print(nowPlaying.title!)
-        }
-    }
-}
