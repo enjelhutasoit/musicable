@@ -20,7 +20,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
        
        override func viewDidLoad() {
            super.viewDidLoad()
-               startBtn.isHidden = true
+              startBtn.isHidden = true
               slides = createSlides()
               setupSlideScrollView(slides: slides)
                 
@@ -60,11 +60,8 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
            slide1.labelDesc.text = "“Musicable” membantu Teman Tuli menikmati musik dengan getaran, gelombang musik, dan lirik."
            
            let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+           slide2.imageShadow.image =  UIImage(named: "On Boarding Icon Shadow")
            slide2.imageView.image = UIImage(named: "On Boarding Icon Page 2")
-//           slide2.imageView.layer.shadowOffset  = CGSize(width: 100, height: 0)
-//           slide2.imageView.layer.shadowPath = CGPath(rect: CGRect(x: 50, y: -50, width: slide2.imageView.frame.width, height: 350), transform: .none)
-//           slide2.imageView.layer.shadowOpacity = 0.1
-//           slide2.imageView.layer.shadowColor = #colorLiteral(red: 0, green: 0.8413510919, blue: 0.8253892064, alpha: 1)
            slide2.labelTitle.text = "iTunes"
            slide2.labelDesc.text = "“Musicable” mengambil lagu dari Perpustakaan Lagu iTunes."
            
@@ -111,6 +108,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
         //               startBtn.isHidden = true
                    } else if(percentOffset.x > 0.5 && percentOffset.x <= 1.0) {
                        slides[1].imageView.transform = CGAffineTransform(scaleX: (percentOffset.x), y: (percentOffset.x))
+                       slides[1].imageShadow.transform = CGAffineTransform(scaleX: (percentOffset.x), y: (percentOffset.x))
              //          startBtn.isHidden = false
              //          startBtn.setTitle("Mulai", for: UIControl.State.normal)
               //         startBtn.frame = CGRect(x: 353, y: 832, width: 37, height: 30)

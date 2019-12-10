@@ -13,26 +13,37 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Album Art Shadow" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-LF-keM">
+                    <rect key="frame" x="82" y="44" width="250" height="264"/>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90v-qS-Hvh">
-                    <rect key="frame" x="90" y="5" width="235" height="220"/>
+                    <rect key="frame" x="97" y="0.0" width="220" height="220"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="235" id="1kr-9I-bZ2"/>
-                        <constraint firstAttribute="height" constant="220" id="QL9-Fg-Vn5"/>
+                        <constraint firstAttribute="width" constant="220" id="aZG-dR-Dph"/>
+                        <constraint firstAttribute="height" constant="220" id="z0H-PB-liW"/>
                     </constraints>
                 </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="90v-qS-Hvh" secondAttribute="trailing" constant="89" id="luH-bT-GcI"/>
-                <constraint firstItem="90v-qS-Hvh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="trB-jQ-XRt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="90v-qS-Hvh" secondAttribute="bottom" constant="5" id="xC4-bq-ou9"/>
-                <constraint firstItem="90v-qS-Hvh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="90" id="yLY-2V-fMY"/>
+                <constraint firstItem="90v-qS-Hvh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="97" id="A7t-JK-hau"/>
+                <constraint firstItem="1QN-LF-keM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="77.999999999999943" id="Ayg-ZC-Fb0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="90v-qS-Hvh" secondAttribute="bottom" constant="10" id="O6X-Dy-fCu"/>
+                <constraint firstItem="1QN-LF-keM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RSP-iu-QtD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1QN-LF-keM" secondAttribute="trailing" constant="82" id="RUz-tl-jDP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="90v-qS-Hvh" secondAttribute="trailing" constant="97" id="eeL-aq-xP8"/>
+                <constraint firstItem="1QN-LF-keM" firstAttribute="top" secondItem="90v-qS-Hvh" secondAttribute="bottom" constant="-176" id="fzD-YW-dwB"/>
+                <constraint firstItem="1QN-LF-keM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="82" id="udV-F8-SDv"/>
+                <constraint firstItem="90v-qS-Hvh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zBc-ft-DO3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="nowPlayingAlbumImage" destination="90v-qS-Hvh" id="NTd-7m-UAK"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="122.87946428571428"/>
+            <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
         </view>
     </objects>
+    <resources>
+        <image name="Album Art Shadow" width="269" height="214"/>
+    </resources>
 </document>
