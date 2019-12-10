@@ -13,6 +13,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8d-Ha-hIU">
+                    <rect key="frame" x="60" y="284" width="294" height="166"/>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gI1-WM-l4m">
                     <rect key="frame" x="60" y="114" width="294" height="294"/>
                     <constraints>
@@ -43,18 +46,24 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P8d-Ha-hIU" secondAttribute="trailing" constant="60" id="3Sm-c8-6aZ"/>
                 <constraint firstItem="GQb-Dq-pTA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4Jy-Lh-ac8"/>
+                <constraint firstItem="GQb-Dq-pTA" firstAttribute="top" secondItem="P8d-Ha-hIU" secondAttribute="bottom" constant="31" id="CdS-Jq-t9p"/>
+                <constraint firstItem="P8d-Ha-hIU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="60" id="IeG-ur-PdE"/>
                 <constraint firstItem="X16-b7-JBa" firstAttribute="top" secondItem="GQb-Dq-pTA" secondAttribute="bottom" constant="14.5" id="OCd-8E-UOZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gI1-WM-l4m" secondAttribute="trailing" constant="60" id="RAS-lh-0mA"/>
                 <constraint firstItem="gI1-WM-l4m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="60" id="TQ7-aj-uZr"/>
                 <constraint firstItem="X16-b7-JBa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="42" id="cyS-ie-qsA"/>
+                <constraint firstItem="P8d-Ha-hIU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="240" id="dgt-nj-tDe"/>
                 <constraint firstItem="gI1-WM-l4m" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="70" id="e8x-Bj-fxS"/>
                 <constraint firstItem="GQb-Dq-pTA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gO4-f1-COf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X16-b7-JBa" secondAttribute="trailing" constant="42" id="pcp-G3-Wql"/>
                 <constraint firstItem="GQb-Dq-pTA" firstAttribute="top" secondItem="gI1-WM-l4m" secondAttribute="bottom" constant="73" id="s9i-8s-ano"/>
+                <constraint firstItem="X16-b7-JBa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zuM-jA-9r9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="imageShadow" destination="P8d-Ha-hIU" id="0Kc-Ec-7tQ"/>
                 <outlet property="imageView" destination="gI1-WM-l4m" id="Itd-6Y-gNW"/>
                 <outlet property="labelDesc" destination="X16-b7-JBa" id="n8N-pN-nSP"/>
                 <outlet property="labelTitle" destination="GQb-Dq-pTA" id="Wfw-Xc-2Tu"/>
