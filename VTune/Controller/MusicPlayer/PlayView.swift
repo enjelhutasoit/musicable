@@ -14,7 +14,9 @@ import MediaPlayer
 //    func getData()
 //}
 
+
 class PlayView: UIView {
+
 
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var timeDuration: UILabel!
@@ -33,8 +35,8 @@ class PlayView: UIView {
     var vc: MusicPlayerViewController?
     var referenceHeaderView: MusicPlayerHeader?
     var referenceAlbumImageView: MusicPlayerAlbumImage?
-    var getDataDelegate: GetDataDelegate?
-    
+//    var getDataDelegate: GetDataDelegate?
+//    let transferSender:UIButton
     func getData(){
         if let nowPlaying = mediaPlayer.nowPlayingItem{
         nowPlayingSongTitle = nowPlaying.title!
@@ -99,12 +101,7 @@ class PlayView: UIView {
     }
 
     @IBAction func btnLirik(_ sender: UIButton) {
-        if btnLirikOutlet.currentImage == #imageLiteral(resourceName: "Lyric Button On"){
-            btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button Off"), for: .normal)
-        }else{
-            btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button On"), for: .normal)
-            delegate?.getLyric(button: sender)
-        }
+        delegate?.getLyric(sender: sender)
     }
     
     @IBAction func sliderValueChange(_ sender: Any) {

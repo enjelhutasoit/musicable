@@ -17,10 +17,11 @@ import CoreHaptics
 //===========================================================================================================================
 let sampleCount = 1024
 //===========================================================================================================================
-
-protocol GetLyricDelegate {
-    func getLyric(button: UIButton)
+protocol GetLyricDelegate
+{
+    func getLyric(sender: UIButton)
 }
+
 
 class MusicPlayerViewController: UIViewController {
 
@@ -105,21 +106,17 @@ class MusicPlayerViewController: UIViewController {
         getData()
         updateTotalDuration()
 
-//        referenceHeaderView?.albumImage.layer.cornerRadius = 7
-//        referenceHeaderView?.albumImage.isHidden = true
-        
-        referenceAlbumImageView?.nowPlayingAlbumImage.layer.cornerRadius = 10
 //        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 //        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowOpacity = 0.3
 //        referenceAlbumImageView?.nowPlayingAlbumImage.layer.shadowRadius = 10
         
         referencePlayView?.volumeSlider.self.setMaximumTrackImage(#imageLiteral(resourceName: "Minimal Slider"), for: .normal)
         referencePlayView?.volumeSlider.self.setMinimumTrackImage(#imageLiteral(resourceName: "Slider Filler"), for: .normal)
-        referencePlayView?.volumeSlider.self.setThumbImage(#imageLiteral(resourceName: "Slider Dot (Big)"), for: .normal)
+        referencePlayView?.volumeSlider.self.setThumbImage(#imageLiteral(resourceName: "Slider Dot"), for: .normal)
         referencePlayView?.timeSlider.setMinimumTrackImage(#imageLiteral(resourceName: "Slider Filler"), for: .normal)
         referencePlayView?.timeSlider.setMaximumTrackImage(#imageLiteral(resourceName: "Minimal Slider"), for: .normal)
         
-        MPVolumeView.setVolume(0.5)
+//        MPVolumeView.setVolume(0.5)
     //===========================================================================================================================
         //Function For Render Waveform View (from: rajabun)
         //===========================================================================================================================
@@ -181,6 +178,7 @@ class MusicPlayerViewController: UIViewController {
         
         if let referenceAlbumImageView = Bundle.main.loadNibNamed("MusicPlayerAlbumImage", owner: self, options: nil)?.first as? MusicPlayerAlbumImage{
             albumImageView.addSubview(referenceAlbumImageView)
+            referenceAlbumImageView.nowPlayingAlbumImage.layer.cornerRadius = 10
             referenceAlbumImageView.frame = CGRect(x: 0, y: 0, width: albumImageView.frame.width, height: albumImageView.frame.height)
             self.referenceAlbumImageView = referenceAlbumImageView
         }
@@ -196,13 +194,22 @@ class MusicPlayerViewController: UIViewController {
             referencePlayView.frame = CGRect(x: 0, y: 0, width: playView.frame.width, height: playView.frame.height)
             self.referencePlayView = referencePlayView
         }
+        
+//        let playController = PlayViewViewController(nibName: "PlayView", bundle: nil)
+//        let playView:PlayView = playController.view as! PlayView
+//        playView.frame = CGRect(x: 0, y: 0, width: self.playView.frame.width, height: self.playView.frame.height)
+//        print(playView.lirik)
+//        print(playController.shouldAutorotate)
+//
+//        present(playController, animated: true) {
+//            self.playView = playView
+//        }
     }
     
     func getData(){
         
         if UserDefaults.standard.string(forKey: "isPlaying") == "true"{
             songTitle = nowPlayingSongTitle
-            songSinger = nowPlayingSongSinger
             referenceHeaderView?.nowPlayingSongTitle.text = songTitle
             referenceHeaderView?.nowPlayingSinger.text = songSinger
             referenceAlbumImageView?.nowPlayingAlbumImage.image = albumImage
@@ -217,7 +224,9 @@ class MusicPlayerViewController: UIViewController {
                 nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
                 referencePlayView?.timeSlider.maximumValue = Float(nowPlayingTotalDuration)
                 referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlaying.artwork?.image(at: CGSize(width: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.width)!, height: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.height)!))
-                
+                referenceAlbumImageView?.nowPlayingAlbumImage.layer.cornerRadius = 10
+                nowPlayingSongSinger = nowPlaying.artist!
+                referenceHeaderView?.nowPlayingSinger.text = nowPlayingSongSinger
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateSlider), userInfo: nil, repeats: true)
                 timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime),
                 userInfo: nil, repeats: true)
@@ -229,10 +238,16 @@ class MusicPlayerViewController: UIViewController {
             referencePlayView?.btnPrevious.isEnabled = false
             referencePlayView?.btnNext.isEnabled = false
             referenceAlbumImageView?.nowPlayingAlbumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
-//            referenceHeaderView?.albumImage.image = #imageLiteral(resourceName: "tidak sedang memutar image")
         }
         
     }
+    
+//    func getLyric()
+//    {
+//        if let nowPlaying = MPMusicPlayerController.applicationMusicPlayer.nowPlayingItem{
+//            MXMLyricsAction.sharedExtension()?.findLyricsForSong(withTitle: nowPlaying.title, artist: nowPlaying.artist, album: nowPlaying.albumTitle, artWork: nowPlaying.artwork?.image(at: CGSize(width: 100, height: 100)), currentProgress: mediaPlayer.currentPlaybackTime, trackDuration: nowPlaying.playbackDuration, for: MusicPlayerViewController, sender: sender, competionHandler: nil)
+//        }
+//    }
     
     @objc func updateTime(){
         nowPlayingCurrentTime = Int(mediaPlayer.currentPlaybackTime)
@@ -572,3 +587,11 @@ extension MusicPlayerViewController
 }
 
 //===========================================================================================================================
+extension MusicPlayerViewController: GetLyricDelegate{
+    func getLyric(sender: UIButton) {
+        if let nowPlaying = MPMusicPlayerController.applicationMusicPlayer.nowPlayingItem{
+            MXMLyricsAction.sharedExtension()?.findLyricsForSong(withTitle: nowPlaying.title, artist: nowPlaying.artist, album: nowPlaying.albumTitle, artWork: nowPlaying.artwork?.image(at: CGSize(width: 100, height: 100)), currentProgress: mediaPlayer.currentPlaybackTime, trackDuration: nowPlaying.playbackDuration, for: self, sender: sender, competionHandler: nil)
+        }
+        print("fungsi GetLyric berhasil")
+    }
+}
