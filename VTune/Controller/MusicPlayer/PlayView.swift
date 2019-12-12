@@ -9,8 +9,14 @@
 import Foundation
 import UIKit
 import MediaPlayer
+//
+//protocol GetDataDelegate{
+//    func getData()
+//}
+
 
 class PlayView: UIView {
+
 
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var timeDuration: UILabel!
@@ -24,10 +30,31 @@ class PlayView: UIView {
     @IBOutlet weak var btnVibrateOutlet: UIButton!
     @IBOutlet weak var btnLirikOutlet: UIButton!
     
-    var mediaPlayer = MPMusicPlayerController.systemMusicPlayer
     var lirik = true
     var delegate: GetLyricDelegate?
     var vc: MusicPlayerViewController?
+    var referenceHeaderView: MusicPlayerHeader?
+    var referenceAlbumImageView: MusicPlayerAlbumImage?
+//    var getDataDelegate: GetDataDelegate?
+//    let transferSender:UIButton
+    func getData(){
+        if let nowPlaying = mediaPlayer.nowPlayingItem{
+        nowPlayingSongTitle = nowPlaying.title!
+        nowPlayingSongSinger = nowPlaying.artist!
+        nowPlayingTotalDuration = Int(nowPlaying.playbackDuration)
+        referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlaying.artwork?.image(at: CGSize(width: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.width)!, height: (referenceAlbumImageView?.nowPlayingAlbumImage.frame.height)!))
+        referenceHeaderView?.nowPlayingSongTitle.text = nowPlayingSongTitle
+        referenceHeaderView?.nowPlayingSinger.text = nowPlayingSongSinger
+        referenceAlbumImageView?.nowPlayingAlbumImage.image = nowPlayingAlbumImage
+        print("Fungsi getData() Berhasil")
+        }
+    }
+    
+    func updateTotalDuration(){
+        let minutes = nowPlayingTotalDuration/60
+        let seconds = nowPlayingTotalDuration - minutes * 60
+        timeDuration.text = String(format: "%02d:%02d", minutes,seconds) as String
+    }
     
     @IBAction func btnPlay(_ sender: UIButton) {
         if mediaPlayer.playbackState == .playing{
@@ -41,11 +68,18 @@ class PlayView: UIView {
 
     @IBAction func btnNext(_ sender: Any) {
         mediaPlayer.skipToNextItem()
-        
+        mediaPlayer.stop()
+        updateTotalDuration()
+        getData()
+        mediaPlayer.play()
     }
 
     @IBAction func btnPrevious(_ sender: Any) {
         mediaPlayer.skipToPreviousItem()
+        mediaPlayer.stop()
+        updateTotalDuration()
+        getData()
+        mediaPlayer.play()
     }
     
     
@@ -67,12 +101,7 @@ class PlayView: UIView {
     }
 
     @IBAction func btnLirik(_ sender: UIButton) {
-        if btnLirikOutlet.currentImage == #imageLiteral(resourceName: "Lyric Button On"){
-            btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button Off"), for: .normal)
-        }else{
-            btnLirikOutlet.setImage(#imageLiteral(resourceName: "Lyric Button On"), for: .normal)
-            delegate?.getLyric(button: sender)
-        }
+        delegate?.getLyric(sender: sender)
     }
     
     @IBAction func sliderValueChange(_ sender: Any) {

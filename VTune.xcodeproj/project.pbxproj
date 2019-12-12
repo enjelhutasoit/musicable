@@ -30,6 +30,7 @@
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
 		DC222CAA2389965800B00C82 /* MXMLyricsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC222CA82389965800B00C82 /* MXMLyricsAction.m */; };
+		DC399CEB23A0CDC8009C627F /* PlayViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC399CEA23A0CDC8009C627F /* PlayViewViewController.swift */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
 		DC501480236C70F300AD39F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC50147E236C70F300AD39F1 /* Main.storyboard */; };
@@ -83,6 +84,7 @@
 		DC222CA72389965700B00C82 /* VTune-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VTune-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC222CA82389965800B00C82 /* MXMLyricsAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMLyricsAction.m; sourceTree = "<group>"; };
 		DC222CA92389965800B00C82 /* MXMLyricsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMLyricsAction.h; sourceTree = "<group>"; };
+		DC399CEA23A0CDC8009C627F /* PlayViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewViewController.swift; sourceTree = "<group>"; };
 		DC501475236C70F300AD39F1 /* Musicable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC501478236C70F300AD39F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC50147A236C70F300AD39F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				DC222CA92389965800B00C82 /* MXMLyricsAction.h */,
 				DC222CA82389965800B00C82 /* MXMLyricsAction.m */,
 				DC222CA72389965700B00C82 /* VTune-Bridging-Header.h */,
+				DC399CEA23A0CDC8009C627F /* PlayViewViewController.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				4E08CD742384563D00745BFF /* AudioUtilities.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
 				DC74969E23832279004B7F42 /* Manager.swift in Sources */,
+				DC399CEB23A0CDC8009C627F /* PlayViewViewController.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
 				AC9F800C238277FB00752432 /* Slide.swift in Sources */,
 				DC0EE70423819D0900638360 /* RunningText.swift in Sources */,
@@ -537,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y6FVCC3X3F;
+				DEVELOPMENT_TEAM = 4H65A594JP;
 				INFOPLIST_FILE = VTune/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
