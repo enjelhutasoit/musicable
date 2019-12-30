@@ -35,8 +35,9 @@
 		DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50147A236C70F300AD39F1 /* SceneDelegate.swift */; };
 		DC501480236C70F300AD39F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC50147E236C70F300AD39F1 /* Main.storyboard */; };
 		DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC501481236C70F300AD39F1 /* VTune.xcdatamodeld */; };
-		DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC501484236C70F500AD39F1 /* Assets.xcassets */; };
 		DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */; };
+		DC53ABB823B0B4BF00447F27 /* NewMusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC53ABB723B0B4BF00447F27 /* NewMusicPlayer.storyboard */; };
+		DC53ABBA23B0B63700447F27 /* NewMusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC53ABB923B0B63700447F27 /* NewMusicPlayerViewController.swift */; };
 		DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC60DADD237036320070F386 /* MusicPlayer.storyboard */; };
 		DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */; };
 		DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC67F451237A9EE2006F6278 /* EqualizerView.xib */; };
@@ -46,6 +47,18 @@
 		DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */; };
 		DC67F45C237A9F5B006F6278 /* dummySongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F45A237A9F5B006F6278 /* dummySongList.swift */; };
 		DC74969E23832279004B7F42 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74969D23832279004B7F42 /* Manager.swift */; };
+		DC8B675123B9C2BA00B77056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675023B9C2BA00B77056 /* Assets.xcassets */; };
+		DC8B675423B9C56300B77056 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675323B9C56300B77056 /* HeaderView.xib */; };
+		DC8B675623B9C57100B77056 /* AlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675523B9C57100B77056 /* AlbumView.xib */; };
+		DC8B675823B9C57F00B77056 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675723B9C57F00B77056 /* WaveformView.xib */; };
+		DC8B675A23B9C58D00B77056 /* PlayButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675923B9C58D00B77056 /* PlayButtonView.xib */; };
+		DC8B675C23B9C59700B77056 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675B23B9C59700B77056 /* FooterView.xib */; };
+		DC8B675F23B9CA2200B77056 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B675E23B9CA2200B77056 /* HeaderView.swift */; };
+		DC8B676123B9CA2E00B77056 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B676023B9CA2E00B77056 /* AlbumView.swift */; };
+		DC8B676323B9CA4000B77056 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B676223B9CA4000B77056 /* WaveformView.swift */; };
+		DC8B676523B9CA4D00B77056 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B676423B9CA4D00B77056 /* PlayButtonView.swift */; };
+		DC8B676723B9CB1200B77056 /* TimeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B676623B9CB1200B77056 /* TimeProgress.swift */; };
+		DC8B676923B9CD4E00B77056 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B676823B9CD4E00B77056 /* FooterView.swift */; };
 		DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */; };
 		DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */; };
 		DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */; };
@@ -90,9 +103,10 @@
 		DC50147A236C70F300AD39F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC50147F236C70F300AD39F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC501482236C70F300AD39F1 /* VTune.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VTune.xcdatamodel; sourceTree = "<group>"; };
-		DC501484236C70F500AD39F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC501487236C70F500AD39F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC501489236C70F500AD39F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC53ABB723B0B4BF00447F27 /* NewMusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewMusicPlayer.storyboard; sourceTree = "<group>"; };
+		DC53ABB923B0B63700447F27 /* NewMusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMusicPlayerViewController.swift; sourceTree = "<group>"; };
 		DC60DADD237036320070F386 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
 		DC60DADF2370367E0070F386 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		DC67F451237A9EE2006F6278 /* EqualizerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EqualizerView.xib; path = "Music Player/EqualizerView.xib"; sourceTree = "<group>"; };
@@ -102,6 +116,18 @@
 		DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongFavorit.swift; sourceTree = "<group>"; };
 		DC67F45A237A9F5B006F6278 /* dummySongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongList.swift; sourceTree = "<group>"; };
 		DC74969D23832279004B7F42 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		DC8B675023B9C2BA00B77056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Musicable copy/VTune/VTune/Assets.xcassets"; sourceTree = "<group>"; };
+		DC8B675323B9C56300B77056 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		DC8B675523B9C57100B77056 /* AlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumView.xib; sourceTree = "<group>"; };
+		DC8B675723B9C57F00B77056 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
+		DC8B675923B9C58D00B77056 /* PlayButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayButtonView.xib; sourceTree = "<group>"; };
+		DC8B675B23B9C59700B77056 /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		DC8B675E23B9CA2200B77056 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		DC8B676023B9CA2E00B77056 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		DC8B676223B9CA4000B77056 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		DC8B676423B9CA4D00B77056 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
+		DC8B676623B9CB1200B77056 /* TimeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProgress.swift; sourceTree = "<group>"; };
+		DC8B676823B9CD4E00B77056 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		DCA99FF023741D6200312B37 /* MusicPlayerHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerHeader.xib; sourceTree = "<group>"; };
 		DCA99FF223741D7F00312B37 /* MusicPlayerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerHeader.swift; sourceTree = "<group>"; };
 		DCA99FF4237421A200312B37 /* MusicPlayerLyricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerLyricHeader.xib; sourceTree = "<group>"; };
@@ -170,10 +196,10 @@
 				DC501490236C716D00AD39F1 /* View */,
 				DC501491236C717B00AD39F1 /* Controller */,
 				DC501478236C70F300AD39F1 /* AppDelegate.swift */,
+				DC8B675023B9C2BA00B77056 /* Assets.xcassets */,
 				DC67F457237A9F42006F6278 /* EqualizerView.swift */,
 				DC50147A236C70F300AD39F1 /* SceneDelegate.swift */,
 				DC74969D23832279004B7F42 /* Manager.swift */,
-				DC501484236C70F500AD39F1 /* Assets.xcassets */,
 				DC501486236C70F500AD39F1 /* LaunchScreen.storyboard */,
 				DC501489236C70F500AD39F1 /* Info.plist */,
 				DC501481236C70F300AD39F1 /* VTune.xcdatamodeld */,
@@ -226,9 +252,37 @@
 			path = Songs;
 			sourceTree = "<group>";
 		};
+		DC8B675223B9C54000B77056 /* Single View */ = {
+			isa = PBXGroup;
+			children = (
+				DC53ABB723B0B4BF00447F27 /* NewMusicPlayer.storyboard */,
+				DC8B675323B9C56300B77056 /* HeaderView.xib */,
+				DC8B675523B9C57100B77056 /* AlbumView.xib */,
+				DC8B675723B9C57F00B77056 /* WaveformView.xib */,
+				DC8B675923B9C58D00B77056 /* PlayButtonView.xib */,
+				DC8B675B23B9C59700B77056 /* FooterView.xib */,
+			);
+			path = "Single View";
+			sourceTree = "<group>";
+		};
+		DC8B675D23B9CA0400B77056 /* Single View */ = {
+			isa = PBXGroup;
+			children = (
+				DC53ABB923B0B63700447F27 /* NewMusicPlayerViewController.swift */,
+				DC8B675E23B9CA2200B77056 /* HeaderView.swift */,
+				DC8B676023B9CA2E00B77056 /* AlbumView.swift */,
+				DC8B676223B9CA4000B77056 /* WaveformView.swift */,
+				DC8B676423B9CA4D00B77056 /* PlayButtonView.swift */,
+				DC8B676623B9CB1200B77056 /* TimeProgress.swift */,
+				DC8B676823B9CD4E00B77056 /* FooterView.swift */,
+			);
+			path = "Single View";
+			sourceTree = "<group>";
+		};
 		DCDFF6D92372F31E002A45EF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DC8B675D23B9CA0400B77056 /* Single View */,
 				EF1C58A3237416B900694932 /* SongListTableViewCell.swift */,
 				DCDFF6E92373DA93002A45EF /* ViewController.swift */,
 				5157B761237560D2005C795E /* MusicPlayerMini.swift */,
@@ -272,6 +326,7 @@
 		DCDFF6DC2372F346002A45EF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DC8B675223B9C54000B77056 /* Single View */,
 				EF1C58A4237416B900694932 /* SongListTableViewCell.xib */,
 				DC50147E236C70F300AD39F1 /* Main.storyboard */,
 				5157B75F23756098005C795E /* MusicPlayerMini.xib */,
@@ -341,14 +396,19 @@
 				4E08CD6E238455C200745BFF /* Menunggu Kamu (OST Jelita Sejuba).mp3 in Resources */,
 				AC054D072374031800E28931 /* PlayView.xib in Resources */,
 				DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */,
+				DC8B675C23B9C59700B77056 /* FooterView.xib in Resources */,
+				DC8B675423B9C56300B77056 /* HeaderView.xib in Resources */,
+				DC53ABB823B0B4BF00447F27 /* NewMusicPlayer.storyboard in Resources */,
+				DC8B675123B9C2BA00B77056 /* Assets.xcassets in Resources */,
 				4E08CD6F238455C200745BFF /* Goyang Dumang.mp3 in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */,
 				EF1C58A6237416B900694932 /* SongListTableViewCell.xib in Resources */,
 				4E08CD71238455C200745BFF /* Sempurna.mp3 in Resources */,
+				DC8B675823B9C57F00B77056 /* WaveformView.xib in Resources */,
 				AC9F801623827A8F00752432 /* Slide.xib in Resources */,
 				DCA99FF5237421A200312B37 /* MusicPlayerLyricHeader.xib in Resources */,
-				DC501485236C70F500AD39F1 /* Assets.xcassets in Resources */,
+				DC8B675A23B9C58D00B77056 /* PlayButtonView.xib in Resources */,
 				4E08CD72238455C200745BFF /* Harus Bahagia.mp3 in Resources */,
 				AC054D0B23740AE300E28931 /* Lirik.xib in Resources */,
 				DCA99FF923742CA500312B37 /* MusicPlayerAlbumImage.xib in Resources */,
@@ -357,6 +417,7 @@
 				AC9F80142382798E00752432 /* Onboarding.storyboard in Resources */,
 				DC60DADE237036320070F386 /* MusicPlayer.storyboard in Resources */,
 				4E08CD70238455C200745BFF /* Pesta.mp3 in Resources */,
+				DC8B675623B9C57100B77056 /* AlbumView.xib in Resources */,
 				DCA99FF123741D6200312B37 /* MusicPlayerHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +437,7 @@
 				DCA99FFB23742D5B00312B37 /* MusicPlayerAlbumImage.swift in Sources */,
 				DC501483236C70F300AD39F1 /* VTune.xcdatamodeld in Sources */,
 				AC9F80102382787400752432 /* PageControlOnboarding.swift in Sources */,
+				DC8B676923B9CD4E00B77056 /* FooterView.swift in Sources */,
 				AC9F800A238277D100752432 /* OnboardingViewController.swift in Sources */,
 				AC054D0D23740AF300E28931 /* Lirik.swift in Sources */,
 				DC60DAE02370367E0070F386 /* MusicPlayerViewController.swift in Sources */,
@@ -383,15 +445,21 @@
 				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
 				DC67F455237A9F32006F6278 /* DurationSlider.swift in Sources */,
 				5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */,
+				DC8B676323B9CA4000B77056 /* WaveformView.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
 				DC222CAA2389965800B00C82 /* MXMLyricsAction.m in Sources */,
+				DC8B676523B9CA4D00B77056 /* PlayButtonView.swift in Sources */,
 				AC9F800E2382782A00752432 /* GetStarted.swift in Sources */,
 				DCA99FF323741D7F00312B37 /* MusicPlayerHeader.swift in Sources */,
 				DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */,
 				4E08CD742384563D00745BFF /* AudioUtilities.swift in Sources */,
 				DC50147B236C70F300AD39F1 /* SceneDelegate.swift in Sources */,
+				DC8B676123B9CA2E00B77056 /* AlbumView.swift in Sources */,
 				DC74969E23832279004B7F42 /* Manager.swift in Sources */,
 				DC399CEB23A0CDC8009C627F /* PlayViewViewController.swift in Sources */,
+				DC53ABBA23B0B63700447F27 /* NewMusicPlayerViewController.swift in Sources */,
+				DC8B675F23B9CA2200B77056 /* HeaderView.swift in Sources */,
+				DC8B676723B9CB1200B77056 /* TimeProgress.swift in Sources */,
 				5157B764237560DA005C795E /* DesignSliderProgress.swift in Sources */,
 				AC9F800C238277FB00752432 /* Slide.swift in Sources */,
 				DC0EE70423819D0900638360 /* RunningText.swift in Sources */,
