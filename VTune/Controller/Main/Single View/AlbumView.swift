@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 class AlbumView: UIView {
+    
 
     @IBOutlet var timeProgress: TimeProgress!
     @IBOutlet var albumImage: UIImageView!

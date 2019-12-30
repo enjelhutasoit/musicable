@@ -65,4 +65,5 @@ class TimeProgress: UIView {
         progressLayer.strokeEnd = CGFloat(value)
         progressLayer.add(animation, forKey: "animateprogress")
     }
+    
 }

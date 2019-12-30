@@ -13,6 +13,7 @@ class PlayButtonView: UIView {
 
     @IBOutlet var playButton: UIButton!
     
+    
     @IBAction func playButton(_ sender: UIButton) {
         if mediaPlayer.playbackState == .playing{
             playButton.setImage(#imageLiteral(resourceName: "Play Button Wide"), for: .normal)

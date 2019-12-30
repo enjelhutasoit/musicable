@@ -39,6 +39,7 @@ class NewMusicPlayerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
    
+    
     func setView(){
 //        if let referenceHeaderView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as? HeaderView{
 //            headerView.addSubview(referenceHeaderView)
