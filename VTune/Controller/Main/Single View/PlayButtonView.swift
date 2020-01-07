@@ -11,16 +11,25 @@ import Foundation
 
 class PlayButtonView: UIView {
 
+    var referenceAlbumView: AlbumView?
+    
     @IBOutlet var playButton: UIButton!
     
     
     @IBAction func playButton(_ sender: UIButton) {
         if mediaPlayer.playbackState == .playing{
             playButton.setImage(#imageLiteral(resourceName: "Play Button Wide"), for: .normal)
-            mediaPlayer.pause()
+//            mediaPlayer.pause()
+            AudioUtilities.pauseAudio()
+            timer?.invalidate()
         }else{
             playButton.setImage(#imageLiteral(resourceName: "Pause Button Wide"), for: .normal)
-            mediaPlayer.play()
+//            if currentTime == Int(duration!){
+//                referenceAlbumView?.timeProgress.setProgressWithAnimation(duration: duration!, value: 1)
+//            }
+//            mediaPlayer.play()
+            AudioUtilities.pauseAudio()
+            timer?.invalidate()
         }
     }
 }

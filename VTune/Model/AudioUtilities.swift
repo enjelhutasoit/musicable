@@ -14,23 +14,34 @@ Class containing methods for tone generation.
 import AudioToolbox
 import AVFoundation
 import Accelerate
-import MediaPlayer
 
 class AudioUtilities: NSObject
 {
-    var myMediaPlayer = MPMusicPlayerController.systemMusicPlayer
+    static var audioRunning = false             // RemoteIO Audio Unit running flag
+    static var samplesFirstComparison:[Float] = [0.0]
+    static var samplesSecondComparison:[Float] = [0.0]
+    
+    static var flagAudioUnit: AUAudioUnit?
+    static var flagUrl: URL?
+    
+    static let audioBasic = AudioStreamBasicDescription()
     
     // Returns an array of single-precision values for the specified audio resource.
-    static func getAudioSamples(forResource: String, withExtension: String) -> [Float]?
+//    static func getAudioSamples(forResource: String, withExtension: String) -> [Float]?
+    static func getAudioSamples(urlFromMusicKit: URL?) -> [Float]?
     {//urlFromMusicKit: URL
-        guard let path = Bundle.main.url(forResource: forResource,
-                                         withExtension: withExtension)
-        else
-        {
-                return nil
-        }
+//        guard let path = Bundle.main.url(forResource: forResource,
+//                                         withExtension: withExtension)
+//        else
+//        {
+//                return nil
+//        }
         
-        let asset = AVAsset(url: path.absoluteURL)
+//        let asset = AVAsset(url: path.absoluteURL)
+        let asset = AVAsset(url: urlFromMusicKit!)
+        
+        flagUrl = urlFromMusicKit
+        print("URL Flag = ", flagUrl)
         
         guard
             let reader = try? AVAssetReader(asset: asset),
@@ -58,6 +69,8 @@ class AudioUtilities: NSObject
         
         var samples = [Float]()
         
+        print("samples =", samples.count)
+        
         while reader.status == .reading
         {
             if
@@ -78,119 +91,147 @@ class AudioUtilities: NSObject
             }
         }
 
+        if samplesFirstComparison.count == 0
+        {
+            samplesFirstComparison = samples
+        }
+        else
+        {
+            samplesFirstComparison = samplesSecondComparison
+            samplesSecondComparison = samples
+        }
+        print("samplesFirstComparison =", samplesFirstComparison.count)
+        print("samplesSecondComparison =", samplesSecondComparison.count)
+        
         return samples
     }
     
     // Configures audio unit to request and play samples from `signalProvider`.
     static func configureAudioUnit(signalProvider: SignalProvider)
     {
-        let kOutputUnitSubType = kAudioUnitSubType_RemoteIO
-        
-        let ioUnitDesc = AudioComponentDescription(
-            componentType: kAudioUnitType_Output,
-            componentSubType: kOutputUnitSubType,
-            componentManufacturer: kAudioUnitManufacturer_Apple,
-            componentFlags: 0,
-            componentFlagsMask: 0)
-        
-        guard
-            let ioUnit = try? AUAudioUnit(componentDescription: ioUnitDesc,
-                                          options: AudioComponentInstantiationOptions()),
-            let outputRenderFormat = AVAudioFormat(
-                standardFormatWithSampleRate: ioUnit.outputBusses[0].format.sampleRate,
-                channels: 1)
+        if audioRunning
+        {
+            if samplesFirstComparison.count == samplesSecondComparison.count
+            {
+                return
+            }
             else
             {
-                    print("Unable to create outputRenderFormat")
-                    return
-            }
-        
-        do
-        {
-            try ioUnit.inputBusses[0].setFormat(outputRenderFormat)
-        }
-        catch
-        {
-            print("Error setting format on ioUnit")
-            return
-        }
-        
-        ioUnit.outputProvider =
-        {
-            (actionFlags: UnsafeMutablePointer<AudioUnitRenderActionFlags>,
-            timestamp: UnsafePointer<AudioTimeStamp>,
-            frameCount: AUAudioFrameCount,
-            busIndex: Int,
-            rawBufferList: UnsafeMutablePointer<AudioBufferList>) -> AUAudioUnitStatus in
-            
-            let bufferList = UnsafeMutableAudioBufferListPointer(rawBufferList)
-            if !bufferList.isEmpty
-            {
-                let signal = signalProvider.getSignal()
                 
-                bufferList[0].mData?.copyMemory(from: signal,
-                                                byteCount: sampleCount * MemoryLayout<Float>.size)
+            }
+        }
+        else
+        {
+            let kOutputUnitSubType = kAudioUnitSubType_RemoteIO
+            
+            let ioUnitDesc = AudioComponentDescription(
+                componentType: kAudioUnitType_Output,
+                componentSubType: kOutputUnitSubType,
+                componentManufacturer: kAudioUnitManufacturer_Apple,
+                componentFlags: 0,
+                componentFlagsMask: 0)
+            
+            guard
+                let ioUnit = try? AUAudioUnit(componentDescription: ioUnitDesc,
+                                              options: AudioComponentInstantiationOptions()),
+                let outputRenderFormat = AVAudioFormat(
+                    standardFormatWithSampleRate: ioUnit.outputBusses[0].format.sampleRate,
+                    channels: 1)
+                else
+                {
+                        print("Unable to create outputRenderFormat")
+                        return
+                }
+            
+            flagAudioUnit = ioUnit
+
+            do
+            {
+                try flagAudioUnit!.inputBusses[0].setFormat(outputRenderFormat)
+            }
+            catch
+            {
+                print("Error setting format on ioUnit")
+                return
             }
             
-            return noErr
+            //ioUnit.outputProvider =
+            flagAudioUnit!.outputProvider =
+            {
+                (actionFlags: UnsafeMutablePointer<AudioUnitRenderActionFlags>,
+                timestamp: UnsafePointer<AudioTimeStamp>,
+                frameCount: AUAudioFrameCount,
+                busIndex: Int,
+                rawBufferList: UnsafeMutablePointer<AudioBufferList>) -> AUAudioUnitStatus in
+                
+                let bufferList = UnsafeMutableAudioBufferListPointer(rawBufferList)
+                if !bufferList.isEmpty
+                {//cek timestamp di bagian mana playnya
+                    let signal = signalProvider.getSignal()
+                    
+                    bufferList[0].mData?.copyMemory(from: signal,
+                                                    byteCount: sampleCount * MemoryLayout<Float>.size)
+                }
+//                else
+//                {
+//                    bufferList[0].mData?.deallocate()
+//                }
+                return noErr
+            }
+             
+            do
+            {
+                try flagAudioUnit!.allocateRenderResources()
+            }
+            catch
+            {
+                print("Error allocating render resources")
+                return
+            }
+            
+            do
+            {
+                try flagAudioUnit!.startHardware()
+                audioRunning = true
+            }
+            catch
+            {
+                print("Error starting audio")
+            }
         }
         
-        do
+    }
+    
+    static func pauseAudio()
+    {
+        if audioRunning
         {
-            try ioUnit.allocateRenderResources()
+            flagAudioUnit?.stopHardware()
+            audioRunning = false
         }
-        catch
+        else
         {
-            print("Error allocating render resources")
-            return
-        }
-        
-        do
-        {
-            try ioUnit.startHardware()
-        }
-        catch
-        {
-            print("Error starting audio")
+            do
+            {
+                try flagAudioUnit?.startHardware()
+                audioRunning = true
+            }
+            catch
+            {
+                print("Error starting audio")
+            }
         }
     }
+    
+    static func stopAudioFirstTime()
+    {
+        flagAudioUnit?.stopHardware()
+        audioRunning = false
+    }
+    
 }
 
 protocol SignalProvider
 {
     func getSignal() -> [Float]
-}
-
-extension AudioUtilities: MPMediaPickerControllerDelegate
-{
-    func getLibrary()
-    {
-        let myMediaPickerVC = MPMediaPickerController(mediaTypes: MPMediaType.music)
-        myMediaPickerVC.allowsPickingMultipleItems = true
-        //myMediaPickerVC.popoverPresentationController?.sourceView = sender
-        myMediaPickerVC.delegate = self
-        //self.present(myMediaPickerVC, animated: true, completion: nil)
-    }
-    
-    func playLibrary()
-    {
-        // Instantiate a new music player
-        let myMediaPlayer = MPMusicPlayerApplicationController.applicationQueuePlayer
-        // Add a playback queue containing all songs on the device
-        myMediaPlayer.setQueue(with: .songs())
-        // Start playing from the beginning of the queue
-        myMediaPlayer.play()
-    }
-    
-    func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection)
-    {
-        myMediaPlayer.setQueue(with: mediaItemCollection)
-        mediaPicker.dismiss(animated: true, completion: nil)
-        //myMediaPlayer.play()
-    }
-    
-    func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController)
-    {
-        mediaPicker.dismiss(animated: true, completion: nil)
-    }
 }

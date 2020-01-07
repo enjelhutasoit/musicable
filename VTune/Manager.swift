@@ -33,3 +33,8 @@ var albumImageSmallView: UIImageView?
 var nowPlayingTitle: UILabel?
 var nowPlayingSinger: UILabel?
 var nowPlayingAlbum: UIImageView?
+
+
+var currentTime: Int = 0
+var timer: Timer?
+var duration: TimeInterval?
