@@ -38,3 +38,6 @@ var nowPlayingAlbum: UIImageView?
 var currentTime: Int = 0
 var timer: Timer?
 var duration: TimeInterval?
+
+var songDuration: Int = 0
+var (minute, second) = (0,0)

@@ -23,6 +23,10 @@ let sampleCount = 1024
 var samples: [Float] = [0.0]
 //===========================================================================================================================
 
+protocol DurationTimer {
+    func startTime()
+}
+
 class NewMusicPlayerViewController: UIViewController {
 
     @IBOutlet var songTitle: MarqueeLabel!
@@ -31,16 +35,13 @@ class NewMusicPlayerViewController: UIViewController {
     @IBOutlet var albumView: UIView!
     @IBOutlet var waveformView: UIView!
     @IBOutlet var playButtonView: UIView!
-    @IBOutlet var footerView: UIView!
     
     var referenceHeaderView: HeaderView?
     var referenceAlbumView: AlbumView?
     var referenceWaveformView: WaveformView?
     var referencePlayButtonView: PlayButtonView?
     var referenceFooterView: FooterView?
-    
-    var songDuration: Int = 0
-    var (minute, second) = (0,0)
+
     //===========================================================================================================================
     //Global Property For Render Signal (from: rajabun)
     //===========================================================================================================================
@@ -250,11 +251,11 @@ class NewMusicPlayerViewController: UIViewController {
             self.referencePlayButtonView = referencePlayButtonView
         }
         
-        if let referenceFooterView = Bundle.main.loadNibNamed("FooterView", owner: self, options: nil)?.first as? FooterView{
-            footerView.addSubview(referenceFooterView)
-            referenceFooterView.frame = CGRect(x: 0, y: 0, width: headerView.frame.width, height: headerView.frame.height)
-            self.referenceFooterView = referenceFooterView
-        }
+//        if let referenceFooterView = Bundle.main.loadNibNamed("FooterView", owner: self, options: nil)?.first as? FooterView{
+//            footerView.addSubview(referenceFooterView)
+//            referenceFooterView.frame = CGRect(x: 0, y: 0, width: headerView.frame.width, height: headerView.frame.height)
+//            self.referenceFooterView = referenceFooterView
+//        }
     }
     
     func getData(){
@@ -263,7 +264,8 @@ class NewMusicPlayerViewController: UIViewController {
                 referenceAlbumView?.albumImage.image = nowPlaying.artwork?.image(at: CGSize(width: (referenceAlbumView?.albumImage.frame.height)!, height: (referenceAlbumView?.albumImage.frame.width)!))
                 songTitle.text = nowPlaying.title
                 songSinger.text = nowPlaying.artist
-                referencePlayButtonView?.playButton.setImage(#imageLiteral(resourceName: "Pause Button Wide"), for: .normal)
+//                referencePlayButtonView?.playBtn.setImage(#imageLiteral(resourceName: "Pause Button Wide"), for: .normal)
+                referencePlayButtonView?.playBtn.isEnabled = true
             }
             
         }else{
@@ -271,44 +273,35 @@ class NewMusicPlayerViewController: UIViewController {
             songTitle.text = "Tidak sedang memutar lagu - "
             songSinger.text = " "
 //            referenceAlbumView?.currentTime.text = "00:00"
+            referencePlayButtonView?.playBtn.isEnabled = false
         }
-    }
-    
-    func getSongDuration(){
-        if let nowPlaying = MPMusicPlayerApplicationController.applicationQueuePlayer.nowPlayingItem{
-                songDuration = Int(nowPlaying.playbackDuration)
-                currentTime = Int(mediaPlayer.currentPlaybackTime)
-                duration = nowPlaying.playbackDuration
-                referenceAlbumView?.timeProgress.setProgressWithAnimation(duration: duration!, value: 1)
-                referenceAlbumView?.timeProgress.progressColor = #colorLiteral(red: 0, green: 0.8623425364, blue: 0.690444231, alpha: 1)
-                timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime),
-                userInfo: nil, repeats: true)
-    //            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(songDurationProgress),
-    //            userInfo: nil, repeats: true)
-        }
-        print(songDuration)
     }
     
     @objc func updateTime(){
-//        currentTime = Int(mediaPlayer.currentPlaybackTime)
-//        let minutes = currentTime/60
-//        let seconds = currentTime - minutes * 60
-//        referenceAlbumView?.currentTime.text = String(String(format: "%02d:%02d", minutes,seconds) as String)
-//        if currentTime == Int(duration!){
-//            UserDefaults.standard.set("false", forKey: "isPlaying")
-//        }
-        
         second += 1
         if second == 60{
             minute += 1
             second = 0
         }
-        
+           
         let secondString = second > 9 ? "\(second)" : "0\(second)"
         let minuteString = minute > 9 ? "\(minute)" : "0\(minute)"
         referenceAlbumView?.currentTime.text = "\(minuteString):\(secondString)"
-        
     }
+    
+    func getSongDuration(){
+        if let nowPlaying = MPMusicPlayerApplicationController.applicationQueuePlayer.nowPlayingItem{
+            songDuration = Int(nowPlaying.playbackDuration)
+            currentTime = Int(mediaPlayer.currentPlaybackTime)
+            duration = nowPlaying.playbackDuration
+            referenceAlbumView?.timeProgress.setProgressWithAnimation(duration: duration!, value: 1)
+            referenceAlbumView?.timeProgress.progressColor = #colorLiteral(red: 0, green: 0.8623425364, blue: 0.690444231, alpha: 1)
+            startTime()
+        }
+        print(songDuration)
+    }
+    
+   
         
     func songDurationProgress(){
         referenceAlbumView?.timeProgress.trackColor = #colorLiteral(red: 0.6783789396, green: 0.6743485928, blue: 0.6814785004, alpha: 0.8032962329)
@@ -344,6 +337,7 @@ extension NewMusicPlayerViewController: MPMediaPickerControllerDelegate{
 //        getSongDuration()
 //        getData()
         UserDefaults.standard.set("true", forKey: "isPlaying")
+        referencePlayButtonView?.playBtn.setImage(#imageLiteral(resourceName: "Pause Button Wide"), for: .normal)
         getSampleFromMusicKit()
     }
     
@@ -651,3 +645,10 @@ extension NewMusicPlayerViewController
 }
 
 //===========================================================================================================================
+
+extension NewMusicPlayerViewController: DurationTimer{
+    func startTime() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime),
+        userInfo: nil, repeats: true)
+    }
+}

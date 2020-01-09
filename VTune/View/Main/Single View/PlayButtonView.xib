@@ -28,7 +28,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="playButton" destination="vbs-FC-4eW" id="Lrk-OK-74q"/>
+                <outlet property="playBtn" destination="vbs-FC-4eW" id="FKj-V6-nwW"/>
             </connections>
             <point key="canvasLocation" x="139" y="133"/>
         </view>

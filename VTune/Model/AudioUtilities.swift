@@ -25,6 +25,7 @@ class AudioUtilities: NSObject
     static var flagUrl: URL?
     
     static let audioBasic = AudioStreamBasicDescription()
+    var referencePlayButtonView: PlayButtonView?
     
     // Returns an array of single-precision values for the specified audio resource.
 //    static func getAudioSamples(forResource: String, withExtension: String) -> [Float]?
@@ -208,6 +209,7 @@ class AudioUtilities: NSObject
         {
             flagAudioUnit?.stopHardware()
             audioRunning = false
+            timer?.invalidate()
         }
         else
         {
@@ -228,7 +230,6 @@ class AudioUtilities: NSObject
         flagAudioUnit?.stopHardware()
         audioRunning = false
     }
-    
 }
 
 protocol SignalProvider

@@ -29,6 +29,8 @@
 		AC9F801623827A8F00752432 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9F801523827A8F00752432 /* Slide.xib */; };
 		DB52F03D237409270048B55D /* albumArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB52F03B237409270048B55D /* albumArtViewController.xib */; };
 		DC0EE70423819D0900638360 /* RunningText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0EE70323819D0900638360 /* RunningText.swift */; };
+		DC11ADF023C7AAD900ECD92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC11ADEF23C7AAD900ECD92F /* Assets.xcassets */; };
+		DC11ADF223C7AFEE00ECD92F /* DurationTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC11ADF123C7AFEE00ECD92F /* DurationTimer.swift */; };
 		DC222CAA2389965800B00C82 /* MXMLyricsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DC222CA82389965800B00C82 /* MXMLyricsAction.m */; };
 		DC399CEB23A0CDC8009C627F /* PlayViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC399CEA23A0CDC8009C627F /* PlayViewViewController.swift */; };
 		DC501479236C70F300AD39F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC501478236C70F300AD39F1 /* AppDelegate.swift */; };
@@ -47,7 +49,6 @@
 		DC67F45B237A9F5B006F6278 /* dummySongFavorit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */; };
 		DC67F45C237A9F5B006F6278 /* dummySongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67F45A237A9F5B006F6278 /* dummySongList.swift */; };
 		DC74969E23832279004B7F42 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74969D23832279004B7F42 /* Manager.swift */; };
-		DC8B675123B9C2BA00B77056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675023B9C2BA00B77056 /* Assets.xcassets */; };
 		DC8B675423B9C56300B77056 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675323B9C56300B77056 /* HeaderView.xib */; };
 		DC8B675623B9C57100B77056 /* AlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675523B9C57100B77056 /* AlbumView.xib */; };
 		DC8B675823B9C57F00B77056 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8B675723B9C57F00B77056 /* WaveformView.xib */; };
@@ -94,6 +95,8 @@
 		DB52F03A237409270048B55D /* albumArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumArtViewController.swift; sourceTree = "<group>"; };
 		DB52F03B237409270048B55D /* albumArtViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = albumArtViewController.xib; sourceTree = "<group>"; };
 		DC0EE70323819D0900638360 /* RunningText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningText.swift; sourceTree = "<group>"; };
+		DC11ADEF23C7AAD900ECD92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC11ADF123C7AFEE00ECD92F /* DurationTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationTimer.swift; sourceTree = "<group>"; };
 		DC222CA72389965700B00C82 /* VTune-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VTune-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC222CA82389965800B00C82 /* MXMLyricsAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMLyricsAction.m; sourceTree = "<group>"; };
 		DC222CA92389965800B00C82 /* MXMLyricsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMLyricsAction.h; sourceTree = "<group>"; };
@@ -116,7 +119,6 @@
 		DC67F459237A9F5B006F6278 /* dummySongFavorit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongFavorit.swift; sourceTree = "<group>"; };
 		DC67F45A237A9F5B006F6278 /* dummySongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummySongList.swift; sourceTree = "<group>"; };
 		DC74969D23832279004B7F42 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		DC8B675023B9C2BA00B77056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Musicable copy/VTune/VTune/Assets.xcassets"; sourceTree = "<group>"; };
 		DC8B675323B9C56300B77056 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		DC8B675523B9C57100B77056 /* AlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumView.xib; sourceTree = "<group>"; };
 		DC8B675723B9C57F00B77056 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
@@ -196,7 +198,7 @@
 				DC501490236C716D00AD39F1 /* View */,
 				DC501491236C717B00AD39F1 /* Controller */,
 				DC501478236C70F300AD39F1 /* AppDelegate.swift */,
-				DC8B675023B9C2BA00B77056 /* Assets.xcassets */,
+				DC11ADEF23C7AAD900ECD92F /* Assets.xcassets */,
 				DC67F457237A9F42006F6278 /* EqualizerView.swift */,
 				DC50147A236C70F300AD39F1 /* SceneDelegate.swift */,
 				DC74969D23832279004B7F42 /* Manager.swift */,
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				DC53ABB923B0B63700447F27 /* NewMusicPlayerViewController.swift */,
+				DC11ADF123C7AFEE00ECD92F /* DurationTimer.swift */,
 				DC8B675E23B9CA2200B77056 /* HeaderView.swift */,
 				DC8B676023B9CA2E00B77056 /* AlbumView.swift */,
 				DC8B676223B9CA4000B77056 /* WaveformView.swift */,
@@ -399,7 +402,7 @@
 				DC8B675C23B9C59700B77056 /* FooterView.xib in Resources */,
 				DC8B675423B9C56300B77056 /* HeaderView.xib in Resources */,
 				DC53ABB823B0B4BF00447F27 /* NewMusicPlayer.storyboard in Resources */,
-				DC8B675123B9C2BA00B77056 /* Assets.xcassets in Resources */,
+				DC11ADF023C7AAD900ECD92F /* Assets.xcassets in Resources */,
 				4E08CD6F238455C200745BFF /* Goyang Dumang.mp3 in Resources */,
 				DC501488236C70F500AD39F1 /* LaunchScreen.storyboard in Resources */,
 				DC67F452237A9EE2006F6278 /* EqualizerView.xib in Resources */,
@@ -444,6 +447,7 @@
 				4E08CD762384565400745BFF /* GraphUtility.swift in Sources */,
 				DCA99FF7237421C800312B37 /* MusicPlayerLyricHeader.swift in Sources */,
 				DC67F455237A9F32006F6278 /* DurationSlider.swift in Sources */,
+				DC11ADF223C7AFEE00ECD92F /* DurationTimer.swift in Sources */,
 				5157B762237560D2005C795E /* MusicPlayerMini.swift in Sources */,
 				DC8B676323B9CA4000B77056 /* WaveformView.swift in Sources */,
 				DCDFF6EA2373DA93002A45EF /* ViewController.swift in Sources */,
