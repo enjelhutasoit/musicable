@@ -23,7 +23,9 @@
             </subviews>
             <constraints>
                 <constraint firstItem="vbs-FC-4eW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1qh-WP-84v"/>
+                <constraint firstItem="vbs-FC-4eW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="22" id="ND3-2k-DPo"/>
                 <constraint firstItem="vbs-FC-4eW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="34" id="NZh-n1-lcq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vbs-FC-4eW" secondAttribute="trailing" constant="22" id="w0a-Ci-UGF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
