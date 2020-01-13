@@ -57,7 +57,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
            let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
            slide1.imageView.image = UIImage(named: "On Boarding Icon Page 1")
            slide1.labelTitle.text = "Selamat Datang di Musicable !"
-           slide1.labelDesc.text = "“Musicable” membantu Teman Tuli menikmati musik dengan getaran, gelombang musik, dan lirik."
+           slide1.labelDesc.text = "“Musicable” membantu Teman Tuli menikmati musik dengan getaran dan  gelombang musik."
            
            let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
            slide2.imageShadow.image =  UIImage(named: "On Boarding Icon Shadow")
