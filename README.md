@@ -21,7 +21,8 @@ Musicable is an iOS app that helps hearing-impaired people to enjoy music throug
 
 ![musicable_github_enjelhutasoit](https://user-images.githubusercontent.com/28510687/72727840-876b4280-3bbe-11ea-9b5f-63c778d15c99.gif)
 
-Credit Song: Merakit by Yura Yunita (PT Massive Music Entertainment)
+<p>Credit Song: Merakit by Yura Yunita (PT Massive Music Entertainment)</p>
+
 ## STORY BEHIND THE APP
 
 _Before I and my team built this app, like always, 
