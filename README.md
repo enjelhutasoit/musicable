@@ -13,7 +13,7 @@
   <a href="https://twitter.com/enjelhutasoit"><img src="https://img.shields.io/twitter/follow/vr_toolkit.svg?style=flat&label=twitter" alt="twitter" /></a>
 </p>
 
-An iOS app that helps hearing-impaired people to enjoy music through:
+Musicable is an iOS app that helps hearing-impaired people to enjoy music through:
 - [x] Vibration that help user to feel the rhyme of the song
 - [x] Waveform that help user to see the rhyme of the song
 - [ ] Lyric that help user to understand the meaning of the song
@@ -21,6 +21,7 @@ An iOS app that helps hearing-impaired people to enjoy music through:
 
 ![musicable_github_enjelhutasoit](https://user-images.githubusercontent.com/28510687/72727840-876b4280-3bbe-11ea-9b5f-63c778d15c99.gif)
 
+Credit Song: Merakit by Yura Yunita (PT Massive Music Entertainment)
 ## STORY BEHIND THE APP
 
 _Before I and my team built this app, like always, 
@@ -49,7 +50,7 @@ In some cases, there is kind of uncomfortable for them to enjoying music in publ
 So we came with a solution concept to build an iOS app for hearing-impaired people
 to enjoying music through vibration, waveform, and lyric. We named it **Musicable**.
 
-_**STATUS: This project is currently undermaintained.**_
+_**STATUS: This project is under maintenance.**_
 
 ## TECHNICAL
 **Frameworks:**
@@ -82,6 +83,7 @@ For further development, here are the features that need to be worked on:
 ## CONTACT
 Created by me ([Enjel Hutasoit](http://github.com/enjelhutasoit)) and **Musicable Team**. 
 In this project I worked as a coder/developer.
+
 
 **Note:**<br>
 The last but not least, feel free to connect with me on:
