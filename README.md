@@ -7,10 +7,12 @@
   <strong>MUSICABLE</strong>
 </h1>
 
+
 <p align="center">
   </a>&nbsp;&nbsp;&nbsp;<a href="mailto:enjel.hutasoit@gmail.com"><img src="https://img.shields.io/badge/Email-enjel.hutasoit@gmail.com-8056d5.svg?style=for-the-badge&logo=minutemailer&logoColor=white"></a>&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/enjelhutasoit" target="_blank"><img src="https://img.shields.io/badge/linkedin-enjelhutasoit-brightgreen.svg?style=for-the-badge&logo=linkedin&logoColor=white" >  
 </a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/enjelhutasoit" target="_blank"><img src="https://img.shields.io/badge/twitter-enjelhutasoit-blue.svg?style=for-the-badge&logo=twitter&logoColor=white"></a>
 </p>
+
 
 
 Musicable is an iOS app that helps hearing-impaired people to enjoy music through:
@@ -53,9 +55,11 @@ _**STATUS: This project is under maintenance.**_
 
 ## TECHNICAL
 **Technologies used:**
+
 `UIKit` `CoreLocation` `CoreHaptics` `MediaPlayer` `AVFoundation` `CoreData` `QuartzCore`
 
 **Developer tools:**
+
 `Swift` `Xcode`
 
 ## DESIGN
