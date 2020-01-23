@@ -8,10 +8,10 @@
 </h1>
 
 <p align="center">
-  <a href="firebase.google.com"><img src="https://img.shields.io/badge/readme-docs-3484C6.svg" alt="firebase" /></a>
-  <a href="https://youtube.com/enjelhutasoit"><img src="https://img.shields.io/badge/youtube-channel-e52d27.svg" alt="Youtube" /></a>
-  <a href="https://twitter.com/enjelhutasoit"><img src="https://img.shields.io/twitter/follow/vr_toolkit.svg?style=flat&label=twitter" alt="twitter" /></a>
+  </a>&nbsp;&nbsp;&nbsp;<a href="mailto:enjel.hutasoit@gmail.com"><img src="https://img.shields.io/badge/Email-enjel.hutasoit@gmail.com-8056d5.svg?style=for-the-badge&logo=minutemailer&logoColor=white"></a>&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/enjelhutasoit" target="_blank"><img src="https://img.shields.io/badge/linkedin-enjelhutasoit-brightgreen.svg?style=for-the-badge&logo=linkedin&logoColor=white" >  
+</a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/enjelhutasoit" target="_blank"><img src="https://img.shields.io/badge/twitter-enjelhutasoit-blue.svg?style=for-the-badge&logo=twitter&logoColor=white"></a>
 </p>
+
 
 Musicable is an iOS app that helps hearing-impaired people to enjoy music through:
 - [x] Vibration that help user to feel the rhyme of the song
@@ -52,17 +52,11 @@ to enjoying music through vibration, waveform, and lyric. We named it **Musicabl
 _**STATUS: This project is under maintenance.**_
 
 ## TECHNICAL
-**Frameworks:**
-- [x] UIKit
-- [x] CoreHaptics
-- [x] MediaPlayer
-- [x] AVFoundation
-- [x] CoreData
-- [x] QuartzCore
+**Technologies used:**
+`UIKit` `CoreLocation` `CoreHaptics` `MediaPlayer` `AVFoundation` `CoreData` `QuartzCore`
 
 **Developer tools:**
-- [x] Swift
-- [x] Xcode
+`Swift` `Xcode`
 
 ## DESIGN
 All design element e.g: 
@@ -80,7 +74,7 @@ For further development, here are the features that need to be worked on:
 - [ ] Add lyric feature
 
 ## CONTACT
-Built by me ([Enjel Hutasoit](http://github.com/enjelhutasoit)) and **Musicable Team**. 
+Build by me ([Enjel Hutasoit](http://github.com/enjelhutasoit)) and **Musicable Team**. 
 In this project I worked as a coder/developer.
 
 <i>Credit Song: Merakit by Yura Yunita (PT Massive Music Entertainment)</i><br>
